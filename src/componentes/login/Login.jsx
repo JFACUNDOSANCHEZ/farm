@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
-    <div className={styles.landingContainer}>
+    <div className={styles.loginContainer}>
     <div className={styles.content}>
       <header className={styles.header}>
         <div className={styles.logo}>
