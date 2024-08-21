@@ -19,21 +19,27 @@
   margin: 0;
 }
 
+
+
+
 /* Header */
-.header {
+.nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Centra verticalmente los elementos */
-  padding: 4px 5px; /* Ajusta el padding según sea necesario */
-  background-color: white;
-  color: black;
-  height: 60px; /* Asegura que el header tenga una altura definida */
+  justify-content: flex-end; /* Alinea los enlaces a la derecha */
+  align-items: center;
+  padding: 10px 20px; 
+  position: absolute; /* Posiciona la navegación de manera absoluta */
+  top: 0; /* Coloca en la parte superior */
+  right: 0; /* Coloca en la parte derecha */
+  background-color: transparent; /* Elimina el fondo blanco */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 .navLink {
-  color: black;
+  color: rgb(255, 255, 255);
   margin: 0 10px;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
+  font-size: large;
 
 }
 .h1 {
@@ -65,7 +71,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-color: rgba(0, 0, 0, 0.7); Color negro con 50% de opacidad */
+  background-color: rgba(0, 0, 0, 0.6); 
   z-index: -1;
 }
 .logo{
@@ -132,7 +138,7 @@
 .feature .text {
   flex: 1; /* Ocupa el espacio restante */
   font-size: 1rem; /* Tamaño de fuente del texto */
-  color: white;
+  color: rgb(173, 173, 173);
 
 }
 

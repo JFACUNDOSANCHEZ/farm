@@ -5,19 +5,23 @@ export default function Landing() {
   return (
     <div className={styles.landingContainer}>
       <div className={styles.content}>
-        {/* <header className={styles.header}>
+        {/* 
           <div className={styles.logo}>
-            <img className={styles.logo} src="https://static.vecteezy.com/system/resources/previews/005/366/461/non_2x/pharmacy-logo-drug-store-logo-vector.jpg" width={'100px'} alt="" />
-            </div>
+          <img className={styles.logo} src="https://static.vecteezy.com/system/resources/previews/005/366/461/non_2x/pharmacy-logo-drug-store-logo-vector.jpg" width={'100px'} alt="" />
+          </div>
           <nav className={styles.nav}>
-            <a href="#features" className={styles.navLink}>Contacto</a>
-            <a href="#cta" className={styles.navLink}>Empieza Ahora</a>
           </nav>
-        </header> */}
+          */}
 
         {/* Hero Section */}
         <section className={styles.hero}>
+        <div className={styles.nav}>
+
+    
+          <a href="#features" className={styles.navLink}>Contacto</a>
+          <a href="#cta" className={styles.navLink}>Empieza Ahora</a>
         
+        </div>
          {/* <h1 className={styles.heroPa}>Bienvenido </h1> */}
           {/* <p className={styles.heroPa}>Registra y gestiona tus muestras farmacéuticas con facilidad y exactitud.</p>  */}
         
