@@ -24,10 +24,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center; /* Centra verticalmente los elementos */
-  padding: 4px 10px; /* Ajusta el padding según sea necesario */
+  padding: 4px 5px; /* Ajusta el padding según sea necesario */
   background-color: white;
   color: black;
-  height: 70px; /* Asegura que el header tenga una altura definida */
+  height: 60px; /* Asegura que el header tenga una altura definida */
 }
 .navLink {
   color: black;
@@ -82,7 +82,7 @@
   padding: 20px; /* Añade padding para separar los elementos del borde */
   text-align: left; 
   color: white;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), 
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent), 
                     url('https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                     linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
   background-size: cover;
@@ -111,7 +111,7 @@
   flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
   justify-content: space-around; /* Espacia los elementos uniformemente */
   padding: 20px;
-  background-color:white;
+   background-color:black; 
 }
 
 .feature {
@@ -119,18 +119,21 @@
   align-items: center; /* Alinea verticalmente la imagen y el texto */
   margin: 10px; /* Espacio entre características */
   max-width: 300px; /* Limita el ancho de cada característica */
+  
 }
 
 .feature img {
   width: 30%; /* Ancho de la imagen dentro de cada característica */
   margin-right: 10px; /* Espacio entre la imagen y el texto */
-
+  border-radius: 20px;
+  
 }
 
 .feature .text {
   flex: 1; /* Ocupa el espacio restante */
   font-size: 1rem; /* Tamaño de fuente del texto */
-  color: black;
+  color: white;
+
 }
 
 .ctaButton {
@@ -139,6 +142,7 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 
@@ -148,8 +152,8 @@
 .cta {
   padding: 50px 20px;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 
