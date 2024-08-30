@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Login.module.css'; // Importa el CSS Module
 import { Link } from 'react-router-dom';
-
+import Nav from '../nav/Nav';
+import Footer from '../footer/Footer';
 export default function Login() {
   return (
     <div className={styles.loginContainer}>
     <div className={styles.content}>
-  
+  <Nav></Nav>
 
       {/* Hero Section */}
       <section className={styles.hero}>
@@ -41,17 +42,7 @@ export default function Login() {
         </section>
     </div>
     
-    {/* Footer */}
-    <footer className={styles.footer}>
-      <div className={styles.footerContent}>
-        <p>&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
-        <div className={styles.socials}>
-          <a href="#facebook" className={styles.footerLink}>Facebook</a>
-          <a href="#twitter" className={styles.footerLink}>Twitter</a>
-          <a href="#instagram" className={styles.footerLink}>Instagram</a>
-        </div>
-      </div>
-    </footer>
+   <Footer></Footer>
   </div>
   );
 }
