@@ -1,183 +1,161 @@
 .landingContainer {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 70px;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-
-
-
-/* Header */
-.nav {
-  display: flex;
-  justify-content: flex-end; /* Alinea los enlaces a la derecha */
-  align-items: center;
-  padding: 10px 20px; 
-  position: absolute; /* Posiciona la navegación de manera absoluta */
-  top: 0; /* Coloca en la parte superior */
-  right: 0; /* Coloca en la parte derecha */
-  background-color: transparent; /* Elimina el fondo blanco */
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-.navLink {
-  color: rgb(255, 255, 255);
-  margin: 0 10px;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-  font-size: large;
-
-}
-.h1 {
-  color: #333;
-}
-
-.navLink:hover {
-  color: #ff6347;
-  transform: scale(1.1); /* Añade un pequeño aumento al hacer hover */
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 100px 20px;
-  background-image: url('https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  height: 20rem;
-  z-index: 1;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); 
-  z-index: -1;
-}
-.logo{
- border-radius: 100%;
-}
-
-
-.hero {
-  position: relative;
-  height: 20rem;
-  display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  align-items: flex-end; /* Alinea el contenido en la parte inferior */
-  padding: 20px; /* Añade padding para separar los elementos del borde */
-  text-align: left; 
-  color: white;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent), 
-                    url('https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero h1, .hero p {
-  position: relative;
-  z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
-  text-align: left; 
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  align-items: flex-end;
-  margin-left: 20px; /* Añade margen izquierdo para separar del borde */
-}
-.heroPa {
-  color: #f1eded;
-  margin-bottom: 4rem;
-  font-size: xx-large;
-  text-align: left; 
-  margin-left: 20px; 
-}
-
-.cara {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
-  justify-content: space-around; /* Espacia los elementos uniformemente */
-  padding: 20px;
-   background-color:black; 
-}
-
-.feature {
-  display: flex;
-  align-items: center; /* Alinea verticalmente la imagen y el texto */
-  margin: 10px; /* Espacio entre características */
-  max-width: 300px; /* Limita el ancho de cada característica */
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   
-}
-
-.feature img {
-  width: 30%; /* Ancho de la imagen dentro de cada característica */
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
-  border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
   
+  
+  
+  
+  /* Header */
+  .nav {
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    padding: 4px 5px; 
+    background-color: white;
+    color: black;
+    height: 60px; 
+  }
+  .navLink {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  
+  }
+  .h1 {
+    color: #333;
+  }
+  
+  .navLink:hover {
+    color: #ff6347;
+    transform: scale(1.1); /* Añade un pequeño aumento al hacer hover */
+  }
+  
+
+  
+
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.7); Color negro con 50% de opacidad */
+    z-index: -1;
+  }
+  .logo{
+   border-radius: 100%;
+  }
+  .videoBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    object-fit: cover; /* Hace que el video cubra el área del contenedor sin deformarse */
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Coloca el video detrás del gradiente y contenido */
 }
 
-.feature .text {
-  flex: 1; /* Ocupa el espacio restante */
-  font-size: 1rem; /* Tamaño de fuente del texto */
-  color: rgb(173, 173, 173);
+  
+  .hero {
+    position: relative;
+    height: 20rem;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: flex-end; /* Alinea el contenido en la parte inferior */
+    padding: 20px; /* Añade padding para separar los elementos del borde */
+    text-align: left; 
+    color: white;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent), 
+                      url('https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero h1, .hero p {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
+    text-align: left; 
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: flex-end;
+    margin-left: 20px; /* Añade margen izquierdo para separar del borde */
+  }
+  .heroPa {
+    color: #f1eded;
+    margin-bottom: 4rem;
+    font-size: xx-large;
+    text-align: left; 
+    margin-left: 20px; 
+  }
+  
+  .cara {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
+    justify-content: space-around; /* Espacia los elementos uniformemente */
+    padding: 20px;
+     background-color:black; 
+  }
+  
 
-}
-
-.ctaButton {
-  background-color: #ff6347;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-
-
-
-
-.cta {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: black;
-  color: white;
-}
-
-
-.footer {
-  padding: 20px;
-  background-color: #222;
-  color: white;
-  text-align: center;
-}
-
-.footerLink {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+  
+  .ctaButton {
+    background-color: #ff6347;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  
+  
+  
+  
+  .cta {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  
+  .footer {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+  }
+  
+  .footerLink {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  } 

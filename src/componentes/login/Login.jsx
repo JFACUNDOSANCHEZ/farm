@@ -6,15 +6,7 @@ export default function Login() {
   return (
     <div className={styles.loginContainer}>
     <div className={styles.content}>
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <img className={styles.logo} src="https://seeklogo.com/images/L/laboratorio-della-farmacia-logo-72F5D5832A-seeklogo.com.gif" width={'50px'} alt="" />
-          </div>
-        <nav className={styles.nav}>
-          <a href="#features" className={styles.navLink}>Contacto</a>
-          <a href="#cta" className={styles.navLink}>Empieza Ahora</a>
-        </nav>
-      </header>
+  
 
       {/* Hero Section */}
       <section className={styles.hero}>

@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: #333; /* Color de fondo para el nav */
+  padding: 10px 20px;     /* Espaciado interno */
+}
+
+.customSelect {
+  padding: 5px;
+  margin-right: 20px; /* Espacio a la derecha del select */
+  border: none;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.customSelect:hover {
+  background-color: #555; /* Color de fondo al pasar el ratón */
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px; /* Espacio entre los enlaces */
+  font-size: 16px;
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.navLink:hover {
+  color: #ff5722; /* Color de texto al pasar el ratón */
+}
+
+.buttonstar {
+  background-color: #ff5722; /* Color de fondo del botón */
+  color: #fff;
+  padding: 10px 20px;  /* Tamaño del botón */
+  border: none;
+  border-radius: 50px; /* Hace que el botón tenga forma de óvalo */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.buttonstar:hover {
+  background-color: #e64a19; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento ligero al pasar el ratón */
+}

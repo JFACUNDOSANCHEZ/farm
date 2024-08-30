@@ -36,15 +36,7 @@
   color: #f1eded;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Centra verticalmente los elementos */
-  padding: 10px 20px; /* Ajusta el padding según sea necesario */
-  background-color: #333;
-  color: white;
-  height: 70px; 
-}
+
 .navLink {
   color: white;
   margin: 0 10px;
@@ -113,25 +105,22 @@
   border-radius: 30px;
 }
 
-/* Features Section */
-
-
 .content {
-  flex: 1; /* Ocupa todo el espacio disponible */
+  flex: 1; 
 }
 
 .loginSection {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 40px 20px;
   border-radius: 8px;
   text-align: center;
   width: 100%;
   height: 100%;
   max-width: 400px;
-  margin-top: 60px; /* Añade margen superior para no tapar el header */
+  margin-top: 60px;
 }
 
-/* Call to Action */
+
 .cta {
   padding: 50px 20px;
   text-align: center;
@@ -139,7 +128,7 @@
   color: white;
 }
 
-/* Footer */
+
 .footer {
   padding: 20px;
   background-color: #222;

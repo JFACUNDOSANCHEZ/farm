@@ -1,0 +1,37 @@
+.sliderContainer {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según el tamaño deseado */
+    margin: 0 auto; /* Centra el contenedor */
+    position: relative; /* Permite que el carrusel esté correctamente posicionado */
+    z-index: 1; /* Asegúrate de que el carrusel esté encima del video */
+}
+
+.feature {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    margin: 10px; /* Espacio entre características */
+
+    border-radius: 10px; /* Redondea las esquinas del contenedor */
+    padding: 10px; /* Espacio interno del contenedor */
+    color: #fff; /* Color del texto */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
+}
+
+.feature img {
+    width: 13rem; /* Ancho de la imagen dentro de cada característica */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+}
+
+.feature .text {
+    flex: 1; /* Ocupa el espacio restante */
+    font-size: 2.5rem; /* Tamaño de fuente del texto */
+    line-height: 1.4; /* Espaciado entre líneas del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-family: 'Roboto', sans-serif;
+}
+
+.t{
+    font-size: 1rem;
+}
