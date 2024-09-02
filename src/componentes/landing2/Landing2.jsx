@@ -30,7 +30,7 @@ export default function Landing2() {
           </video>
 <br /><br /><br /><br /><br /><br /><br /><br />
 
-          <Carousel></Carousel>
+          {/* <Carousel></Carousel> */}
         </div>
 
       </header>

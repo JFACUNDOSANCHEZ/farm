@@ -33,13 +33,7 @@ export default function Login() {
 
 
       {/* Call to Action */}
-      <section id="cta" className={styles.cta}>
-          {/* <h2>¿Listo para empezar?</h2> */}
-          <Link to={'/Login'}>
-          <br /><br /><br />
-          {/* <button className={styles.ctaButton}>Ingresa Ahora</button> */}
-          </Link>
-        </section>
+    
     </div>
     
    <Footer></Footer>
