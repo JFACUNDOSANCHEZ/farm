@@ -1,3 +1,4 @@
+/* General */
 .header {
   position: relative;
   width: 100%;
@@ -6,9 +7,9 @@
 
 .videoBackgroundContainer {
   position: relative;
-  width: 100%;      /* Ocupa todo el ancho del contenedor */
-  height: 43vh;     /* Un tercio de la altura del viewport */
-  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  width: 100%;    
+  height: 43vh;  /* Ajustable dependiendo del tamaño de la pantalla */
+  overflow: hidden; 
 }
 
 .videoBackground {
@@ -17,27 +18,29 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Hace que el video cubra el área del contenedor sin deformarse */
+  object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Se asegura de que el video esté detrás del contenido de navegación */
+  z-index: -1;
 }
 
-.videoBackgroundContainer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.445); /* Ajusta el valor para hacer el video más oscuro */
-  z-index: 1; /* Asegura que la capa esté encima del video */
-}.infoSection {
-  display: flex; /* Utiliza Flexbox para alinear los elementos en línea */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px; /* Espacio entre los elementos */
+.textH {
+  flex: 1; 
+  font-size: 2rem; 
+  line-height: 1.4; 
+  text-align: left; 
   font-family: 'Roboto', sans-serif;
-  padding: 20px; /* Añade un poco de espacio alrededor de la sección */
+  margin-left: 10rem;
+  /* Ajuste dinámico de margen para responsividad */
+}
+
+/* Ajustes de .infoSection */
+.infoSection {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  font-family: 'Roboto', sans-serif;
+  padding: 20px; 
 }
 
 .ctaButton {
@@ -49,10 +52,6 @@
   border-radius: 20px;
 }
 
-
-
-
-
 .cta {
   padding: 50px 20px;
   text-align: center;
@@ -61,50 +60,31 @@
 }
 
 .imageContainer {
-  flex-shrink: 0; /* Evita que la imagen se reduzca */
+  flex-shrink: 0; 
 }
 
 .imageContainer img {
-  max-width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  max-width: 150px; 
   height: auto;
 }
 
 .linksContainer {
   display: flex;
-  gap: 20px; /* Espacio entre los enlaces */
+  gap: 20px; 
 }
 
 .navLink {
   color: #333;
   text-decoration: none;
   font-size: 16px;
-  padding: 5px 10px; /* Añade padding para mayor área clicable */
+  padding: 5px 10px;
 }
 
 .navLink:hover {
-  color: #ff5722; /* Color de enlace al pasar el ratón */
+  color: #ff5722; 
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .infoSection {
-    flex-direction: column; /* Cambia la dirección de flexión a columna en pantallas pequeñas */
-    text-align: center; /* Centra el texto en pantallas pequeñas */
-  }
-
-  .imageContainer {
-    margin-bottom: 20px; /* Añade espacio debajo de la imagen */
-  }
-
-  .linksContainer {
-    flex-direction: column; /* Coloca los enlaces en columna en pantallas pequeñas */
-  }
-
-  .navLink {
-    padding: 10px 0; /* Añade espacio vertical entre los enlaces en pantallas pequeñas */
-  }
-}
-
+/* Características */
 .feature {
   display: flex;
   background-size: cover;
@@ -116,26 +96,25 @@
   color: rgb(0, 0, 0);
   margin: 10px;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature:hover {
-  transform: scale(1.05); /* Escala el elemento un poco */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
-  background-color: #b84d36; /* Cambia el color de fondo */
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: #b84d36; 
 }
 
 .feature img {
   width: 20%;
-  margin-right: 50px; /* Añade espacio entre la imagen y el texto */
-; /* Opcional: hace que la imagen sea circular */
+  margin-right: 50px; 
 }
 
 .text {
-  flex: 1; /* Permite que el texto ocupe el espacio restante */
+  flex: 1; 
 }
 
-/* Asigna imágenes de fondo específicas a cada característica */
+/* Fondo específico por características */
 .feature1 {
   background-image: url('https://images.pexels.com/photos/3825500/pexels-photo-3825500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
@@ -151,9 +130,67 @@
 .cara {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
-  justify-content: space-around; /* Espacia los elementos uniformemente */
+  flex-wrap: wrap; 
+  justify-content: space-around; 
   padding: 20px;
   background-color: rgb(255, 255, 255);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  .textH {
+    margin-left: 5rem; /* Reduce el margen en tablets */
+  }
+
+  .videoBackgroundContainer {
+    height: 50vh; /* Aumenta un poco la altura para tablets */
+  }
+
+  .feature {
+    width: 45%; /* Ajusta el ancho de las características */
+  }
+}
+
+@media (max-width: 768px) {
+  .textH {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente en tablets */
+    margin-left: 2rem; /* Menos margen en tablets más pequeñas */
+  }
+
+  .infoSection {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px; 
+  }
+
+  .linksContainer {
+    flex-direction: column; 
+  }
+
+  .navLink {
+    padding: 10px 0; 
+  }
+
+  .feature {
+    width: 100%; /* Cada característica ocupa toda la anchura en dispositivos móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .textH {
+    font-size: 1.2rem; /* Tamaño de fuente para móviles */
+    margin-left: 1rem; /* Aún menos margen */
+  }
+
+  .videoBackgroundContainer {
+    height: 60vh; /* Aumenta la altura del video en móviles */
+  }
+
+  .navLink {
+    font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+  }
 }

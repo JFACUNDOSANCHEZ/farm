@@ -28,9 +28,9 @@ export default function Landing2() {
             <source src={videoSrc} type="video/mp4" />
             Tu navegador no soporta la etiqueta de video.
           </video>
+<br /><br /><br /><br /><br /><br /><br /><br />
+
           <Carousel></Carousel>
-
-
         </div>
 
       </header>

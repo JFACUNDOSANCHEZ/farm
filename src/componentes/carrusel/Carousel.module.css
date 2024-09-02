@@ -13,7 +13,7 @@
 
     border-radius: 10px; /* Redondea las esquinas del contenedor */
     padding: 10px; /* Espacio interno del contenedor */
-    color: #fff; /* Color del texto */
+    color: #000000; /* Color del texto */
     box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
 }
 
@@ -26,10 +26,10 @@
 
 .feature .text {
     flex: 1; /* Ocupa el espacio restante */
-    font-size: 2.5rem; /* Tamaño de fuente del texto */
+    font-size: 1.5rem; /* Tamaño de fuente del texto */
     line-height: 1.4; /* Espaciado entre líneas del texto */
     text-align: left; /* Alinea el texto a la izquierda */
-    font-family: 'Roboto', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .t{
