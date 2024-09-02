@@ -56,7 +56,7 @@
 .cta {
   padding: 50px 20px;
   text-align: center;
-  background-color: rgb(228, 227, 227);
+  background-color: rgb(250, 245, 245);
   color: rgb(2, 2, 2);
 }
 
@@ -103,4 +103,57 @@
   .navLink {
     padding: 10px 0; /* Añade espacio vertical entre los enlaces en pantallas pequeñas */
   }
+}
+
+.feature {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4%;
+  width: 30%;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
+}
+
+.feature:hover {
+  transform: scale(1.05); /* Escala el elemento un poco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+  background-color: #b84d36; /* Cambia el color de fondo */
+}
+
+.feature img {
+  width: 20%;
+  margin-right: 50px; /* Añade espacio entre la imagen y el texto */
+; /* Opcional: hace que la imagen sea circular */
+}
+
+.text {
+  flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Asigna imágenes de fondo específicas a cada característica */
+.feature1 {
+  background-image: url('https://images.pexels.com/photos/3825500/pexels-photo-3825500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.feature2 {
+  background-image: url('https://images.pexels.com/photos/9574535/pexels-photo-9574535.jpeg?auto=compress&cs=tinysrgb&w=400');
+}
+
+.feature3 {
+  background-image: url('https://images.pexels.com/photos/7172774/pexels-photo-7172774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.cara {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
+  justify-content: space-around; /* Espacia los elementos uniformemente */
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

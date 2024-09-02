@@ -1,0 +1,9 @@
+.feature{
+    display: flex;
+
+    width: 30%;
+}
+
+.feature img {
+    width: 50%;
+}

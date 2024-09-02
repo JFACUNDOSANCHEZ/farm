@@ -115,7 +115,8 @@
     flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una fila */
     justify-content: space-around; /* Espacia los elementos uniformemente */
     padding: 20px;
-     background-color:black; 
+     background-color:black;
+     
   }
   
 

@@ -1,7 +1,7 @@
 .footer {
     padding: 30px; /* Aumenta el padding para darle más espacio */
-    background-color: #333; /* Color de fondo ligeramente más claro */
-    color: #f4f4f4; /* Color de texto más claro */
+    background-color: #f8f8f8; /* Color de fondo ligeramente más claro */
+    color: #000000; /* Color de texto más claro */
     text-align: center;
   }
   
@@ -11,7 +11,7 @@
   }
   
   .footerLink {
-    color: #f4f4f4; /* Color de los enlaces */
+    color: #070505; /* Color de los enlaces */
     margin: 0 15px; /* Espacio entre los enlaces */
     text-decoration: none;
     font-size: 1.2rem; /* Tamaño de fuente más grande */
@@ -28,7 +28,7 @@
   .socials a {
     font-size: 1.5rem; /* Tamaño de los iconos */
     margin: 0 10px; /* Espacio entre los iconos */
-    color: #f4f4f4;
+    color: #020202;
   }
   
   .socials a:hover {
