@@ -24,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad para hacerlo más oscuro */
+  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad para hacerlo más oscuro */
   z-index: 1; /* Asegura que la superposición esté encima del video */
 }
 .textA {
