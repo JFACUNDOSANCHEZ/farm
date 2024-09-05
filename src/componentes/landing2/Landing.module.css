@@ -1,15 +1,8 @@
-/* General */
-.header {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
 .videoBackgroundContainer {
   position: relative;
   width: 100%;    
   height: 43vh;  /* Ajustable dependiendo del tamaño de la pantalla */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .videoBackground {
@@ -23,6 +16,61 @@
   z-index: -1;
 }
 
+/* Superposición oscura sobre el video */
+.videoBackgroundContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad para hacerlo más oscuro */
+  z-index: 1; /* Asegura que la superposición esté encima del video */
+}
+.textA {
+  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+
+  /* Animación */
+  opacity: 0; /* Inicialmente invisible */
+  transform: translate(-50%, -50%) scale(0.95); /* Inicialmente un poco más pequeño */
+  animation: fadeIn 1.5s ease forwards; /* Animación que dura 1.5s */
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .textA {
+    font-size: 5vw;
+  }
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95); /* Empieza pequeño */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Llega al tamaño normal */
+  }
+}
+
+.highlight {
+  color: #ff6347; /* Color específico para 'Apolo Web' */
+  font-weight: bold; /* Puedes hacer que también esté en negrita si deseas */
+}
 .textH {
   flex: 1; 
   font-size: 2rem; 

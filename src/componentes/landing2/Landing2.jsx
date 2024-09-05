@@ -3,7 +3,7 @@ import styles from './Landing.module.css'; // Importa el CSS Module
 import { Link } from 'react-router-dom';
 import videoSrc from '../../assets/vdl.mp4'; // Asegúrate de que esta ruta sea correcta
 import Nav from '../nav/Nav';
-import Carousel from '../carrusel/Carrusel';
+import Footer from '../footer/Footer';
 import Card from '../card/Card';
 
 export default function Landing2() {
@@ -26,8 +26,12 @@ export default function Landing2() {
         <div className={styles.videoBackgroundContainer}>
           <video className={styles.videoBackground} autoPlay loop muted>
             <source src={videoSrc} type="video/mp4" />
-            Tu navegador no soporta la etiqueta de video.
+
           </video>
+         
+          <h3 className={styles.textA}>
+  Optimiza tu investigación con <span className={styles.highlight}>Apolo Web</span>
+</h3>
 <br /><br /><br /><br /><br /><br /><br /><br />
 
           {/* <Carousel></Carousel> */}
@@ -62,7 +66,7 @@ export default function Landing2() {
         </Link>
       </section>
 
-
+<Footer></Footer>
     </div>
   );
 }

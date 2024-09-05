@@ -36,7 +36,7 @@ export default function Login() {
     
     </div>
     
-   <Footer></Footer>
+  
   </div>
   );
 }
