@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import videoSrc from '../../assets/vdl.mp4'; // Asegúrate de que esta ruta sea correcta
 import Nav from '../nav/Nav';
 import Footer from '../footer/Footer';
-import Card from '../card/Card';
+
 
 export default function Landing2() {
   return (

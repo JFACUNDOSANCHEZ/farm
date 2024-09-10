@@ -1,0 +1,66 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+
+  .profile {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .profile span {
+    margin-right: 10px;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .logout:hover {
+    color: #0056b3;
+  }
+  
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Mantiene los elementos alineados a la izquierda */
+    justify-content: flex-start; /* Alinea los elementos desde la parte superior */
+    height: 100vh; /* Ocupar toda la altura de la pantalla */
+    width: 15%; /* Ocupar el 15% del ancho de la pantalla */
+    padding-left: 20px;
+    background-color: #525252; /* El color de fondo que mencionaste */
+    padding-top: 50px; /* Añade algo de espacio superior */
+    border: 1px solid white;  
+  }
+  
+  .menuList {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Para que los elementos de la lista usen todo el ancho del contenedor */
+}
+  
+  .menuItem {
+    margin: 10px 0; /* Espacio entre cada opción */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+  }
+  
+  .menuItem a {
+    text-decoration: none;
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 15px; /* Espacio interno para las opciones del menú */
+    display: block; /* Hace que cada enlace ocupe todo el ancho disponible */
+    width: 70%; /* Asegura que el enlace sea del 100% del ancho del contenedor */
+    background-color: transparent; /* Elimina el fondo de las opciones */
+    border-radius: 5px; /* Bordes redondeados para las opciones */
+  }
+  
+  .menuItem a:hover {
+    background-color: #888888a7; /* Color de fondo al pasar el cursor */
+  }
+  

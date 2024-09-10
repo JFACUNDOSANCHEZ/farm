@@ -9,7 +9,7 @@ export default function Login() {
     <div className={styles.content}>
   <Nav></Nav>
 
-      {/* Hero Section */}
+      
       <section className={styles.hero}>
       
       <section className={styles.loginSection}>
