@@ -7,7 +7,6 @@
   background-color: #007bff;
   padding: 0.6rem;
   color: white;
-
 }
 
 /* Logo a la izquierda */
@@ -79,4 +78,27 @@
 .dropdownName {
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Ocultar enlaces por defecto */
+    flex-direction: column; /* Apilar verticalmente */
+    position: absolute;
+    background-color: #007bff; /* Fondo del menú */
+    top: 60px; /* Debajo de la barra de navegación */
+    right: 0; /* Alinear a la derecha */
+    width: 100%; /* Ancho completo */
+    z-index: 99; /* Asegurar que esté por encima de otros elementos */
+  }
+
+  .navLinks.active {
+    display: flex; /* Mostrar los enlaces si el menú está activo */
+  }
+
+  .menuToggle {
+    display: block; /* Mostrar botón de menú */
+    cursor: pointer; /* Cambiar el cursor */
+  }
 }

@@ -2,26 +2,26 @@
   width: 200px;
   background-color: #0077b6; 
   color: white;
-  height: 100vh;
-  padding-top: 20px;
+  height: 100vh; /* Altura completa de la ventana */
+  padding-top: 20px; /* Espacio superior */
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Eliminar estilo de lista */
+  padding: 0; /* Eliminar padding */
 }
 
 li {
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  padding: 10px 20px; /* Espacio interno de los elementos de lista */
+  display: flex; /* Usar flexbox para alinear los iconos */
+  align-items: center; /* Centrar verticalmente el contenido */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
 }
 
 li:hover {
-  background-color: #005f86; 
+  background-color: #005f86; /* Color de fondo al pasar el ratón */
 }
 
 li svg {
-  margin-right: 10px;
+  margin-right: 10px; /* Espacio a la derecha del icono */
 }
