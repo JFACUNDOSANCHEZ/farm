@@ -8,9 +8,10 @@
   font-family: Arial, sans-serif;
 }
 
-.h{
+.h {
   text-align: center;
 }
+
 .logoContainer {
   text-align: center;
   margin-bottom: 20px;
@@ -107,4 +108,46 @@ h2 {
   font-size: 0.8rem;
   color: #999;
   margin-top: 20px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .loginBox {
+    padding: 1.5rem; /* Reduce padding en pantallas más pequeñas */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduce el tamaño del título */
+  }
+
+  h2 {
+    font-size: 1rem; /* Reduce el tamaño del subtítulo */
+  }
+
+  .inputField {
+    padding: 0.5rem; /* Reduce el padding del input */
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+  }
+
+  .submitButton {
+    font-size: 0.9rem; /* Reduce el tamaño del botón */
+  }
+
+  .footer {
+    font-size: 0.7rem; /* Reduce el tamaño del footer */
+  }
+}
+
+@media (max-width: 480px) {
+  .loginBox {
+    width: 90%; /* Hacer la caja de login más ancha en pantallas pequeñas */
+  }
+
+  h1 {
+    font-size: 1.3rem; /* Reduce aún más el tamaño del título */
+  }
+
+  .inputField {
+    padding: 0.4rem; /* Ajusta el padding en pantallas muy pequeñas */
+  }
 }
