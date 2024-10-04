@@ -1,6 +1,5 @@
 import React from 'react'
-
-import SearchBar from '../searchbar/Searchbar';
+import SearchBar from '../searchbar/SearchbBar';
 import Nav from '../nav/Nav';
 
 export default function Principal() {
