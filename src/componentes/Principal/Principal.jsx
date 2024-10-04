@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuPage from '../menu/Menu';
+
 import SearchBar from '../searchbar/Searchbar';
 import Nav from '../nav/Nav';
 
