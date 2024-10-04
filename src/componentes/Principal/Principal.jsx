@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SearchBar from '../searchar/SearchBar';
+import Searchbar from '../searchbar/Searchbar';
 import Nav from '../nav/Nav';
 
 export default function Principal() {
@@ -8,7 +8,7 @@ export default function Principal() {
     
          <div >
             <Nav></Nav>
-        <SearchBar />
+        <Searchbar />
     
       <div >
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SearchBar.module.css'; 
 
-function SearchBar() {
+function Searchbar() {
   return (
     <div className={styles.searchContainer}>
       <input type="text" placeholder="Buscar" className={styles.searchInput} />
@@ -11,5 +11,5 @@ function SearchBar() {
   );
 }
 
-export default SearchBar;
+export default Searchbar;
 
