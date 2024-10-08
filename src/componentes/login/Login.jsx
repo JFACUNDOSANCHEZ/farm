@@ -1,13 +1,33 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../redux/slices/AuthSlice';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica para manejar el login
+    
+    const credentials = {
+      usuario: username,
+      password: password,
+      modulo: 'ApWeb',
+    };
+
+    try {
+      const resultAction = await dispatch(loginUser(credentials)).unwrap();
+      console.log('Login exitoso:', resultAction);
+      navigate('/menu'); // Redirigir al menú después del login exitoso
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+    }
   };
 
   return (
@@ -48,9 +68,7 @@ const Login = () => {
             </div>
             <a href="#">¿Olvidó su contraseña?</a>
           </div>
-          <Link to={'/menu'}>
           <button type="submit" className={styles.submitButton}>Ingresar</button>
-          </Link>
         </form>
       </div>
       <p className={styles.footer}>&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
