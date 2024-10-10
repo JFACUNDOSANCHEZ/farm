@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://nube02.sytes.net:24082', // URL para el entorno local
+        target: 'https://nube02.sytes.net:24082', 
         changeOrigin: true,
         secure: false,
       },

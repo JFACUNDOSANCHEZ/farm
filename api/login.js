@@ -1,14 +1,12 @@
 // api/login.js
-import axios from 'axios';
+import axiosInstance from './axiosConfig';
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
-            // Cambia la URL a tu servidor backend
-            const response = await axios.post('http://nube02.sytes.net:24082/api/Login', req.body);
+            const response = await axiosInstance.post('/api/Login', req.body); // Usa axiosInstance
             res.status(200).json(response.data);
         } catch (error) {
-            // Manejar errores
             res.status(error.response?.status || 500).json({ error: error.message });
         }
     } else {
