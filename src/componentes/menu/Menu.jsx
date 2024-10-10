@@ -36,7 +36,7 @@ function MenuPage() {
                 <ul>
                     {menuItems.map((item, index) => (
                         <li key={index}>
-                            <FontAwesomeIcon icon={faSmile} /> {item.descripcion}
+                            <FontAwesomeIcon  /> {item.descripcion}
                         </li>
                     ))}
                 </ul>

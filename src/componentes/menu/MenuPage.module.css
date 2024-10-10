@@ -26,11 +26,15 @@
 }
 
 .menuContainer {
-    max-height: 300px;
+    max-height: 100%;
     overflow-y: auto;
     padding: 10px;
     border: 1px solid #ddd;
     background-color: #fff;
+}
+.menuContainer li{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.5rem;
 }
 
 .toggleButton {
