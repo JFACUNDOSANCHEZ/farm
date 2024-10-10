@@ -1,16 +1,15 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axiosInstance from '../../axiosConfig'; // Asegúrate de importar la configuración de Axios
 
 export const loginUser = createAsyncThunk('auth/loginUser', async (credentials) => {
-  const response = await axios.post('/api/Login', credentials);
+  const response = await axiosInstance.post('/api/Login', credentials); // Usa la instancia de Axios
 
   // Guardar el token en localStorage
   localStorage.setItem('token', response.data.token);
   
   return response.data; // Debería devolver el token
 });
-
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
