@@ -16,10 +16,11 @@ const Login = () => {
     e.preventDefault();
     
     const credentials = {
-      usuario: username,
-      password: password,
-      modulo: 'ApWeb',
+      Usuario: username,
+      Password: password,
+      Modulo: 'ApWeb',
     };
+console.log(credentials);
 
     try {
       const resultAction = await dispatch(loginUser(credentials)).unwrap();

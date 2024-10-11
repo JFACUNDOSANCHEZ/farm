@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL, // Esto debe ser tu URL HTTPS
+  baseURL: "http://nube02.sytes.net:24082", // Esto debe ser tu URL HTTPS
   headers: {
     'Content-Type': 'application/json',
   },
