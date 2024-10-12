@@ -22,13 +22,20 @@ const Login = () => {
     };
 console.log(credentials);
 
-    try {
-      const resultAction = await dispatch(loginUser(credentials)).unwrap();
-      console.log('Login exitoso:', resultAction);
-      navigate('/menu'); // Redirigir al menú después del login exitoso
-    } catch (error) {
-      console.error('Error al iniciar sesión:', error);
-    }
+try {
+  const resultAction = await dispatch(loginUser(credentials)).unwrap();
+  console.log('Login exitoso:', resultAction);
+  navigate('/menu'); // Redirigir al menú después del login exitoso
+} catch (error) {
+  if (error.response) {
+    console.error('Error en la respuesta:', error.response.data);
+  } else if (error.request) {
+    console.error('Error en la solicitud:', error.request);
+  } else {
+    console.error('Error desconocido:', error.message);
+  }
+}
+
   };
 
   return (
