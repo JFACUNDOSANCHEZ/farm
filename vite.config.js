@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://nube02.sytes.net:24082', // Asegúrate de usar http
+        target: 'http://nube02.sytes.net:24082', // Asegúrate de usar http
         changeOrigin: true,
         secure: false, // Puede estar en true si tu servidor tiene un certificado SSL válido
       },

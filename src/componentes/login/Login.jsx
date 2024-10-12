@@ -4,6 +4,7 @@ import { loginUser } from '../../redux/slices/authSlice';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const Login = () => {
 
   const dispatch = useDispatch();
@@ -23,7 +24,8 @@ const Login = () => {
 console.log(credentials);
 
 try {
-  const resultAction = await dispatch(loginUser(credentials)).unwrap();
+  const resultAction = await axios.post('https://nube02.sytes.net:24082/api/Login', credentials);
+  // console.log(response);
   console.log('Login exitoso:', resultAction);
   navigate('/menu'); // Redirigir al menú después del login exitoso
 } catch (error) {
