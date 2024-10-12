@@ -30,8 +30,8 @@ function MenuPage() {
 
     return (
         <div>
-          <div className={`${styles.sidebar} ${isActive ? styles.active : styles.hidden}`}>
-            <h3 className={styles.menuTitle}>Menu</h3>
+          <div className={styles.sidebar}>
+            <h3 className={styles.menuTitle}>LOGO</h3>
             <div className={styles.menuContainer}>
                 <ul>
                     {menuItems.map((item, index) => (
@@ -44,9 +44,7 @@ function MenuPage() {
             </div>
           </div>
 
-          <button className={styles.toggleButton} onClick={toggleMenu}>
-              <FontAwesomeIcon icon={isActive ? faArrowLeft : faArrowRight} /> {/* Flecha que cambia según el estado */}
-          </button>
+         
         </div>
     );
 }

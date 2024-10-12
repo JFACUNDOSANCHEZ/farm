@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Nav.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTools, faQuestionCircle, faHeadset, faUserShield, faLanguage, faInfoCircle, faCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-
+import SearchBar from '../searchbar/SearchbBar.jsx'
 
 const Nav = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -13,9 +13,8 @@ const Nav = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <img src="https://e7.pngegg.com/pngimages/567/329/png-clipart-symbol-logo-science-models-of-scientific-inquiry-korean-good-luck-emblem-logo-typeface.png" alt="Cinco Hispanos" />
-      </div>
+ 
+      <br />
       <ul className={styles.navLinks}>
       <li>
           <FontAwesomeIcon icon={faTools} /> Herramientas
@@ -29,10 +28,16 @@ const Nav = () => {
         <li>
           <FontAwesomeIcon icon={faHeadset} /> Soporte
         </li>
+        <li>
+          
+
+          
+        </li>
       </ul>
       <div className={styles.profileSection}>
         <div className={styles.profile} onClick={toggleDropdown}>
-          <span className={styles.profileName}>Usuario</span>
+            <SearchBar></SearchBar>
+          {/* <span className={styles.profileName}>Usuario</span> */}
           <div className={styles.profileIcon}>US</div>
         </div>
         {showDropdown && (

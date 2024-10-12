@@ -4,9 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
+  background-color: #ffffff;
   padding: 0.6rem;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Logo a la izquierda */
@@ -20,11 +20,13 @@
   display: flex;
   list-style: none;
   gap: 1.5rem;
+
+  padding: 1rem;
 }
 
 .navLinks li {
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* Sección de perfil a la derecha */
@@ -44,10 +46,11 @@
 
 .profileIcon {
   background-color: #28a745;
-  color: white;
+  color: rgb(27, 24, 24);
   padding: 0.5rem;
   border-radius: 50%;
   font-weight: bold;
+  margin: 10%;
 }
 
 /* Dropdown menu */
