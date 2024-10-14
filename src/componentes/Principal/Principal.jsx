@@ -3,20 +3,22 @@ import SearchBar from '../searchbar/SearchbBar';
 import Nav from '../nav/Nav';
 import Filtros from '../filtros/Filtros';
 import Menu from '../menu/Menu'
-import principal from './principal.module.css'
+
+import styles from './principal.module.css';
+
 export default function Principal() {
   return (
-    
-         <div >
-            <Nav></Nav>
-     <div className={principal.container} >
+    <div className={styles.container}>
+      {/* Menú a la izquierda */}
+      <div className={styles.menu}>
+        <Menu />
+      </div>
 
-         <Menu></Menu> 
-     </div>
-      <div className={principal.filtros} >
-    <Filtros></Filtros>
+      {/* Contenido principal con los filtros */}
+      <div className={styles.mainContent}>
+        <Nav />
+        <Filtros />
       </div>
     </div>
-    
-  )
+  );
 }

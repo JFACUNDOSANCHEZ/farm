@@ -4,14 +4,15 @@ import styles from './SearchBar.module.css';
 function SearchBar() {
   return (
     <div className={styles.searchContainer}>
-      <button className={styles.searchButton}>🔍</button>
-      <input type="text" placeholder="Buscar" className={styles.searchInput} 
-      
+      <input 
+        type="text" 
+        placeholder="Buscar" 
+        className={styles.searchInput} 
       />
+      <label className={styles.searchButton}>🔍</label>
       {/* <button className={styles.newButton}>Nuevo prospecto</button>  */}
     </div>
   );
 }
 
 export default SearchBar;
-

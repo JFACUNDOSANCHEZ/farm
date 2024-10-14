@@ -1,9 +1,37 @@
-.menu{
-width: 30%;
-
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
-.filtros{
-    margin-left: 50%;
-    align-items: center;
-    justify-content: center;
+
+.menu {
+  width: 250px;
+  background-color: #f4f4f4;
+  transition: transform 0.3s ease; /* Transición suave para el menú */
+}
+
+.hidden {
+  transform: translateX(-100%); /* Ocultar el menú fuera de la vista */
+}
+
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .menu {
+      width: 200px; /* Puedes ajustar el ancho en pantallas pequeñas */
+      position: absolute; /* Permitir que se superponga */
+      top: 0;
+      left: 0;
+      z-index: 1; /* Asegura que el menú esté por encima del contenido */
+  }
+  .mainContent {
+      padding: 10px;
+  }
 }

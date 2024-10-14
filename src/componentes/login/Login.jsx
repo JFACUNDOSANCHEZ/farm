@@ -24,10 +24,9 @@ const Login = () => {
 console.log(credentials);
 
 try {
-  const resultAction = await axios.post('https://nube02.sytes.net:24082/api/Login', credentials);
-  // console.log(response);
+  const resultAction = await dispatch(loginUser(credentials)).unwrap();
   console.log('Login exitoso:', resultAction);
-  navigate('/menu'); // Redirigir al menú después del login exitoso
+  navigate('/menu'); // Redirigir al menú después del login exitoso// Redirigir al menú después del login exitoso
 } catch (error) {
   if (error.response) {
     console.error('Error en la respuesta:', error.response.data);
@@ -47,7 +46,7 @@ try {
         <h1>Apolo web</h1>
       </div>
       <div className={styles.loginBox}>
-        <h3 className={styles.h}>Inicie sesión con su cuenta</h3>
+        <h3 className={styles.h}>Inicie sesión </h3>
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="username">Usuario</label>

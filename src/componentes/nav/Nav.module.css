@@ -1,107 +1,77 @@
-/* Estilos principales para el navbar */
+/* Nav.module.css */
 .navbar {
-  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 0.6rem;
-  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: #fff;
 }
 
-/* Logo a la izquierda */
-.logo img {
-  width: 50px;
-  border-radius: 50%;
+p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Estilos de los enlaces del nav */
-.navLinks {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-
-  padding: 1rem;
+.navButton{
+  margin-left: 10rem;
+    background-color: rgb(67, 141, 239)  ;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    width: 3rem;
+height: 2rem;
+justify-content: center;
+align-items: center;
+  
 }
 
-.navLinks li {
-  cursor: pointer;
-  color: rgb(0, 0, 0);
+.DivsearchBar {
+   cursor: pointer;
+  background-color: transparent;
+  margin-left: 10px;
+  border: rgb(130, 177, 238);
+margin-top: 1rem;
+border: none;
 }
 
-/* Sección de perfil a la derecha */
+
+
 .profileSection {
-  position: relative;
-}
-
-.profile {
   display: flex;
   align-items: center;
-  cursor: pointer;
-}
 
-.profileName {
-  margin-right: 0.5rem;
+  margin-left: auto; /* Esto mueve el contenido del perfil a la derecha */
+  
 }
 
 .profileIcon {
-  background-color: #28a745;
-  color: rgb(27, 24, 24);
-  padding: 0.5rem;
+  background-color: #ccc;
   border-radius: 50%;
-  font-weight: bold;
-  margin: 10%;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-/* Dropdown menu */
 .dropdownMenu {
   position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: rgb(243, 247, 235);
-  color: black;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 200px;
-  z-index: 100;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.dropdownMenu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.dropdownMenu li {
-  padding: 0.5rem 0;
-  cursor: pointer;
-}
 
-.dropdownName {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-  .navLinks {
-    display: none; /* Ocultar enlaces por defecto */
-    flex-direction: column; /* Apilar verticalmente */
-    position: absolute;
-    background-color: #007bff; /* Fondo del menú */
-    top: 60px; /* Debajo de la barra de navegación */
-    right: 0; /* Alinear a la derecha */
-    width: 100%; /* Ancho completo */
-    z-index: 99; /* Asegurar que esté por encima de otros elementos */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .navLinks.active {
-    display: flex; /* Mostrar los enlaces si el menú está activo */
-  }
-
-  .menuToggle {
-    display: block; /* Mostrar botón de menú */
-    cursor: pointer; /* Cambiar el cursor */
+  .profileSection {
+    margin-top: 10px;
   }
 }

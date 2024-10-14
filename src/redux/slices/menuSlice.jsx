@@ -8,7 +8,7 @@ export const fetchMenuItems = createAsyncThunk('menu/fetchMenuItems', async (_, 
   const token = localStorage.getItem('token');
 console.log(token);
 
-const response = await axios.get('/api/Menu/Completos', {
+const response = await axios.get('https://nube02.sytes.net:24082/api/Menu/completos', {
   headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json',
