@@ -26,9 +26,9 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
+   
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   }
   
   h2 {
@@ -75,8 +75,8 @@
   }
   
   .submitButton {
-    background-color: #ffca28;
-    color: #fff;
+    background-color: #8c8c8c;
+    color: #f8f8f8;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -86,6 +86,6 @@
   }
   
   .submitButton:hover {
-    background-color: #ffb300;
+    background-color: #3e3a30;
   }
   

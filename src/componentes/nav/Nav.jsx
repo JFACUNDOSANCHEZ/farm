@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css';
-import { FaHome, FaSearch } from 'react-icons/fa';
-
+import { FaHome, FaSearch, FaChevronDown } from 'react-icons/fa';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Logout from './logout';
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Referencia para el menú
-
+  const menuRef = useRef(null); // 
+  const navigate = useNavigate();
+  const location = useLocation();
+  
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   };
@@ -23,11 +26,19 @@ const NavBar = () => {
     };
   }, []);
 
+
+  const currentPath = 
+  location.pathname === '/provincias' ? 'Provincias' : 
+  location.pathname === '/ensayos' ? 'Ensayos' : 
+  ''; // Ruta predeterminada
+
+
+
   return (
     <nav className={styles.navbar}>
       {/* Breadcrumbs */}
       <div className={styles.breadcrumbs}>
-        <span><FaHome className="icon" /> Inicio</span> / <span>Gestión</span> / <span>Proveedores</span>
+        <span onClick={() => navigate('/menu')}><FaHome className="icon" /> Inicio</span> / <span>{currentPath}</span>
       </div>
 
       {/* Botones de Acciones */}
@@ -47,11 +58,12 @@ const NavBar = () => {
 
       {/* Opciones de Usuario */}
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
-        <span>GL</span>
-        <i className="fas fa-caret-down"></i>
+        <span>US</span>
+        <FaChevronDown className="icon" />
         {isMenuOpen && (
           <div className={styles.dropdown}>
-            <button className={styles.dropdownItem}>Cerrar sesión</button>
+             
+            <button onClick={() => <Logout />} className={styles.dropdownItem}>Cerrar sesión</button>
             <button className={styles.dropdownItem}>Configuración</button>
           </div>
         )}

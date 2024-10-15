@@ -16,6 +16,13 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.breadcrumbs span {
+  cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+.breadcrumbs span:hover {
+  text-decoration: underline; /* Opción adicional para indicar que es interactivo */
+}
 .actions {
   display: flex;
   align-items: start;
@@ -68,7 +75,7 @@
   align-items: center;
   background-color: #cc4646;
   color: white;
-  padding: 8px 12px;
+  padding: 8px 8px;
   border-radius: 4px;
   cursor: pointer;
 }

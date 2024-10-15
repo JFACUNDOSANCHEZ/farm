@@ -4,66 +4,78 @@
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    width: 95%;
+    width: 75%;
    
 border-color: solid blue;
   }
-  
   .SelectContainer {
-    background-color: rgba(216, 216, 216, 0.557);
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se reorganicen en pantallas más pequeñas */
     align-items: center;
-    margin-top: 10px;
+    justify-content: flex-start; /* Alinear los elementos hacia la izquierda */
+    background-color: rgba(216, 216, 216, 0.557);
     padding: 20px;
-    
-  
-  }
-  
-  .inputA {
-    width: 30%;
-    height: 1.5rem;
-  }
+    gap: 5px; /* Reducir el espaciado entre elementos */
+}
 
-  select {
+/* Estilo para los select */
+select {
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
-   margin-right: 1rem;
-   margin-bottom: 1rem;
     color: #2e4264;
-  }
- 
+    margin-right: 0; /* Eliminar el margen derecho */
+    margin-bottom: 0; /* Eliminar el margen inferior */
+    width: auto; /* Dejar que el select se ajuste a su contenido */
+}
+.inputA {
+  width: 200px; /* Ajustar el tamaño del input */
+  height: 1.5rem;
+  padding: 8px; /* Añadir algo de padding */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 5px; /* Espacio a la izquierda reducido para acercarse al select */
+}
   
-  .buttonsContainer {
-    display:inline;
-    justify-content: space-between;
-    margin-top: 10px;
-    gap: 6px;
-    background-color: #f3f3f3;
-  
-  }
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-start; /* Alinear los botones hacia la izquierda */
+  gap: 8px; /* Reducir el espacio entre los botones */
+  margin-top: 10px;
+  flex-wrap: wrap; /* Permitir que se ajusten en pantallas pequeñas */
+}
   
   .buttonsContainer button {
     margin-top: 1px;
-    flex-grow: 1;
     margin: 0 5px;
-    padding: 10px;
-    border-radius: 7%;
+    padding: 8px 12px; /* Reducir el tamaño del botón */
+    border-radius: 5px; /* Ajustar el radio del borde */
     border: solid 1px grey;
-    /* background-color: #33689d00; */
-    color: rgb(0, 0, 0);
-  }
+    background-color: #f9f9f9; /* Color de fondo neutro */
+    color: #333; /* Color del texto */
+    font-size: 12px; /* Hacer la fuente más pequeña */
+    font-family: 'Arial', sans-serif; /* Cambiar la tipografía */
+    cursor: pointer; /* Añadir el cursor de puntero */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto de transición */
+}
   
-  .buttonBuscar{
-    background-color: rgb(226, 185, 103);
+.buttonsContainer button:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Botón "Buscar" con un color especial */
+.buttonBuscar {
+  background-color: rgb(226, 185, 103);
   border: none;
-  }
-  .buttonBuscar :hover{
-    background-color: rgb(1, 1, 1);
- color: white;
-  }
+}
+.buttonBuscar:hover {
+  background-color: rgb(1, 1, 1);
+  color: white;
+}
 
   @media (max-width: 768px) {
     .SelectContainer {

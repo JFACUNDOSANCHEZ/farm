@@ -12,9 +12,9 @@
   
   .menuContainer {
     height: 100%;
-    max-height: calc(100vh - 50px); /* Resta la altura del nav si es necesario */
+     /* Resta la altura del nav si es necesario */
     overflow-y: auto; /* Permite desplazamiento si es necesario */
-    padding: 10px;
+    padding: 5px;
     background-color: #364c75; 
   }
   
@@ -29,7 +29,7 @@
 .menuTitle {
     text-align: center;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 20px 0;
 }
 
@@ -48,14 +48,14 @@
     transition: background-color 0.3s ease; /* Transición suave para el hover */
     cursor: pointer; /* Cambia el puntero al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados para los ítems */
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Efecto hover */
 .menuContainer li:hover {
      /* Cambia el color de fondo al pasar el mouse */
     color: rgb(226, 185, 103); /* Cambia el color del texto al pasar el mouse */
-
+background-color: #f5f5f50c;
 }
 .logo {
     width: 90%; /* Ocupa el 100% del ancho del contenedor padre */

@@ -26,8 +26,8 @@ const Provincias = () => {
             <div className={styles.mainContent}>
                 <NavBar />
                 <Filtros></Filtros>
-                <h1>Provincias</h1>
                 {status === 'loading' && <div>Cargando...</div>}
+                <h1>Provincias</h1>
                 {status === 'succeeded' && (
                     <div className={styles.cardContainer}>
                         {provincias.map((provincia) => (

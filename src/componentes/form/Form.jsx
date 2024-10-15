@@ -2,7 +2,13 @@ import React from 'react';
 import styles from './Formulario.module.css'; // Importa los estilos CSS Modules
 import Nav from '../nav/Nav.jsx'
 import MenuPage from '../menu/Menu.jsx';
+import { useNavigate, useLocation } from 'react-router-dom';
 const Formulario = () => {
+
+ 
+
+
+
   return (
     <div className={styles.container}>
     <div className={styles.menu}>
