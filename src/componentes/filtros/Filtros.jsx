@@ -23,14 +23,15 @@ export default function Filtros() {
 
 
         <input type="text" className={filtros.inputA} />
-      </div>
-
+      <br />
       <div className={filtros.buttonsContainer}>
         <button>Regla</button>
         <button>Regla global</button>
         <button>Grupo</button>
         <button className={filtros.buttonBuscar}>Buscar</button>
       </div>
+      </div>
+
     </div>
   );
 }

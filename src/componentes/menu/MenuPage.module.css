@@ -23,7 +23,7 @@
 .menuTitle {
     text-align: center;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 20px 0;
 }
 
@@ -49,11 +49,23 @@
     transition: background-color 0.3s ease; /* Transición suave para el hover */
     cursor: pointer; /* Cambia el puntero al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados para los ítems */
+    font-size: 0.9rem;
 }
 
 /* Efecto hover */
 .menuContainer li:hover {
-    background-color: #4d729ad9; /* Cambia el color de fondo al pasar el mouse */
+     /* Cambia el color de fondo al pasar el mouse */
     color: rgb(226, 185, 103); /* Cambia el color del texto al pasar el mouse */
 
+}
+.logo {
+    width: 90%; /* Ocupa el 100% del ancho del contenedor padre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Añade un poco de espacio arriba y abajo si lo necesitas */
+}
+
+.logo img {
+    width: 10rem; /* Tamaño de la imagen */
 }

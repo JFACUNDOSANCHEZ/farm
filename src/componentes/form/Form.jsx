@@ -1,32 +1,73 @@
 import React from 'react';
-import styles from './Formulario.module.css';
-
+import styles from './Formulario.module.css'; // Importa los estilos CSS Modules
+import Nav from '../nav/Nav.jsx'
 const Formulario = () => {
-    return (
-        <form className={styles.form}>
-            <div className={styles.column}>
-                <label htmlFor="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required />
+  return (
+    <div>
+<Nav></Nav>
+    <div className={styles.formContainer}>
+      <h2>Nuevo elemento - Proveedor</h2>
+      <form>
+        <div className={styles.formGroup}>
+          <label>Nombre</label>
+          <input type="text" name="nombre" />
+        </div>
 
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+        <div className={styles.formGroup}>
+          <label>Tipo de tercero</label>
+          <select name="tipoTercero">
+            <option>----</option>
+          </select>
+        </div>
 
-                <label htmlFor="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" />
-            </div>
-            <div className={styles.column}>
-                <label htmlFor="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" />
+        <div className={styles.formGroup}>
+          <label>Número Administrativo</label>
+          <input type="text" name="numeroAdministrativo" />
+        </div>
 
-                <label htmlFor="ciudad">Ciudad:</label>
-                <input type="text" id="ciudad" name="ciudad" />
+        <div className={styles.formGroup}>
+          <label>Teléfono</label>
+          <input type="text" name="telefono" />
+        </div>
 
-                <label htmlFor="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    );
+        <div className={styles.formGroup}>
+          <label>Correo Electrónico</label>
+          <input type="email" name="email" />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Ciudad</label>
+          <input type="text" name="ciudad" />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Estado</label>
+          <input type="text" name="estado" />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Comentarios</label>
+          <textarea name="comentarios" />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Imágenes</label>
+          <input type="file" />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Activo</label>
+          <select name="activo">
+            <option>Sí</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <button type="submit" className={styles.submitButton}>Añadir</button>
+      </form>
+    </div>
+    </div>
+  );
 };
 
 export default Formulario;

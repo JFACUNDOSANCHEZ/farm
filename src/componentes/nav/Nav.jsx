@@ -1,50 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLanguage, faQuestionCircle, faInfoCircle, faCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import SearchBar from '../searchbar/SearchbBar.jsx';
+import { FaHome, FaSearch } from 'react-icons/fa';
 
-const Nav = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null); // Referencia para el menú
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className={styles.navbar}>
-      <p>Inicio /</p>
-       
-      <div className={styles.profileSection}>
-       <div className={styles.DivsearchBar}>
-
-        <SearchBar className={styles.searchBar} />
-       </div>
-      <div className={styles.profileSection}>
+      {/* Breadcrumbs */}
+      <div className={styles.breadcrumbs}>
+        <span><FaHome className="icon" /> Inicio</span> / <span>Gestión</span> / <span>Proveedores</span>
       </div>
-        <div className={styles.profileIcon} onClick={toggleDropdown}>
-          US
-        </div>
-        {showDropdown && (
-          <div className={styles.dropdownMenu}>
-            <p>Usuario</p>
-            <ul>
-              <li>
-                <FontAwesomeIcon icon={faLanguage} /> Español (México)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faQuestionCircle} /> Ayuda
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faInfoCircle} /> Acerca de
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faCog} /> Preferencias
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faSignOutAlt} /> Cerrar Sesión
-              </li>
-            </ul>
+
+      {/* Botones de Acciones */}
+      <div className={styles.actions}>
+        <button className={styles.actionButton}>+</button>
+        <button className={styles.actionButton}><FaHome className="icon" /></button>
+        <button className={styles.actionButton}><FaSearch className="icon" /></button>
+      </div>
+
+      {/* Searchbar */}
+      <div className={styles.searchContainer}>
+        <input type="text" placeholder="Buscar..." className={styles.searchbar} />
+        <button className={styles.actionButton}>
+          <FaSearch className="icon" />
+        </button>
+      </div>
+
+      {/* Opciones de Usuario */}
+      <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
+        <span>GL</span>
+        <i className="fas fa-caret-down"></i>
+        {isMenuOpen && (
+          <div className={styles.dropdown}>
+            <button className={styles.dropdownItem}>Cerrar sesión</button>
+            <button className={styles.dropdownItem}>Configuración</button>
           </div>
         )}
       </div>
@@ -52,4 +60,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavBar;

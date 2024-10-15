@@ -4,15 +4,17 @@
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    background-color: rgba(216, 216, 216, 0.557);
-
+    width: 95%;
+   
+border-color: solid blue;
   }
   
   .SelectContainer {
- 
+    background-color: rgba(216, 216, 216, 0.557);
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 20px;
     
   
   }
@@ -28,6 +30,7 @@
     border-radius: 4px;
     background-color: #f9f9f9;
    margin-right: 1rem;
+   margin-bottom: 1rem;
     color: #2e4264;
   }
  
@@ -37,6 +40,8 @@
     justify-content: space-between;
     margin-top: 1px;
     gap: 6px;
+    background-color: #f3f3f3;
+  
   }
   
   .buttonsContainer button {
@@ -47,10 +52,14 @@
     border-color: #384e73f8;
   }
   
-.buttonBuscar{
-  background-color: rgb(226, 185, 103);
-border: none;
-}
+  .buttonBuscar{
+    background-color: rgb(226, 185, 103);
+  border: none;
+  }
+  .buttonBuscar :hover{
+    background-color: rgb(1, 1, 1);
+ color: white;
+  }
 
   @media (max-width: 768px) {
     .SelectContainer {

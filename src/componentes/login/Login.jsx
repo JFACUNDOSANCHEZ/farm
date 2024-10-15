@@ -5,6 +5,7 @@ import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import logo from '../../../public/logo.jpg.jpeg'
 const Login = () => {
 
   const dispatch = useDispatch();
@@ -41,12 +42,12 @@ try {
 
   return (
     <div className={styles.loginContainer}>
-      <div className={styles.logoContainer}>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPSLotMP7Ejmqw9EyQia_XB5aFyAUBJP9uWw&s" alt="Cinco Hispanos" className={styles.logo} />
-        <h1>Apolo web</h1>
-      </div>
       <div className={styles.loginBox}>
-        <h3 className={styles.h}>Inicie sesión </h3>
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Cinco Hispanos" className={styles.logo} />
+        {/* <h1>Apolo web</h1> */}
+      </div>
+        {/* <h3 className={styles.h}>Inicie sesión </h3> */}
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="username">Usuario</label>
@@ -72,8 +73,8 @@ try {
           </div>
           <div className={styles.options}>
             <div>
-              <input type="checkbox" id="remember" />
               <label htmlFor="remember">Recordar mi ingreso</label>
+              <input type="checkbox" id="remember" />
             </div>
             <a href="#">¿Olvidó su contraseña?</a>
           </div>
