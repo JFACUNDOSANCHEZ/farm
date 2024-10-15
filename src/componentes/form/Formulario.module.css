@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     width: 48%; /* Ajusta para 2 columnas */
-    margin-bottom: 15px;
+    margin-bottom: 1REM;
   }
   
   .formGroup label {
