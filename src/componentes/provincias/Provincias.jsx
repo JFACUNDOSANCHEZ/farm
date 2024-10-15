@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProvincias, selectProvincias, selectProvinciasStatus, selectProvinciasError } from '../../redux/slices/provinciaSlice.jsx';
 import NavBar from '../nav/Nav.jsx';
 import Menu from '../menu/Menu.jsx';
-import styles from './Provincias.module.css';
+import styles from './provincias.module.css';
 import { useEffect } from 'react';
 import Filtros from '../filtros/Filtros.jsx';
 
