@@ -3,7 +3,7 @@ import SearchBar from '../searchbar/SearchbBar';
 import Nav from '../nav/Nav';
 import Filtros from '../filtros/Filtros';
 import Menu from '../menu/Menu'
-
+import Provincias from '../provincias/Provincias';
 import styles from './principal.module.css';
 
 export default function Principal() {
@@ -18,6 +18,7 @@ export default function Principal() {
       <div className={styles.mainContent}>
         <Nav />
         <Filtros />
+        
       </div>
     </div>
   );

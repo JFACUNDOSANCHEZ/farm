@@ -20,7 +20,8 @@ border-color: solid blue;
   }
   
   .inputA {
-    width: 40%;
+    width: 30%;
+    height: 1.5rem;
   }
 
   select {
@@ -38,18 +39,21 @@ border-color: solid blue;
   .buttonsContainer {
     display:inline;
     justify-content: space-between;
-    margin-top: 1px;
+    margin-top: 10px;
     gap: 6px;
     background-color: #f3f3f3;
   
   }
   
   .buttonsContainer button {
+    margin-top: 1px;
     flex-grow: 1;
     margin: 0 5px;
     padding: 10px;
     border-radius: 7%;
-    border-color: #384e73f8;
+    border: solid 1px grey;
+    /* background-color: #33689d00; */
+    color: rgb(0, 0, 0);
   }
   
   .buttonBuscar{

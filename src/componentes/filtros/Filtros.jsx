@@ -1,6 +1,6 @@
 import React from 'react';
 import filtros from './filtros.module.css';
-
+import { FaRuler, FaGlobe, FaUsers } from 'react-icons/fa';
 export default function Filtros() {
   return (
     <div className={filtros.container}>
@@ -18,16 +18,16 @@ export default function Filtros() {
         </select>
 
         <select name="Contiene">
-          <option value="">Contiene</option>
+          <option value="">Contiene:</option>
         </select>
 
 
         <input type="text" className={filtros.inputA} />
-      <br />
+      <br /><br />
       <div className={filtros.buttonsContainer}>
-        <button>Regla</button>
-        <button>Regla global</button>
-        <button>Grupo</button>
+        <button><FaRuler /> Regla</button>
+        <button><FaGlobe /> Regla global</button>
+        <button><FaUsers /> Grupo</button>
         <button className={filtros.buttonBuscar}>Buscar</button>
       </div>
       </div>

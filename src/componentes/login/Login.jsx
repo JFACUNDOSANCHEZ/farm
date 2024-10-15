@@ -51,6 +51,7 @@ try {
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="username">Usuario</label>
+            <br />
             <input
               type="text"
               id="username"
@@ -62,6 +63,7 @@ try {
           </div>
           <div className={styles.inputGroup}>
             <label htmlFor="password">Contraseña</label>
+            <br />
             <input
               type="password"
               id="password"
@@ -74,6 +76,7 @@ try {
           <div className={styles.options}>
             <div>
               <label htmlFor="remember">Recordar mi ingreso</label>
+             
               <input type="checkbox" id="remember" />
             </div>
             <a href="#">¿Olvidó su contraseña?</a>
@@ -81,7 +84,7 @@ try {
           <button type="submit" className={styles.submitButton}>Ingresar</button>
         </form>
       </div>
-      <p className={styles.footer}>&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
+      
     </div>
   );
 };

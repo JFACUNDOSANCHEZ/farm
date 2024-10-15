@@ -1,18 +1,13 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: flex-start;
+  position: relative;
 }
 
 .menu {
   width: 250px;
   background-color: #f4f4f4;
-  transition: transform 0.3s ease; /* Transición suave para el menú */
-}
-
-.hidden {
-  transform: translateX(-100%); /* Ocultar el menú fuera de la vista */
+  transition: width 0.3s ease; /* Transición suave para el ancho */
 }
 
 .mainContent {
@@ -25,13 +20,10 @@
 
 @media (max-width: 768px) {
   .menu {
-      width: 200px; /* Puedes ajustar el ancho en pantallas pequeñas */
-      position: absolute; /* Permitir que se superponga */
-      top: 0;
-      left: 0;
-      z-index: 1; /* Asegura que el menú esté por encima del contenido */
+    display: none; /* Ocultar el menú por completo en pantallas pequeñas */
   }
+
   .mainContent {
-      padding: 10px;
+    padding: 10px;
   }
 }

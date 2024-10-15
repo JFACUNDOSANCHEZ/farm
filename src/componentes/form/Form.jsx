@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './Formulario.module.css'; // Importa los estilos CSS Modules
 import Nav from '../nav/Nav.jsx'
+import MenuPage from '../menu/Menu.jsx';
 const Formulario = () => {
   return (
-    <div>
-<Nav></Nav>
+    <div className={styles.container}>
+    <div className={styles.menu}>
+        <MenuPage />
+    </div>
+    <div className={styles.mainContent}>
+        <Nav />
     <div className={styles.formContainer}>
       <h2>Nuevo elemento - Proveedor</h2>
       <form>
@@ -65,6 +70,7 @@ const Formulario = () => {
 
         <button type="submit" className={styles.submitButton}>Añadir</button>
       </form>
+    </div>
     </div>
     </div>
   );

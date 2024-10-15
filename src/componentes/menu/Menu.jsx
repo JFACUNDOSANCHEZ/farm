@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } from '../../redux/slices/menuSlice.jsx';
-import { FaHome, FaTable, FaFlask, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa'; // Importar más íconos según lo que necesites
+import { FaHome, FaTable, FaFlask, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa'; 
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import styles from './MenuPage.module.css';
 import logo from '../../../public/logo.jpg.jpeg';
 
@@ -10,6 +11,7 @@ function MenuPage() {
     const menuItems = useSelector(selectMenuItems);
     const menuStatus = useSelector(selectMenuStatus);
     const menuError = useSelector(selectMenuError);
+    const navigate = useNavigate(); // Usa el hook useNavigate
 
     useEffect(() => {
         if (menuStatus === 'idle') {
@@ -18,40 +20,54 @@ function MenuPage() {
     }, [menuStatus, dispatch]);
 
     if (menuStatus === 'loading') {
-        return <div>Cargando menú...</div>; // Mensaje de carga
+        return <div>Cargando menú...</div>;
     }
 
     // Función para obtener el ícono correcto basado en el código del ítem
     const getIconForItem = (codigo) => {
         switch(codigo) {
             case 'RAIZ':
-                return <FaHome />; // Ícono para el menú principal
+                return <FaHome />;
             case 'TABLAS':
-                return <FaTable />; // Ícono para tablas de elementos
+                return <FaTable />;
             case 'ENSAYOS':
-                return <FaFlask />; // Ícono para ensayos
+                return <FaFlask />;
             case 'MNUMETODO':
-                return <FaTools />; // Ícono para métodos
+                return <FaTools />;
             case 'MNUPERSONAL':
-                return <FaUser />; // Ícono para personal
+                return <FaUser />;
             case 'MNUSECTOR':
-                return <FaIndustry />; // Ícono para subsector
+                return <FaIndustry />;
             case 'MNUUM':
-                return <FaRuler />; // Ícono para unidades de medida
+                return <FaRuler />;
             case 'MNICIVA':
-                return <FaCashRegister />; // Ícono para condición de IVA
+                return <FaCashRegister />;
             case 'MNUCPAG':
-                return <FaCity />; // Ícono para provincias
             case 'PRV':
-                return <FaCity />; // Ícono para provincias
+                return <FaCity />;
             case 'TMUESTRA':
-                return <FaVial />; // Ícono para tipos de muestras
+                return <FaVial />;
             case 'MNULAB':
-                return <FaFlask />; // Ícono para laboratorio
+                return <FaFlask />;
             case 'MNURESULTADOS':
-                return <FaTable />; // Ícono para carga de resultados
+                return <FaTable />;
             default:
-                return null; // Ningún ícono para otros ítems
+                return null;
+        }
+    };
+
+    // Función para manejar el click en cada ítem del menú
+    const handleMenuClick = (codigo) => {
+        switch(codigo) {
+            case 'PRV': // Cuando hacen click en el ítem Provincias
+                navigate('/provincias'); // Redirigir a la ruta '/provincias'
+                break;
+            case 'ENSAYOS':
+                navigate('/ensayos');
+                break;
+            // Agrega más casos para otras rutas
+            default:
+                break;
         }
     };
 
@@ -62,7 +78,7 @@ function MenuPage() {
              <img src={logo} alt="logo" className={styles.logo} />
                 <ul>
                     {menuItems.map((item, index) => (
-                        <li key={index}>
+                        <li key={index} onClick={() => handleMenuClick(item.codigo)}>
                             {getIconForItem(item.codigo)} {/* Renderizar el ícono */}
                             {item.descripcion} {/* Renderizar la descripción */}
                         </li>
