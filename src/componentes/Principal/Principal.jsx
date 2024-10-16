@@ -17,8 +17,8 @@ export default function Principal() {
       {/* Contenido principal con los filtros */}
       <div className={styles.mainContent}>
         <Nav />
-        <Filtros />
         
+        <Filtros />
       </div>
     </div>
   );
