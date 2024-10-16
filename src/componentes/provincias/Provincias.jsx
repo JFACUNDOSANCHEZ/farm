@@ -12,17 +12,11 @@ const Provincias = () => {
     const status = useSelector(selectProvinciasStatus);
     const error = useSelector(selectProvinciasError);
 
-    const [isGridView, setIsGridView] = useState(false);
-
     useEffect(() => {
         if (status === 'idle') {
             dispatch(fetchProvincias());
         }
     }, [status, dispatch]);
-
-    const toggleView = () => {
-        setIsGridView((prev) => !prev);
-    };
 
     return (
         <div className={styles.container}>
@@ -34,35 +28,27 @@ const Provincias = () => {
                 <Filtros />
                 {status === 'loading' && <div>Cargando...</div>}
                 <h1>Provincias</h1>
-
-                <button onClick={toggleView} className={styles.toggleViewButton}>
-                    {isGridView ? 'Ver como Cards' : 'Ver como Grilla'}
-                </button>
-
                 {status === 'succeeded' && (
-                    isGridView ? (
-                        <ul className={styles.gridContainer}>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Código</th>
+                                <th>Porcentaje IIBB</th>
+                                <th>Importe IIBB</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             {provincias.map((provincia) => (
-                                <li key={provincia.codigo} className={styles.gridItem}>
-                                    <h2>{provincia.descripcion}</h2>
-                                    <p>Código: {provincia.codigo}</p>
-                                    <p>Porcentaje IIBB: {provincia.porcentajeIIBB}%</p>
-                                    <p>Importe IIBB: ${provincia.importeIIBB}</p>
-                                </li>
+                                <tr key={provincia.codigo}>
+                                    <td>{provincia.descripcion}</td>
+                                    <td>{provincia.codigo}</td>
+                                    <td>{provincia.porcentajeIIBB}%</td>
+                                    <td>${provincia.importeIIBB}</td>
+                                </tr>
                             ))}
-                        </ul>
-                    ) : (
-                        <div className={styles.cardContainer}>
-                            {provincias.map((provincia) => (
-                                <div key={provincia.codigo} className={styles.card}>
-                                    <h2>{provincia.descripcion}</h2>
-                                    <p>Código: {provincia.codigo}</p>
-                                    <p>Porcentaje IIBB: {provincia.porcentajeIIBB}%</p>
-                                    <p>Importe IIBB: ${provincia.importeIIBB}</p>
-                                </div>
-                            ))}
-                        </div>
-                    )
+                        </tbody>
+                    </table>
                 )}
                 {status === 'failed' && <div>Error: {error}</div>}
             </div>
