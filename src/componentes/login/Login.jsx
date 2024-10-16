@@ -51,7 +51,7 @@ try {
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="username">Usuario</label>
-            <br />
+            <br /><br />
             <input
               type="text"
               id="username"
@@ -63,7 +63,7 @@ try {
           </div>
           <div className={styles.inputGroup}>
             <label htmlFor="password">Contraseña</label>
-            <br />
+            <br /><br />
             <input
               type="password"
               id="password"
