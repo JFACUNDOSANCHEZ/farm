@@ -26,6 +26,8 @@ const NavBar = () => {
     };
   }, []);
 
+  
+
 
   const currentPath = 
   location.pathname === '/provincias' ? 'Provincias' : 

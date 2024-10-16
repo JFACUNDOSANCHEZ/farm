@@ -14,6 +14,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
   width: 100%;
+  
   max-width: 400px;
   text-align: center;       /* Centra el texto y los elementos dentro */
   display: flex;
@@ -23,13 +24,14 @@
 
 .logoContainer {
   margin-bottom: 2rem;
-
+height: 4rem;
 }
 
 .logo {
   width: 200px;
   height: auto;
   margin: 0 auto;
+
 }
 
 .inputGroup {
