@@ -63,7 +63,7 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className={styles.dropdown}>
              
-            <button onClick={() => <Logout />} className={styles.dropdownItem}>Cerrar sesión</button>
+            <button onClick={() => Logout()} className={styles.dropdownItem}>Cerrar sesión</button>
             <button className={styles.dropdownItem}>Configuración</button>
           </div>
         )}
