@@ -11,6 +11,7 @@ const Provincias = () => {
     const provincias = useSelector(selectProvincias);
     const status = useSelector(selectProvinciasStatus);
     const error = useSelector(selectProvinciasError);
+    const [view, setView] = useState('cards'); // Estado para alternar entre vista de cards o tabla
 
     useEffect(() => {
         if (status === 'idle') {
@@ -28,27 +29,48 @@ const Provincias = () => {
                 <Filtros />
                 {status === 'loading' && <div>Cargando...</div>}
                 <h1>Provincias</h1>
+
+                {/* Botón para cambiar la vista */}
+                <div className={styles.viewToggle}>
+                    <button onClick={() => setView('cards')}>Vista de Cards</button>
+                    <button onClick={() => setView('table')}>Vista de Tabla</button>
+                </div>
+
+                {/* Renderiza según la vista seleccionada */}
                 {status === 'succeeded' && (
-                    <table className={styles.table}>
-                        <thead>
-                            <tr>
-                                <th>Descripción</th>
-                                <th>Código</th>
-                                <th>Porcentaje IIBB</th>
-                                <th>Importe IIBB</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    view === 'cards' ? (
+                        <div className={styles.cardContainer}>
                             {provincias.map((provincia) => (
-                                <tr key={provincia.codigo}>
-                                    <td>{provincia.descripcion}</td>
-                                    <td>{provincia.codigo}</td>
-                                    <td>{provincia.porcentajeIIBB}%</td>
-                                    <td>${provincia.importeIIBB}</td>
-                                </tr>
+                                <div key={provincia.codigo} className={styles.card}>
+                                    <h2>{provincia.descripcion}</h2>
+                                    <p>Código: {provincia.codigo}</p>
+                                    <p>Porcentaje IIBB: {provincia.porcentajeIIBB}%</p>
+                                    <p>Importe IIBB: ${provincia.importeIIBB}</p>
+                                </div>
                             ))}
-                        </tbody>
-                    </table>
+                        </div>
+                    ) : (
+                        <table className={styles.table}>
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th>Código</th>
+                                    <th>Porcentaje IIBB</th>
+                                    <th>Importe IIBB</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {provincias.map((provincia) => (
+                                    <tr key={provincia.codigo}>
+                                        <td>{provincia.descripcion}</td>
+                                        <td>{provincia.codigo}</td>
+                                        <td>{provincia.porcentajeIIBB}%</td>
+                                        <td>${provincia.importeIIBB}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )
                 )}
                 {status === 'failed' && <div>Error: {error}</div>}
             </div>

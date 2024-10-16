@@ -131,3 +131,24 @@
 .table td {
   font-size: 14px;
 }
+
+.viewToggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.viewToggle button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.viewToggle button:hover {
+  background-color: #0056b3;
+}
