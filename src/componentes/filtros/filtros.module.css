@@ -1,67 +1,68 @@
-/* filtros.module.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    width: 75%;
-   
-border-color: solid blue;
-  }
-  .SelectContainer {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se reorganicen en pantallas más pequeñas */
-    align-items: center;
-    justify-content: flex-start; /* Alinear los elementos hacia la izquierda */
-    background-color: rgba(216, 216, 216, 0.557);
-    padding: 20px;
-    gap: 5px; /* Reducir el espaciado entre elementos */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar todos los elementos horizontalmente */
+  justify-content: center; /* Centrar todos los elementos verticalmente */
+  gap: 10px;
+  padding: 10px;
+  width: 98%;
+   /* Ocupar toda la altura de la pantalla */
+  border-color: solid blue;
+}
+
+.SelectContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se reorganicen en pantallas más pequeñas */
+  align-items: center;
+  justify-content: center; /* Alinear los elementos al centro */
+  background-color: rgba(216, 216, 216, 0.557);
+  padding: 20px;
+  gap: 5px; /* Reducir el espaciado entre elementos */
 }
 
 /* Estilo para los select */
 select {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    color: #2e4264;
-    margin-right: 0; /* Eliminar el margen derecho */
-    margin-bottom: 0; /* Eliminar el margen inferior */
-    width: auto; /* Dejar que el select se ajuste a su contenido */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #2e4264;
+  width: auto; /* Dejar que el select se ajuste a su contenido */
 }
+
 .inputA {
   width: 200px; /* Ajustar el tamaño del input */
   height: 1.5rem;
-  padding: 8px; /* Añadir algo de padding */
+  padding: 5px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-left: 5px; /* Espacio a la izquierda reducido para acercarse al select */
 }
-  
+
+/* Contenedor de los botones */
 .buttonsContainer {
   display: flex;
-  justify-content: flex-start; /* Alinear los botones hacia la izquierda */
-  gap: 8px; /* Reducir el espacio entre los botones */
-  margin-top: 10px;
-  flex-wrap: wrap; /* Permitir que se ajusten en pantallas pequeñas */
+  justify-content: center; /* Centrar los botones horizontalmente */
+  align-items: center; /* Asegurar que los botones también estén centrados */
+  gap: 8px; /* Separar los botones del contenido de arriba */
+  flex-wrap: wrap; /* Permitir que los botones se ajusten en pantallas pequeñas */
 }
-  
-  .buttonsContainer button {
-    margin-top: 1px;
-    margin: 0 5px;
-    padding: 8px 12px; /* Reducir el tamaño del botón */
-    border-radius: 5px; /* Ajustar el radio del borde */
-    border: solid 1px grey;
-    background-color: #f9f9f9; /* Color de fondo neutro */
-    color: #333; /* Color del texto */
-    font-size: 12px; /* Hacer la fuente más pequeña */
-    font-family: 'Arial', sans-serif; /* Cambiar la tipografía */
-    cursor: pointer; /* Añadir el cursor de puntero */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto de transición */
+
+.buttonsContainer button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5c87fc8b;
+  color: #333;
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-  
+
 .buttonsContainer button:hover {
   background-color: #e6e6e6;
   color: #000;
