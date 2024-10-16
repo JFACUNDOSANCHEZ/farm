@@ -40,11 +40,50 @@
     padding: 1rem;
   }
   
-  .card {
+  /* .card {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+  } */
   
+  /* Contenedor de Cards */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1rem;
+}
+
+/* Nueva clase para vista de grilla */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 1rem;
+}
+
+/* Estilos comunes para las cards en ambas vistas */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el botón que alterna las vistas */
+.toggleViewButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.toggleViewButton:hover {
+  background-color: #0056b3;
+}

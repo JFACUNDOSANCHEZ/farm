@@ -3,7 +3,7 @@ import { fetchProvincias, selectProvincias, selectProvinciasStatus, selectProvin
 import NavBar from '../nav/Nav.jsx';
 import Menu from '../menu/Menu.jsx';
 import styles from './provincias.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Filtros from '../filtros/Filtros.jsx';
 
 const Provincias = () => {
@@ -12,11 +12,19 @@ const Provincias = () => {
     const status = useSelector(selectProvinciasStatus);
     const error = useSelector(selectProvinciasError);
 
+    // Nuevo estado para controlar el tipo de vista
+    const [isGridView, setIsGridView] = useState(false);
+
     useEffect(() => {
         if (status === 'idle') {
             dispatch(fetchProvincias());
         }
     }, [status, dispatch]);
+
+    // Cambiar la vista entre grilla y cards
+    const toggleView = () => {
+        setIsGridView((prev) => !prev);
+    };
 
     return (
         <div className={styles.container}>
@@ -25,11 +33,17 @@ const Provincias = () => {
             </div>
             <div className={styles.mainContent}>
                 <NavBar />
-                <Filtros></Filtros>
+                <Filtros />
                 {status === 'loading' && <div>Cargando...</div>}
                 <h1>Provincias</h1>
+                
+                {/* Botón para cambiar la vista */}
+                <button onClick={toggleView} className={styles.toggleViewButton}>
+                    {isGridView ? 'Ver como Cards' : 'Ver como Grilla'}
+                </button>
+
                 {status === 'succeeded' && (
-                    <div className={styles.cardContainer}>
+                    <div className={isGridView ? styles.gridContainer : styles.cardContainer}>
                         {provincias.map((provincia) => (
                             <div key={provincia.codigo} className={styles.card}>
                                 <h2>{provincia.descripcion}</h2>
