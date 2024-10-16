@@ -31,7 +31,8 @@ const NavBar = () => {
 
   const currentPath = 
   location.pathname === '/provincias' ? 'Provincias' : 
-  location.pathname === '/ensayos' ? 'Ensayos' : 
+  location.pathname === '/ensayos' ? 'Ensayos' :  
+  location.pathname === '/condicionFiscal' ? 'Condicion Fiscal' : 
   ''; // Ruta predeterminada
 
 

@@ -13,8 +13,11 @@
 .breadcrumbs {
   font-size: 14px;
   color: #666;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 200px; /* Ajusta este valor al ancho que desees */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
+
 
 .breadcrumbs span {
   cursor: pointer; /* Cambia el cursor a puntero */
@@ -24,8 +27,10 @@
   text-decoration: underline; /* Opción adicional para indicar que es interactivo */
 }
 .actions {
+  margin-left: 10rem;
   display: flex;
   align-items: start;
+  
 }
 
 .actionButton {

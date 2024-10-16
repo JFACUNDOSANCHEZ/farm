@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Principal from './componentes/Principal/Principal';
 import Form from './componentes/form/Form';
 import Provincias from '../src/componentes/provincias/Provincias.jsx';
+import CondicionFiscalComponent from './componentes/condicionFiscal/CondicionFiscal.jsx';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 <Route path='/menu' element={<Principal /> }></Route>
 <Route path='/ensayos' element={<Form /> }></Route>
 <Route path="/provincias" element={<Provincias />} />
+<Route path="/condicionFiscal" element={<CondicionFiscalComponent />} />
      
     </Routes>
     
