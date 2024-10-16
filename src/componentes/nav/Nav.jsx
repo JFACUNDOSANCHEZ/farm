@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css';
 import { FaHome, FaSearch, FaChevronDown } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Logout from './logout';
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // 
+  const menuRef = useRef(null); 
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -26,16 +26,20 @@ const NavBar = () => {
     };
   }, []);
 
-  
-
+  // Función para cerrar sesión
+  const handleLogout = () => {
+    // Eliminar el token (asumiendo que está en localStorage)
+    localStorage.removeItem('token'); // O el nombre de tu token, como 'authToken'
+    
+    // Redirigir al usuario a la página de inicio de sesión
+    navigate('/');
+  };
 
   const currentPath = 
   location.pathname === '/provincias' ? 'Provincias' : 
   location.pathname === '/ensayos' ? 'Ensayos' :  
-  location.pathname === '/condicionFiscal' ? 'Condicion Fiscal' : 
+  location.pathname === '/condicionFiscal' ? 'Condición Fiscal' : 
   ''; // Ruta predeterminada
-
-
 
   return (
     <nav className={styles.navbar}>
@@ -65,8 +69,8 @@ const NavBar = () => {
         <FaChevronDown className="icon" />
         {isMenuOpen && (
           <div className={styles.dropdown}>
-             
-            <button onClick={() => Logout()} className={styles.dropdownItem}>Cerrar sesión</button>
+            {/* Llamamos a handleLogout cuando el usuario presiona Cerrar sesión */}
+            <button onClick={handleLogout} className={styles.dropdownItem}>Cerrar sesión</button>
             <button className={styles.dropdownItem}>Configuración</button>
           </div>
         )}

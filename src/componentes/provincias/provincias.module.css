@@ -98,7 +98,7 @@
 }
 
 .table {
-  width: 80%;
+  width: 92%;
   max-width: 1200px;
   margin: 0 auto;
   border-collapse: collapse; /* Esto es importante para que las celdas no tengan espacio entre sí */
