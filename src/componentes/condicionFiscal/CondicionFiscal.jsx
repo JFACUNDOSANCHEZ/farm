@@ -33,8 +33,8 @@ const CondicionFiscalComponent = () => {
                 <th>Descripción</th>
                 <th>Abreviada</th>
                 <th>Código</th>
-                <th>Cuit</th>
-                <th>Estado</th>
+                <th>Tipo Iva</th>
+                <th>Tasa</th>
                 <th>Tasa Iva</th>
               </tr>
             </thead>
@@ -44,8 +44,8 @@ const CondicionFiscalComponent = () => {
                   <td>{item.descripcion}</td>
                   <td>{item.abreviada || 'Sin abreviatura'}</td>
                   <td>{item.codigo}</td>
-                  <td>{item.cuit}</td>
-                  <td>{item.codigo}</td>
+                  <td>{item.tipoIva}</td>
+                  <td>{item.tasaIva.descripcionTasa}</td>
                   <td>{item.tasaIva.porcentajeTasa}</td>
                 </tr>
               ))}

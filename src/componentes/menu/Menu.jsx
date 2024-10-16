@@ -65,6 +65,9 @@ function MenuPage() {
             case 'ENSAYOS':
                 navigate('/ensayos');
                 break;
+            case 'MNICIVA':
+                navigate('/condicionFiscal');
+                break;
             case 'RAIZ':
                 navigate('/menu');
                 break;

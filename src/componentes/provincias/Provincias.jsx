@@ -13,7 +13,7 @@ const Provincias = () => {
     const provincias = useSelector(selectProvincias);
     const status = useSelector(selectProvinciasStatus);
     const error = useSelector(selectProvinciasError);
-    const [view, setView] = useState('cards'); // Estado para alternar entre vista de cards o tabla
+    const [view, setView] = useState('table'); // Estado para alternar entre vista de cards o tabla
 
     useEffect(() => {
         if (status === 'idle') {
