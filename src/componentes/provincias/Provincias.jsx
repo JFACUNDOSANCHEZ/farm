@@ -19,6 +19,11 @@ const Provincias = () => {
         }
     }, [status, dispatch]);
 
+    // Función para alternar entre vista de cards y tabla
+    const toggleView = () => {
+        setView((prevView) => (prevView === 'cards' ? 'table' : 'cards'));
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
@@ -30,13 +35,14 @@ const Provincias = () => {
                 {status === 'loading' && <div>Cargando...</div>}
                 <h1>Provincias</h1>
 
-                {/* Botón para cambiar la vista */}
+                {/* Botón para alternar la vista */}
                 <div className={styles.viewToggle}>
-                    <button onClick={() => setView('cards')}>Vista de Cards</button>
-                    <button onClick={() => setView('table')}>Vista de Tabla</button>
+                    <button onClick={toggleView}>
+                        Cambiar a {view === 'cards' ? 'Vista de Tabla' : 'Vista de Cards'}
+                    </button>
                 </div>
 
-                {/* Renderiza según la vista seleccionada */}
+                {/* Renderizado condicional según la vista */}
                 {status === 'succeeded' && (
                     view === 'cards' ? (
                         <div className={styles.cardContainer}>
