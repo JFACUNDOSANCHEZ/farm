@@ -40,15 +40,7 @@
     padding: 1rem;
   }
   
-  /* .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  } */
-  
-  /* Contenedor de Cards */
+/* Contenedor de Cards */
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
@@ -56,16 +48,28 @@
   padding: 1rem;
 }
 
-/* Nueva clase para vista de grilla */
+/* Contenedor de la grilla como <ul> */
 .gridContainer {
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
-/* Estilos comunes para las cards en ambas vistas */
-.card {
+/* Estilo para los elementos <li> en la grilla */
+.gridItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+}
+
+/* Estilo común para las cards en ambas vistas */
+.card, .gridItem {
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 15px;
@@ -75,6 +79,7 @@
 
 /* Estilo para el botón que alterna las vistas */
 .toggleViewButton {
+
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -82,8 +87,10 @@
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .toggleViewButton:hover {
   background-color: #0056b3;
 }
+
