@@ -4,10 +4,12 @@
   align-items: center; /* Centrar todos los elementos horizontalmente */
   justify-content: center; /* Centrar todos los elementos verticalmente */
   gap: 10px;
-  padding: 10px;
+  padding: 20px;
   width: 98%;
+  margin-top: 0.2rem;
+  
    /* Ocupar toda la altura de la pantalla */
-  border-color: solid blue;
+
 }
 
 .SelectContainer {
@@ -18,11 +20,12 @@
   background-color: rgba(216, 216, 216, 0.557);
   padding: 20px;
   gap: 5px; /* Reducir el espaciado entre elementos */
-}
+  border-radius: 0.5rem;
+   }
 
 /* Estilo para los select */
 select {
-  padding: 8px;
+  padding: 6px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -34,7 +37,7 @@ select {
 .inputA {
   width: 200px; /* Ajustar el tamaño del input */
   height: 1.5rem;
-  padding: 5px;
+  padding: 4px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;

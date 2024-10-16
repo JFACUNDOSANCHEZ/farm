@@ -49,11 +49,11 @@ const NavBar = () => {
       </div>
 
       {/* Botones de Acciones */}
-      <div className={styles.actions}>
+      {/* <div className={styles.actions}>
         <button className={styles.actionButton}>+</button>
         <button className={styles.actionButton}><FaHome className="icon" /></button>
         <button className={styles.actionButton}><FaSearch className="icon" /></button>
-      </div>
+      </div> */}
 
       {/* Searchbar */}
       <div className={styles.searchContainer}>

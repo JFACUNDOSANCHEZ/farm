@@ -50,7 +50,8 @@ try {
         {/* <h3 className={styles.h}>Inicie sesión </h3> */}
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
-            <label htmlFor="username">Usuario</label>
+            <br />
+            <label htmlFor="username">Usuario:</label>
             <br /><br />
             <input
               type="text"
@@ -61,8 +62,9 @@ try {
               className={styles.inputField}
             />
           </div>
+          <br />
           <div className={styles.inputGroup}>
-            <label htmlFor="password">Contraseña</label>
+            <label htmlFor="password">Contraseña:</label>
             <br /><br />
             <input
               type="password"

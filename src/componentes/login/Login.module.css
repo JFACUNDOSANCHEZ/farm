@@ -6,6 +6,11 @@
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Fondo suave */
   padding: 1rem;           /* Espacio en pantallas pequeñas */
   box-sizing: border-box;   /* Asegura que el padding se calcule correctamente */
+
+}
+.loginContainer label {
+font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .loginBox {
@@ -41,7 +46,7 @@ height: 4rem;
 }
 
 .inputField {
-  width: 80%;  /* Se ajusta al ancho del contenedor */
+  width: 90%;  /* Se ajusta al ancho del contenedor */
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 5px;
