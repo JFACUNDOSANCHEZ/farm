@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProvincias, selectProvincias, selectProvinciasStatus, selectProvinciasError } from '../../redux/slices/provinciaSlice.jsx';
 import NavBar from '../nav/Nav.jsx';
 import Menu from '../menu/Menu.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThLarge, faList } from '@fortawesome/free-solid-svg-icons'; // Importamos los iconos
 import styles from './provincias.module.css';
 import { useEffect, useState } from 'react';
 import Filtros from '../filtros/Filtros.jsx';
@@ -19,11 +21,6 @@ const Provincias = () => {
         }
     }, [status, dispatch]);
 
-    // Función para alternar entre vista de cards y tabla
-    const toggleView = () => {
-        setView((prevView) => (prevView === 'cards' ? 'table' : 'cards'));
-    };
-
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
@@ -35,11 +32,20 @@ const Provincias = () => {
                 {status === 'loading' && <div>Cargando...</div>}
                 <h1>Provincias</h1>
 
-                {/* Botón para alternar la vista */}
+                {/* Iconos para alternar la vista */}
                 <div className={styles.viewToggle}>
-                    <button onClick={toggleView}>
-                        Cambiar a {view === 'cards' ? 'Vista de Tabla' : 'Vista de Cards'}
-                    </button>
+                    <FontAwesomeIcon
+                        icon={faThLarge}
+                        className={view === 'cards' ? styles.activeIcon : ''}
+                        onClick={() => setView('cards')}
+                        title="Vista de Cuadros"
+                    />
+                    <FontAwesomeIcon
+                        icon={faList}
+                        className={view === 'table' ? styles.activeIcon : ''}
+                        onClick={() => setView('table')}
+                        title="Vista de Lista"
+                    />
                 </div>
 
                 {/* Renderizado condicional según la vista */}
