@@ -138,6 +138,22 @@
   margin-bottom: 1rem;
 }
 
+.icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #0056b3;
+}
+
+.activeIcon {
+  color: #0056b3;
+}
+
 .viewToggle button {
   background-color: #007bff;
   color: white;
