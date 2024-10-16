@@ -26,7 +26,7 @@ const CondicionFiscalComponent = () => {
         <Filtros></Filtros>
         <div className={styles.contain}>
           <h1 className={styles.title}>Condición Fiscal</h1>
-          
+          <br />
           <table className={styles.table}>
             <thead>
               <tr>

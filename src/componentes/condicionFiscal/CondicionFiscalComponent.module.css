@@ -1,10 +1,29 @@
+/* CondicionFiscalComponent.module.css */
 .container {
-    display: flex;
-    flex-wrap: nowrap; /* Asegura que el menú y el contenido estén uno al lado del otro */
-    min-height: 100vh; /* Asegura que el contenido llene la pantalla verticalmente */
- font-family:Arial, Helvetica, sans-serif;
-  }
-  
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px; /* Asegúrate de que sea consistente */
+  color: #333;
+}
+
+.table {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Otros estilos como .menu y .mainContent */
+
   .menu {
     width: 250px;
     background-color: #f4f4f4;
@@ -19,12 +38,7 @@
   }
 
   
-  .title {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
+
   
   .list {
     list-style-type: none;
@@ -57,13 +71,7 @@
     justify-content: center; /* Centra verticalmente si es necesario */
     align-items: center; /* Centra horizontalmente */
   }
-  .table {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-collapse: collapse; /* Esto es importante para que las celdas no tengan espacio entre sí */
-    margin-top: 20px;
-  }
+
   
   .table th, .table td {
     padding: 15px;

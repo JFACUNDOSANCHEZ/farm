@@ -30,7 +30,8 @@ const Provincias = () => {
                 <NavBar />
                 <Filtros />
                 {status === 'loading' && <div>Cargando...</div>}
-                <h1>Provincias</h1>
+          <h1 className={styles.title}>Provincias</h1>
+               
 
                 {/* Iconos para alternar la vista */}<div className={styles.viewToggle}>
     <FontAwesomeIcon
