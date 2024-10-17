@@ -12,11 +12,13 @@
   transition: transform 0.3s ease;
 }
 
+ 
 .mainContent {
   flex-grow: 1;
-  padding: 0px; /* Puedes ajustar el padding según sea necesario */
+  padding: 0px;
   overflow: hidden;
 }
+
 
 .title {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

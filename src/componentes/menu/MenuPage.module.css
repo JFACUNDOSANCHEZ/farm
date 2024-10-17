@@ -10,6 +10,7 @@
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
   }
   
+  
   .menuContainer {
     height: 100%;
      /* Resta la altura del nav si es necesario */
