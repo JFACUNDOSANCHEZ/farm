@@ -80,6 +80,9 @@ function MenuPage() {
             case 'MNICIVA':
                 navigate('/condicionFiscal');
                 break;
+            case 'MNUCPAG':
+                navigate('/condicionDePago');
+                break;                   
             case 'RAIZ':
                 navigate('/menu');
                 break;

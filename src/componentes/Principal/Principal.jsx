@@ -18,7 +18,7 @@ export default function Principal() {
       <div className={styles.mainContent}>
         <Nav />
         
-        <Filtros />
+        {/* <Filtros /> */}
       </div>
     </div>
   );

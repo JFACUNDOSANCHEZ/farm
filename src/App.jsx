@@ -5,6 +5,7 @@ import Principal from './componentes/Principal/Principal';
 import Form from './componentes/form/Form';
 import Provincias from '../src/componentes/provincias/Provincias.jsx';
 import CondicionFiscalComponent from './componentes/condicionFiscal/CondicionFiscal.jsx';
+import CondicionPagoComponent from './componentes/condicionDePago/CondicionDePagoComponent.jsx';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 <Route path='/ensayos' element={<Form /> }></Route>
 <Route path="/provincias" element={<Provincias />} />
 <Route path="/condicionFiscal" element={<CondicionFiscalComponent />} />
+<Route path="/condicionDePago" element={<CondicionPagoComponent />} />
      
     </Routes>
     

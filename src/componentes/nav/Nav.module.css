@@ -4,57 +4,27 @@
   align-items: center;
   background-color: #fff;
   padding: 5px 10px;
-  border-bottom: 1px solid #ddd; /* Solo el borde inferior */
+  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 1000;
+  min-width: 100%;
+  box-sizing: border-box;
 }
-
 
 .breadcrumbs {
   font-size: 14px;
   color: #666;
-  width: 200px; /* Ajusta este valor al ancho que desees */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-width: 250px; /* Mantén un ancho mínimo */
+  font-family: 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-}
-
-
-.breadcrumbs span {
-  cursor: pointer; /* Cambia el cursor a puntero */
-}
-
-.breadcrumbs span:hover {
-  text-decoration: underline; /* Opción adicional para indicar que es interactivo */
-}
-.actions {
-  margin-left: 10rem;
-  display: flex;
-  align-items: start;
-  
-}
-
-.actionButton {
-  background-color: #aaaaab;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius:0%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.actionButton:hover {
-  background-color: #0056b3;
+  overflow: hidden; /* Oculta texto si se desborda */
+  text-overflow: ellipsis; /* Añade ... si el texto es demasiado largo */
 }
 
 .searchContainer {
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Evita que se reduzca el tamaño */
 }
 
 .searchbar {
@@ -62,17 +32,7 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 200px;
-}
-
-.searchButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-left: 5px;
-  cursor: pointer;
+  width: 200px; /* Ancho fijo */
 }
 
 .userOptions {
@@ -80,40 +40,8 @@
   align-items: center;
   background-color: #cc4646;
   color: white;
-  padding: 8px 8px;
+  padding: 8px;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.userOptions span {
-  margin-right: 8px;
-}
-
-.userOptions i {
-  font-size: 0.9rem;
-}
-
-.dropdown {
-  position: absolute; /* Permite que el menú se posicione de manera independiente */
-  top: 100%; /* Lo coloca justo debajo del contenedor padre */
-  right:  0; /* Alineado a la izquierda */
-  background-color: white; /* Fondo del menú */
-  border: 1px solid #ccc; /* Bordes del menú */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra para el menú */
-  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
-  margin-top: 5px; /* Espacio entre el usuario y el menú */
-}
-
-.dropdownItem {
-  display: block; /* Hace que cada item ocupe toda la línea */
-  padding: 10px 15px; /* Espaciado interno */
-  width: 100%; /* Para que el botón ocupe todo el ancho */
-  text-align: left; /* Alineación del texto */
-  border: none; /* Sin bordes */
-  background: none; /* Sin fondo */
-  cursor: pointer; /* Cambia el cursor a puntero */
-}
-
-.dropdownItem:hover {
-  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+  flex-shrink: 0; /* Evita que se reduzca el tamaño */
 }

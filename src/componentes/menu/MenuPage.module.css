@@ -13,7 +13,6 @@
   
   .menuContainer {
     height: 100%;
-     /* Resta la altura del nav si es necesario */
     overflow-y: auto; /* Permite desplazamiento si es necesario */
     padding: 5px;
     background-color: #364c75; 
