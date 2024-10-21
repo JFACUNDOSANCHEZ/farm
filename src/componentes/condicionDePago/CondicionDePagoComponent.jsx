@@ -21,11 +21,11 @@ const CondicionPagoComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-        <MenuPage />
+      
       </div>
       <div className={styles.mainContent}>
-        <Nav />
-        <Filtros></Filtros>
+      
+     
         <div className={styles.contain}>
           <h2 className={styles.title}>Lista de Condiciones de Pago</h2>
           <table className={styles.table}>

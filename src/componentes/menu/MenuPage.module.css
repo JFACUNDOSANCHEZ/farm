@@ -12,6 +12,7 @@
   
   
   .menuContainer {
+    margin-top: 2rem;
     height: 100%;
     overflow-y: auto; /* Permite desplazamiento si es necesario */
     padding: 5px;

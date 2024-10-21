@@ -19,11 +19,10 @@ const CondicionFiscalComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.menu}>
-        <MenuPage />
+   
       </div>
       <div className={styles.mainContent}>
-        <NavBar />
-        <Filtros></Filtros>
+        
         <div className={styles.contain}>
           <h1 className={styles.title}>Condición Fiscal</h1>
           <br />

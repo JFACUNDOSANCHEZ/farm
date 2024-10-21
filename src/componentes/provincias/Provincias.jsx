@@ -24,11 +24,11 @@ const Provincias = () => {
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
-                <Menu />
+              
             </div>
             <div className={styles.mainContent}>
-                <NavBar />
-                <Filtros />
+            
+           
                 {status === 'loading' && <div>Cargando...</div>}
           <h1 className={styles.title}>Provincias</h1>
                

@@ -11,12 +11,12 @@ export default function Principal() {
     <div className={styles.container}>
       {/* Menú a la izquierda */}
       <div className={styles.menu}>
-        <Menu />
+    
       </div>
 
       {/* Contenido principal con los filtros */}
       <div className={styles.mainContent}>
-        <Nav />
+        
         
         {/* <Filtros /> */}
       </div>

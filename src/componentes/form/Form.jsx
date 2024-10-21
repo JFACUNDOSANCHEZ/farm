@@ -12,10 +12,10 @@ const Formulario = () => {
   return (
     <div className={styles.container}>
     <div className={styles.menu}>
-        <MenuPage />
+  
     </div>
     <div className={styles.mainContent}>
-        <Nav />
+   
     <div className={styles.formContainer}>
       <h2>Nuevo elemento - Proveedor</h2>
       <form>

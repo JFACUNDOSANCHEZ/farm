@@ -1,31 +1,26 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import Login from './componentes/login/Login';
-import { Routes, Route, useLocation } from 'react-router-dom';
 import Principal from './componentes/Principal/Principal';
 import Form from './componentes/form/Form';
-import Provincias from '../src/componentes/provincias/Provincias.jsx';
-import CondicionFiscalComponent from './componentes/condicionFiscal/CondicionFiscal.jsx';
-import CondicionPagoComponent from './componentes/condicionDePago/CondicionDePagoComponent.jsx';
+import Provincias from './componentes/provincias/Provincias';
+import CondicionFiscalComponent from './componentes/condicionFiscal/CondicionFiscal';
+import CondicionPagoComponent from './componentes/condicionDePago/CondicionDePagoComponent';
+import Layout from './componentes/layout/Layout'; // Importa el Layout
 
 function App() {
-
-
   return (
-    <>
     <Routes>
-<Route path='/' element={<Login /> }></Route>
-<Route path='/menu' element={<Principal /> }></Route>
-<Route path='/ensayos' element={<Form /> }></Route>
-<Route path="/provincias" element={<Provincias />} />
-<Route path="/condicionFiscal" element={<CondicionFiscalComponent />} />
-<Route path="/condicionDePago" element={<CondicionPagoComponent />} />
-     
+      {/* Página de login, sin el menú */}
+      <Route path="/" element={<Login />} />
+      
+      {/* Rutas con el menú y nav dentro del Layout */}
+      <Route path="/menu" element={<Layout><Principal /></Layout>} />
+      <Route path="/ensayos" element={<Layout><Form /></Layout>} />
+      <Route path="/provincias" element={<Layout><Provincias /></Layout>} />
+      <Route path="/condicionFiscal" element={<Layout><CondicionFiscalComponent /></Layout>} />
+      <Route path="/condicionDePago" element={<Layout><CondicionPagoComponent /></Layout>} />
     </Routes>
-    
-
-    </>
-
-    )
+  );
 }
 
-export default App
+export default App;
