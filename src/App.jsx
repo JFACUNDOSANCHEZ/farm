@@ -6,9 +6,14 @@ import Provincias from './componentes/provincias/Provincias';
 import CondicionFiscalComponent from './componentes/condicionFiscal/CondicionFiscal';
 import CondicionPagoComponent from './componentes/condicionDePago/CondicionDePagoComponent';
 import Layout from './componentes/layout/Layout'; // Importa el Layout
+import NavBar from './componentes/nav/Nav';
+import './App.css';
+
 
 function App() {
   return (
+
+    
     <Routes>
       {/* Página de login, sin el menú */}
       <Route path="/" element={<Login />} />

@@ -43,12 +43,7 @@ const NavBar = () => {
         <span onClick={() => navigate('/menu')}><FaHome className="icon" /> Inicio</span> / <span>{currentPath}</span>
       </div>
 
-      {/* <div className={styles.searchContainer}>
-        <input type="text" placeholder="Buscar..." className={styles.searchbar} />
-        <button className={styles.actionButton}>
-          <FaSearch className="icon" />
-        </button>
-      </div> */}
+    
 
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
         <span>US</span>

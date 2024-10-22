@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } from '../../redux/slices/menuSlice.jsx';
-import { FaHome, FaTable, FaFlask, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import styles from './MenuPage.module.css';
 import logo from '../../../public/logo.jpg.jpeg';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 function MenuPage() {
     const dispatch = useDispatch();
     const menuItems = useSelector(selectMenuItems);
     const menuStatus = useSelector(selectMenuStatus);
     const menuError = useSelector(selectMenuError);
-    const navigate = useNavigate(); // Usa el hook useNavigate
+    const navigate = useNavigate();
 
-    // Inicializa openGroups para que todos los grupos estén abiertos
+    // Estado para manejar la expansión de grupos de menú
     const [openGroups, setOpenGroups] = useState({});
 
     useEffect(() => {
@@ -23,12 +24,11 @@ function MenuPage() {
     }, [menuStatus, dispatch]);
 
     useEffect(() => {
-        // Abre todos los grupos inicialmente
         if (menuStatus === 'succeeded') {
             const initialOpenGroups = {};
             menuItems.forEach(item => {
                 if (item.endpoint) {
-                    initialOpenGroups[item.endpoint] = true; // Establece el grupo como abierto
+                    initialOpenGroups[item.endpoint] = false; // Inicialmente, todos cerrados
                 }
             });
             setOpenGroups(initialOpenGroups);
@@ -63,6 +63,8 @@ function MenuPage() {
                 return <FaFlask />;
             case 'MNURESULTADOS':
                 return <FaTable />;
+                case 'MNUCOTIMUES':
+                return <FaIndustry />;
             default:
                 return null;
         }
@@ -71,8 +73,8 @@ function MenuPage() {
     // Función para manejar el click en cada ítem del menú
     const handleMenuClick = (codigo) => {
         switch (codigo) {
-            case 'PRV': // Cuando hacen click en el ítem Provincias
-                navigate('/provincias'); // Redirigir a la ruta '/provincias'
+            case 'PRV': // Redirigir a la ruta '/provincias'
+                navigate('/provincias');
                 break;
             case 'ENSAYOS':
                 navigate('/ensayos');
@@ -82,54 +84,66 @@ function MenuPage() {
                 break;
             case 'MNUCPAG':
                 navigate('/condicionDePago');
-                break;                   
+                break;
             case 'RAIZ':
                 navigate('/menu');
                 break;
-            // Agrega más casos para otras rutas
             default:
                 break;
         }
     };
 
+    // Función para manejar la expansión y colapso de un grupo
     const toggleGroup = (endpoint) => {
-        setOpenGroups((prev) => ({ ...prev, [endpoint]: !prev[endpoint] }));
+        setOpenGroups(prev => ({ ...prev, [endpoint]: !prev[endpoint] }));
+    };
+
+    // Agrupar los ítems en las categorías principales primero
+    const groupedMenu = {
+        Laboratorio: {
+            descripcion: '☢ Laboratorio',
+            subItems: menuItems.filter(item => item.endpoint === 'MNULAB'),
+        },
+        Tablas: {
+            descripcion: '〽 Tablas',
+            subItems: menuItems.filter(item => item.endpoint === 'TABLAS'),
+        }
     };
 
     return (
         <div>
             <div className={styles.sidebar}>
-                <div className={styles.menuContainer}>
                     <img src={logo} alt="logo" className={styles.logo} />
+                <div className={styles.menuContainer}>
                     <ul>
-                        {/* Renderiza el ítem principal "RAIZ" sin flechita */}
+                        {/* Renderiza el ítem principal "Menu Principal" sin flechita */}
                         <li onClick={() => handleMenuClick('RAIZ')}>
                             {getIconForItem('RAIZ')} Menu Principal
                         </li>
-                        {/* Agrupa y renderiza ítems por endpoint */}
-                        {Array.from(new Set(menuItems.map(item => item.endpoint))) // Obtiene los endpoints únicos
-                            .filter(endpoint => endpoint) // Filtra los endpoints que no son nulos
-                            .map((endpoint, index) => {
-                                const itemsInGroup = menuItems.filter(item => item.endpoint === endpoint);
-                                return (
-                                    <li key={index}>
-                                        <div onClick={() => toggleGroup(endpoint)} style={{ display: 'flex', alignItems: 'center' }}>
-                                            {getIconForItem(endpoint)}
-                                            <span> {endpoint}</span>
-                                            <span style={{ marginLeft: '10px' }}> {openGroups[endpoint] ? '▼' : '▲'}</span>
-                                        </div>
-                                        {openGroups[endpoint] && (
-                                            <ul className={styles.submenu}>
-                                                {itemsInGroup.map((item, subIndex) => (
-                                                    <li key={subIndex} onClick={() => handleMenuClick(item.codigo)}>
-                                                        {getIconForItem(item.codigo)}  {item.descripcion}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </li>
-                                );
-                            })}
+                        {/* Renderiza las secciones agrupadas manualmente */}
+                        {Object.entries(groupedMenu).map(([key, group], index) => (
+                            <li key={index}>
+                                <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'center' }}>
+                                  
+                                  
+                                    {getIconForItem(key)}
+                                    <span>{group.descripcion}</span>
+                                    <span style={{ marginLeft: '10px' }}>
+                {openGroups[key] ? <FaChevronUp /> : <FaChevronDown />}
+            </span>
+                                </div>
+                                {/* Renderiza los sub-items si el grupo está abierto */}
+                                {openGroups[key] && group.subItems && (
+                                    <ul className={styles.submenu}>
+                                        {group.subItems.map((subItem, subIndex) => (
+                                            <li key={subIndex} onClick={() => handleMenuClick(subItem.codigo)}>
+                                                {getIconForItem(subItem.codigo)} {subItem.descripcion}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ))}
                     </ul>
                     {menuError && <div>Error al cargar el menú: {menuError}</div>}
                 </div>
@@ -139,3 +153,4 @@ function MenuPage() {
 }
 
 export default MenuPage;
+

@@ -1,37 +1,53 @@
-/* principal.module.css */
+/* Layout.module.css */
 .container {
-    display: flex;
-    min-height: 100vh; /* Llena la pantalla verticalmente */
-  }
-  
+  display: flex;
+  min-height: 100vh; /* Llena la pantalla verticalmente */
+}
+
+.menu {
+  width: 250px; /* Ancho fijo para el menú */
+  background-color: #f4f4f400;
+  flex-shrink: 0; /* Evita que el menú se reduzca */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0); /* Sombra para el menú */
+}
+
+.mainContent {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  display: flex;
+  flex-direction: column; /* Para organizar el contenido en columnas */
+  padding: 0;
+}
+
+.filtro{
+margin-left: 90px;
+
+}
+
+.contenido{
+height: 50rem;
+
+
+}
+main {
+  flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+  padding: 20px; /* Espaciado para el contenido */
+  background-color: #fff; /* Fondo blanco para el contenido */
+}
+
+/* Agregar estilos adicionales para hacer que el nav se mantenga en la parte superior */
+.nav {
+  /* border-bottom: 1px solid #ddd; */
+   /* Línea divisoria entre el nav y el contenido */
+  z-index: 10; /* Asegura que el nav esté por encima del contenido */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
   .menu {
-    width: 250px;
-    background-color: #f4f4f4;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-  
-  }
-  
-  .mainContent {
-    flex-grow: 1;
-    padding: 0px;
-    overflow: hidden;
-  }
-  
-  .title {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .menu {
       display: none; /* Ocultar el menú por completo en pantallas pequeñas */
-    }
-  
-    .mainContent {
-      padding: 10px;
-    }
   }
-  
+
+  .mainContent {
+      padding: 10px;
+  }
+}

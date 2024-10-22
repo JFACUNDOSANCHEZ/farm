@@ -5,14 +5,37 @@ html, body {
   margin: 0; /* Elimina el margen predeterminado del cuerpo */
 }
 
-body {
-  display: grid;
-  grid-template-rows: 1fr auto; /* Una fila flexible y una fila para el footer */
-}
+
 
 .footer {
   padding: 20px;
   background-color: #222;
   color: white;
   text-align: center;
+}
+
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: none; /* Elimina todos los bordes */
+  border-bottom: 2px solid black; /* Línea negra debajo de cada celda */
+}
+
+th {
+  background-color: #f4f4f400;
+  font-weight: bold;
+  border-bottom: 2px solid black; /* Línea negra debajo de los encabezados */
+}
+
+
+
+tbody tr:hover {
+  background-color: #f1f1f1;
 }

@@ -1,66 +1,73 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar todos los elementos horizontalmente */
-  justify-content: center; /* Centrar todos los elementos verticalmente */
   gap: 10px;
   padding: 20px;
-  width: 98%;
+  width: 70%;
   margin-top: 0.2rem;
-  
-   /* Ocupar toda la altura de la pantalla */
-
+  margin-left: 260px;
 }
 
 .SelectContainer {
   display: flex;
-  flex-wrap: wrap; /* Permitir que los elementos se reorganicen en pantallas más pequeñas */
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center; /* Alinear los elementos al centro */
+  justify-content: center;
   background-color: rgba(216, 216, 216, 0.557);
   padding: 20px;
-  gap: 5px; /* Reducir el espaciado entre elementos */
-  border-radius: 0.5rem;
-   }
+  gap: 10px; /* Aumentar un poco el espaciado entre elementos */
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
 
 /* Estilo para los select */
 select {
-  padding: 6px;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f9f9f9;
   color: #2e4264;
-  width: auto; /* Dejar que el select se ajuste a su contenido */
+  width: auto;
+  transition: border-color 0.3s ease; /* Transición suave al enfocar */
 }
 
+select:focus {
+  border-color: #224ab9; /* Color de borde al enfocar */
+}
+
+/* Estilo para el input */
 .inputA {
-  width: 200px; /* Ajustar el tamaño del input */
-  height: 1.5rem;
+  width: 200px;
+  height: 2rem; /* Ajustar la altura */
   padding: 4px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-left: 5px; /* Espacio a la izquierda reducido para acercarse al select */
+  margin-left: 5px;
+  transition: border-color 0.3s ease; /* Transición suave al enfocar */
+}
+
+.inputA:focus {
+  border-color: #224ab9; /* Color de borde al enfocar */
 }
 
 /* Contenedor de los botones */
 .buttonsContainer {
   display: flex;
-  justify-content: center; /* Centrar los botones horizontalmente */
-  align-items: center; /* Asegurar que los botones también estén centrados */
-  gap: 8px; /* Separar los botones del contenido de arriba */
-  flex-wrap: wrap; /* Permitir que los botones se ajusten en pantallas pequeñas */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .buttonsContainer button {
-  margin: 0 5px;
   padding: 8px 12px;
   border-radius: 5px;
   border: none;
-  background-color: #5c87fc8b;
-  color: #333;
-  font-size: 12px;
+  background-color: #224ab9;
+  color: #ffffff;
+  font-size: 14px;
   font-family: 'Arial', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -74,8 +81,8 @@ select {
 /* Botón "Buscar" con un color especial */
 .buttonBuscar {
   background-color: rgb(226, 185, 103);
-  border: none;
 }
+
 .buttonBuscar:hover {
   background-color: rgb(1, 1, 1);
   color: white;
