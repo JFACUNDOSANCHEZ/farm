@@ -43,9 +43,16 @@ const NavBar = () => {
         <span onClick={() => navigate('/menu')}><FaHome className="icon" /> Inicio</span> / <span>{currentPath}</span>
       </div>
 
-    
 
+    <div className={styles.user}>
+      <p>usuario
+      
+
+    Juan, Perez  
+      </p>
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
+      
+      
         <span>US</span>
         <FaChevronDown className="icon" />
         {isMenuOpen && (
@@ -55,6 +62,7 @@ const NavBar = () => {
           </div>
         )}
       </div>
+        </div>
     </nav>
   );
 };

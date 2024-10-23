@@ -41,6 +41,11 @@ main {
   z-index: 10; /* Asegura que el nav esté por encima del contenido */
 }
 
+.contenido {
+  flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  padding: 16px; /* Añade algo de espacio */
+}
 /* Responsividad */
 @media (max-width: 768px) {
   .menu {

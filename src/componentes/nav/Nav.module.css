@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 5px 10px;
-  border-bottom: 1px solid #ddd; /* Solo el borde inferior */
+  border-bottom: 0px solid #ddd; /* Solo el borde inferior */
   position: relative;
 
   margin-left: 280px;
@@ -80,11 +80,20 @@
 .userOptions {
   display: flex;
   align-items: center;
-  background-color: #24222e;
+  background-color: #cd2828;
   color: white;
   padding: 8px 8px;
-  border-radius: 50px;
+  border-radius: 100px;
   cursor: pointer;
+}
+
+.user {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  gap: 0px 10px;
+  display: flex;
+  margin-left: 8px; /* Espaciado entre el icono y el nombre */
+  font-size: 0.9rem; /* Ajusta el tamaño según prefieras */
+  color: rgb(43, 43, 61); /* Para que coincida con el color del texto */
 }
 
 .userOptions span {

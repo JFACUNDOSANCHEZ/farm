@@ -19,12 +19,13 @@ export default function Filtros() {
         <select name="Contiene">
           <option value="">Contiene:</option>
         </select>
+        <div className={filtros.inputContainer}>
+  <input type="text" className={filtros.inputA} placeholder="Buscar..." />
+</div>
 
-        <input type="text" className={filtros.inputA} placeholder="Buscar..." />
+        
       <div className={filtros.buttonsContainer}>
-        <button> Regla</button>
-        <button> Regla global</button>
-        <button> Grupo</button>
+       
         <button className={filtros.buttonBuscar}>Buscar</button>
       </div>
       </div>

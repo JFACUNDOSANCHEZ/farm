@@ -123,13 +123,13 @@ function MenuPage() {
                         {/* Renderiza las secciones agrupadas manualmente */}
                         {Object.entries(groupedMenu).map(([key, group], index) => (
                             <li key={index}>
-                                <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'center' }}>
+                                <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'start' }}>
                                   
                                   
                                     {getIconForItem(key)}
                                     <span>{group.descripcion}</span>
-                                    <span style={{ marginLeft: '10px' }}>
-                {openGroups[key] ? <FaChevronUp /> : <FaChevronDown />}
+                                    <span style={{ marginLeft: '5px' }}>
+                {openGroups[key] ? <FaChevronUp /> :  <FaChevronDown />}
             </span>
                                 </div>
                                 {/* Renderiza los sub-items si el grupo está abierto */}
