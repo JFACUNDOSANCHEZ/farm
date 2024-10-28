@@ -33,6 +33,7 @@ const NavBar = () => {
 
   const currentPath = 
     location.pathname === '/provincias' ? 'Provincias' : 
+    location.pathname === '/condicionDePago' ? 'Condicion De Pago' : 
     location.pathname === '/ensayos' ? 'Ensayos' :  
     location.pathname === '/condicionFiscal' ? 'Condición Fiscal' : 
     '';
@@ -45,13 +46,8 @@ const NavBar = () => {
 
 
     <div className={styles.user}>
-      <p>usuario
-      
-
-    Juan, Perez  
-      </p>
+    
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
-      
       
         <span>US</span>
         <FaChevronDown className="icon" />
@@ -61,6 +57,7 @@ const NavBar = () => {
             <button className={styles.dropdownItem}>Configuración</button>
           </div>
         )}
+      
       </div>
         </div>
     </nav>

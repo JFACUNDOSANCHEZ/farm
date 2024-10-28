@@ -33,20 +33,7 @@ const Provincias = () => {
           <h1 className={styles.title}>Provincias</h1>
                
 
-                {/* Iconos para alternar la vista */}<div className={styles.viewToggle}>
-    <FontAwesomeIcon
-        icon={faThLarge}
-        className={`${styles.icon} ${view === 'cards' ? styles.activeIcon : ''}`}
-        onClick={() => setView('cards')}
-        title="Vista de Cuadros"
-    />
-    <FontAwesomeIcon
-        icon={faList}
-        className={`${styles.icon} ${view === 'table' ? styles.activeIcon : ''}`}
-        onClick={() => setView('table')}
-        title="Vista de Lista"
-    />
-</div>
+              <br />
 
 
                 {/* Renderizado condicional según la vista */}

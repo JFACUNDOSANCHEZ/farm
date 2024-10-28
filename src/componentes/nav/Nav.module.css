@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-   background-color: #f6f6f600; 
-  padding: 1px 5px;
+  /* background-color: #fff; */
+  padding: 5px 10px;
   border-bottom: 0px solid #ddd; /* Solo el borde inferior */
   position: relative;
   margin-left: 260px;
@@ -78,28 +78,29 @@
 
 .userOptions {
   display: flex;
+ 
   align-items: center;
-  background-color: #b00b0be0;
-  color: white;
-  margin-top: 0.3rem;
-  padding: 4px 4px;
+  background-color: #fcfcfce0;
+  color: #666;
+  padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición de color y fondo */
 }
 
-.user {
-  width: 190px; /* Ajusta este valor al ancho que desees */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  white-space: nowrap;
-  gap: 0px 10px;
-  display: flex;
-  margin-left: 8px; /* Espaciado entre el icono y el nombre */
-  font-size: 0.9rem; /* Ajusta el tamaño según prefieras */
-  color: #666; /* Para que coincida con el color del texto */
+.userOptions:hover {
+  background-color: #e0e0e0; /* Color de fondo al hacer hover */
+  color: #333; /* Cambia el color del texto en hover */
 }
 
-.userOptions span {
-  margin-right: 8px;
+.userOptions span,
+.userOptions .icon {
+  transition: color 0.3s ease; /* Transición solo en color */
+}
+
+.userOptions:hover span,
+.userOptions:hover .icon {
+  color: #333; /* Cambia el color de texto y del icono en hover */
 }
 
 .userOptions i {

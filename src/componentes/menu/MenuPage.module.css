@@ -1,27 +1,27 @@
 .sidebar {
     position: fixed; /* Mantiene el menú fijo en la pantalla */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
     width: 250px;
     height: 100vh; /* Asegura que el menú ocupe toda la altura */
-    background-color: #071435f4;
+    background-color: #071435fd;
     transition: transform 0.3s ease; 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .menuContainer {
-    margin-top: 4rem;
-    height: 80%;
+    margin-top: 2.5rem;
+    height: 75%;
     overflow-y: auto; 
-    padding: 1px;
+    padding: 0rem;
     list-style-type: none;
     text-align: left;
 }
 
 .menuContainer li {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
     padding:  0.6rem; 
     color: #ddd; /* Color del texto base */
     transition: background-color 0.3s ease; /* Transición suave para el hover */
@@ -45,8 +45,8 @@
 }
 
 .menuError{
-padding: 2rem;
-
+    padding: 2rem;
+    
 }
 
 .logo img {
@@ -70,7 +70,8 @@ padding: 2rem;
     background-color: rgb(135, 135, 135); /* Cambia el color al pasar el mouse */
 }
 
-/* Estilo de la pista (track) del scrollbar */
+
+
 .menuContainer::-webkit-scrollbar-track {
     background-color: #f5f5f5; /* Color del fondo de la pista */
     border-radius: 10px;
@@ -83,9 +84,26 @@ padding: 2rem;
 }
 
 .submenu {
-    padding-left: 0.5rem; /* Ajusta el padding izquierdo para los submenús */
+    height: 0; /* Cambiamos a height */
+    overflow: hidden;
+    transition: height 0.3s ease; /* Controla la velocidad de apertura y cierre */
+    padding-left: 1.5rem;
     list-style-type: none;
+}
+.submenu {
+    padding-left: 0.5rem; /* Ajusta el padding izquierdo para los submenús */
+}
 
+.submenuOpen {
+    max-height: 500px; /* Altura máxima suficiente para contener todos los subitems */
+    transition: max-height 0.3s ease-in; /* Controla la velocidad de cierre */
+}
+.submenu.open {
+    max-height: 200px; /* Ajusta según el número de subitems que esperas; también puedes usar `auto` */
+}
+
+.menuGroupIcon {
+    margin-right: 0.75rem; /* Ajusta para alinear el ícono más a la izquierda */
 }
 
 .submenu li {

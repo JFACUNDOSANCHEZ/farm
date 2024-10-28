@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } from '../../redux/slices/menuSlice.jsx';
 import { FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
@@ -112,43 +112,46 @@ function MenuPage() {
 
     return (
         <div>
-            <div className={styles.sidebar}>
-                    <img src={logo} alt="logo" className={styles.logo} />
-                <div className={styles.menuContainer}>
-                    <ul>
-                        {/* Renderiza el ítem principal "Menu Principal" sin flechita */}
-                        <li onClick={() => handleMenuClick('RAIZ')}>
-                            {getIconForItem('RAIZ')} Menu Principal
-                        </li>
-                        {/* Renderiza las secciones agrupadas manualmente */}
-                        {Object.entries(groupedMenu).map(([key, group], index) => (
+        <div className={styles.sidebar}>
+            <img src={logo} alt="logo" className={styles.logo} />
+            <div className={styles.menuContainer}>
+                <ul>
+                    <li onClick={() => handleMenuClick('RAIZ')}>
+                        {getIconForItem('RAIZ')} Menu Principal
+                    </li>
+                    {Object.entries(groupedMenu).map(([key, group], index) => {
+                        const subMenuRef = useRef(null);
+
+                        return (
                             <li key={index}>
                                 <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'start' }}>
-                                  
-                                  
                                     {getIconForItem(key)}
                                     <span>{group.descripcion}</span>
                                     <span style={{ marginLeft: '5px' }}>
-                {openGroups[key] ? <FaChevronUp /> :  <FaChevronDown />}
-            </span>
+                                        {openGroups[key] ? <FaChevronUp /> : <FaChevronDown />}
+                                    </span>
                                 </div>
-                                {/* Renderiza los sub-items si el grupo está abierto */}
-                                {openGroups[key] && group.subItems && (
-                                    <ul className={styles.submenu}>
-                                        {group.subItems.map((subItem, subIndex) => (
-                                            <li key={subIndex} onClick={() => handleMenuClick(subItem.codigo)}>
-                                                {getIconForItem(subItem.codigo)} {subItem.descripcion}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                                <ul
+                                    ref={subMenuRef}
+                                    style={{
+                                        height: openGroups[key] ? `${subMenuRef.current.scrollHeight}px` : '0px'
+                                    }}
+                                    className={styles.submenu}
+                                >
+                                    {group.subItems.map((subItem, subIndex) => (
+                                        <li key={subIndex} onClick={() => handleMenuClick(subItem.codigo)}>
+                                            {getIconForItem(subItem.codigo)} {subItem.descripcion}
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
-                        ))}
-                    </ul>
-                    {menuError && <div className={styles.menuError}> Menu no disponible</div>}
-                </div>
+                        );
+                    })}
+                </ul>
+                {menuError && <div className={styles.menuError}> Menu no disponible</div>}
             </div>
         </div>
+    </div>
     );
 }
 
