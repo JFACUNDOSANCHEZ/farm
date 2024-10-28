@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <div className={styles.container}>
       <div className={styles.mainContent}> {/* Contenedor para el contenido principal */}
       <Menu className={styles.menu} />   {/* Aplicar clase al menú */}
-        <Nav />    {/* Renderiza la barra de navegación */}
+        <Nav />    Renderiza la barra de navegación
         <div className={styles.filtro}>
 
         <Filtros />

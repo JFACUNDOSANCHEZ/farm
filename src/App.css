@@ -5,7 +5,9 @@ html, body {
   margin: 0; /* Elimina el margen predeterminado del cuerpo */
 }
 
-
+body {
+  overflow-y: scroll;
+}
 
 .footer {
   padding: 20px;
