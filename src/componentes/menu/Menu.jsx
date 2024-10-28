@@ -145,7 +145,7 @@ function MenuPage() {
                             </li>
                         ))}
                     </ul>
-                    {menuError && <div>Error al cargar el menú: {menuError}</div>}
+                    {menuError && <div className={styles.menuError}> Menu no disponible</div>}
                 </div>
             </div>
         </div>

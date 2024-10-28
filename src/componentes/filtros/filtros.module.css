@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  width: 70%;
+  width: 63%;
   margin-top: 0.2rem;
   margin-left: 260px;
 }
@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(216, 216, 216, 0.557);
+  background-color: rgba(216, 216, 216, 0.228);
   padding: 20px;
   gap: 10px;
   border-radius: 0.3rem;
@@ -32,7 +32,7 @@ select {
 }
 
 select:focus {
-  border-color: #224ab9;
+  border-color: #474a53cc;
 }
 
 .inputContainer {
@@ -66,8 +66,8 @@ select:focus {
 }
 
 .buttonsContainer button {
-  padding: 6px ;
-  border-radius: 5px;
+  padding: 13px ;
+  border-radius: 7px;
   border: none;
   background-color: #224ab9;
   color: #ffffff;
@@ -83,7 +83,16 @@ select:focus {
 }
 
 .buttonBuscar {
-  background-color: rgb(226, 185, 103);
+ margin-left: 1rem;
+  padding: 10px ;
+  border-radius: 70px;
+  border: none;
+  background-color: #224ab9;
+  color: #ffffff;
+    font-size:13px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .buttonBuscar:hover {

@@ -1,6 +1,6 @@
 import React from 'react';
 import filtros from './filtros.module.css';
-import { FaRuler, FaGlobe, FaUsers } from 'react-icons/fa';
+import { FaRuler, FaGlobe, FaUsers, FaSearch } from 'react-icons/fa';
 
 export default function Filtros() {
   return (
@@ -21,12 +21,12 @@ export default function Filtros() {
         </select>
         <div className={filtros.inputContainer}>
   <input type="text" className={filtros.inputA} placeholder="Buscar..." />
+        <button className={filtros.buttonBuscar}><FaSearch/></button>
 </div>
 
         
       <div className={filtros.buttonsContainer}>
        
-        <button className={filtros.buttonBuscar}>Buscar</button>
       </div>
       </div>
 

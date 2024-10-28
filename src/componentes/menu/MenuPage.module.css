@@ -1,8 +1,8 @@
 .sidebar {
     position: fixed; /* Mantiene el menú fijo en la pantalla */
-    left: 0;
-    top: 0;
-    width: 280px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    width: 250px;
     height: 100vh; /* Asegura que el menú ocupe toda la altura */
     background-color: #071435f4;
     transition: transform 0.3s ease; 
@@ -11,7 +11,7 @@
 }
 
 .menuContainer {
-    margin-top: 2rem;
+    margin-top: 4rem;
     height: 80%;
     overflow-y: auto; 
     padding: 1px;
@@ -20,8 +20,9 @@
 }
 
 .menuContainer li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0.6rem 0.6rem 0.6rem 0.5rem; /* Ajusta el padding izquierdo para pegar más el texto */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    padding:  0.6rem; 
     color: #ddd; /* Color del texto base */
     transition: background-color 0.3s ease; /* Transición suave para el hover */
     cursor: pointer; /* Cambia el puntero al pasar el mouse */
@@ -40,7 +41,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 35px;
+    padding: 25px 35px;
+}
+
+.menuError{
+padding: 2rem;
+
 }
 
 .logo img {
