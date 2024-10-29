@@ -29,7 +29,6 @@ const Provincias = () => {
             <div className={styles.mainContent}>
             
            
-                {status === 'loading' && <div>Cargando...</div>}
           <h1 className={styles.title}>Provincias</h1>
                
 
@@ -43,6 +42,7 @@ const Provincias = () => {
                             {provincias.map((provincia) => (
                                 <div key={provincia.codigo} className={styles.card}>
                                     <h2>{provincia.descripcion}</h2>
+                                    {status === 'loading' && <div><img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" alt="" /></div>}
                                     <p>Código: {provincia.codigo}</p>
                                     <p>Porcentaje IIBB: {provincia.porcentajeIIBB}%</p>
                                     <p>Importe IIBB: ${provincia.importeIIBB}</p>

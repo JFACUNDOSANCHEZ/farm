@@ -6,6 +6,17 @@
   
   }
 
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.loadingGif {
+    width: 100px; /* Tamaño del GIF */
+    height: auto;
+}
   .loadingContainer, .errorContainer {
     display: flex;
     justify-content: center;
