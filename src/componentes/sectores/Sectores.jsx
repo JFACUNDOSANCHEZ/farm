@@ -28,7 +28,6 @@ const Sectores = () => {
   return (
     <>
 
-      <h1 className={styles.title}>Lista de Sectores</h1>
     <div className={styles.container}>
 
       <h2 className={styles.subtitle}>Sectores de Laboratorio</h2>
