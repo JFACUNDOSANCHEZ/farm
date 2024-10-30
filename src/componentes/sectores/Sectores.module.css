@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .loading {
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .error {
+    font-size: 18px;
+    color: #d9534f;
+  }
+  

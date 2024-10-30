@@ -86,8 +86,27 @@ function MenuPage() {
                 navigate('/condicionDePago');
                 break;
             case 'RAIZ':
-                navigate('/menu');
+                    navigate('/menu');
+                    break;
+            
+            case 'MNUPERSONAL':
+                navigate('/usuarios');
                 break;
+            
+            case 'MNUMETODO':
+                    navigate('/Metodos');
+                    break;
+            
+            case 'MNUSECTOR':
+                        navigate('/sectores');
+                        break;
+            
+            case 'MNUUM':
+                    navigate('/estadosOT');
+                    break;
+
+                        
+    
             default:
                 break;
         }

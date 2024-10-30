@@ -37,7 +37,7 @@
   }
   .menu {
     width: 250px;
-    background-color: #f4f4f4;
+ 
     flex-shrink: 0; /* Evita que el menú se reduzca de tamaño */
     transition: transform 0.3s ease;
   }
@@ -87,7 +87,7 @@
 
 /* Estilo para los elementos <li> en la grilla */
 .gridItem {
-  background-color: #fff;
+ 
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
@@ -97,7 +97,7 @@
 
 /* Estilo común para las cards en ambas vistas */
 .card, .gridItem {
-  background-color: #fff;
+ 
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
@@ -145,13 +145,13 @@
 }
 
 .table th {
-  background-color: #f4f4f4;
+
   font-weight: bold;
   border-bottom: 2px solid black; /* Añade también la línea negra debajo de los encabezados */
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+
 }
 
 .table tbody tr:hover {

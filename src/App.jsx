@@ -8,6 +8,10 @@ import CondicionPagoComponent from './componentes/condicionDePago/CondicionDePag
 import Layout from './componentes/layout/Layout'; // Importa el Layout
 import NavBar from './componentes/nav/Nav';
 import './App.css';
+import Metodos from './componentes/metodo/Metodos';
+import Usuarios from './componentes/Usuarios/Usuarios';
+import Sectores from './componentes/sectores/Sectores';
+import EstadosOT from './componentes/estados/EstadosOT';
 
 
 function App() {
@@ -24,6 +28,10 @@ function App() {
       <Route path="/provincias" element={<Layout><Provincias /></Layout>} />
       <Route path="/condicionFiscal" element={<Layout><CondicionFiscalComponent /></Layout>} />
       <Route path="/condicionDePago" element={<Layout><CondicionPagoComponent /></Layout>} />
+      <Route path="/Metodos" element={<Layout><Metodos /></Layout>} />
+      <Route path="/usuarios" element={<Layout><Usuarios /></Layout>} />
+      <Route path="/sectores" element={<Layout><Sectores /></Layout>} />
+      <Route path="/estadosOT" element={<Layout><EstadosOT /></Layout>} />
     </Routes>
   );
 }
