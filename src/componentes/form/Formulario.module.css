@@ -6,7 +6,7 @@
 
 .menu {
   width: 250px;
-  background-color: #f4f4f4;
+
   flex-shrink: 0; /* Evita que el menú se reduzca de tamaño */
   transition: transform 0.3s ease;
 }
