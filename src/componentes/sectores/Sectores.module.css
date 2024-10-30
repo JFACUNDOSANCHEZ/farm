@@ -1,39 +1,59 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  .title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .list {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .item {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-  }
-  
-  .loading {
-    font-size: 18px;
-    color: #888;
-  }
-  
-  .error {
-    font-size: 18px;
-    color: #d9534f;
-  }
-  
+  padding: 20px;
+  margin-left: 250px;
+  width: 60%;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px; /* Reduce este valor para moverlo más arriba */
+  margin-bottom: 20px; /* Mantén o ajusta el margen inferior según necesites */
+}
+
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las cards se ajusten al espacio disponible */
+  justify-content: center; /* Centra las cards en el contenedor */
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 170px; /* Ancho fijo para las cards */
+  margin: 10px; /* Espaciado entre cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centra el texto dentro de la card */
+  transition: transform 0.2s; /* Efecto de hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.cardIcon {
+  margin-bottom: 10px; /* Espacio entre el icono y el título */
+}
+.subtitle {
+  text-align: start;
+  font-size: 20px;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  color: #333;
+  margin: 5px; /* Espaciado inferior */
+}
+
+.cardCode {
+  font-size: 14px;
+  color: #666;
+}
