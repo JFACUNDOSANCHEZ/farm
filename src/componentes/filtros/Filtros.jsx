@@ -6,7 +6,7 @@ export default function Filtros() {
   return (
     <div className={filtros.container}>
       <div className={filtros.SelectContainer}>
-        <select name="hrhrhr">
+        {/* <select name="hrhrhr">
           <option value="">--</option>
           <option value="fadf">fadf</option>
           <option value="asdf">asdf</option>
@@ -18,7 +18,7 @@ export default function Filtros() {
 
         <select name="Contiene">
           <option value="">Contiene:</option>
-        </select>
+        </select> */}
         <div className={filtros.inputContainer}>
   <input type="text" className={filtros.inputA} placeholder="Buscar..." />
         <button className={filtros.buttonBuscar}><FaSearch/></button>

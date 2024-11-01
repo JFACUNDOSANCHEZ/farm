@@ -17,7 +17,8 @@ const Formulario = () => {
     <div className={styles.mainContent}>
    
     <div className={styles.formContainer}>
-      <h2>Nuevo elemento - Proveedor</h2>
+      <h2>Nuevo elemento </h2>
+      <br /><br />
       <form>
         <div className={styles.formGroup}>
           <label>Nombre</label>

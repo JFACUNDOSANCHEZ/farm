@@ -1,14 +1,14 @@
 .container {
   padding: 20px;
   margin-left: 250px;
-  width: 60%;
+  width: 70%;
 }
 
 .title {
   text-align: center;
   font-size: 24px;
   color: #333;
-  margin-top: 10px; /* Reduce este valor para moverlo más arriba */
+  margin-top: 0px; /* Reduce este valor para moverlo más arriba */
   margin-bottom: 20px; /* Mantén o ajusta el margen inferior según necesites */
 }
 
@@ -17,7 +17,7 @@
   display: flex;
   flex-wrap: wrap; /* Permite que las cards se ajusten al espacio disponible */
   justify-content: center; /* Centra las cards en el contenedor */
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .card {

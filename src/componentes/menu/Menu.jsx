@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } from '../../redux/slices/menuSlice.jsx';
-import { FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
+import {FaAdjust, FaAffiliatetheme , FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styles from './MenuPage.module.css';
 import logo from '../../../public/logo.jpg.jpeg';
@@ -63,8 +63,14 @@ function MenuPage() {
                 return <FaFlask />;
             case 'MNURESULTADOS':
                 return <FaTable />;
-                case 'MNUCOTIMUES':
+            case 'MNUCOTIMUES':
                 return <FaIndustry />;
+            case 'ESTADOSOT':
+                    return <FaAdjust />;
+            case 'MNUMATRIZ':
+                    return <FaAffiliatetheme />;
+
+                
             default:
                 return null;
         }
@@ -92,6 +98,10 @@ function MenuPage() {
             case 'MNUPERSONAL':
                 navigate('/usuarios');
                 break;
+
+                case 'MNUMATRIZ':
+                    navigate('/matrices');
+                    break;
             
             case 'MNUMETODO':
                     navigate('/Metodos');
@@ -101,7 +111,7 @@ function MenuPage() {
                         navigate('/sectores');
                         break;
             
-            case 'MNUUM':
+            case 'ESTADOSOT':
                     navigate('/estadosOT');
                     break;
 

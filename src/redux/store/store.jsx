@@ -10,7 +10,7 @@ import clientesReducer from '../slices/clientesSlice';
 import sectoresReducer from '../slices/sectoresSlice'; 
 import usuariosReducer from '../slices/usuariosSlice'; 
 import estadosOTReducer from '../slices/estadosOTSlice';
-
+import matricesReducer from '../slices/matricesSlice'
 const store = configureStore({
   reducer: {
     auth: authReducer,
@@ -22,7 +22,8 @@ const store = configureStore({
     clientes: clientesReducer,       
     sectores: sectoresReducer,       
     usuarios: usuariosReducer,       
-    estadosOT: estadosOTReducer,     
+    estadosOT: estadosOTReducer,  
+    matrices: matricesReducer   
   },
 });
 

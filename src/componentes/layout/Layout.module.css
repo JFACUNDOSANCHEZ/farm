@@ -22,7 +22,7 @@
   display: flex; /* Permite utilizar flexbox para centrar */
   justify-content: center; /* Centra el contenido horizontalmente */
   width: 100%; /* Hace que el filtro ocupe el ancho completo */
-  margin: 20px 0; /* Espaciado vertical para separar del contenido */
+  /* Espaciado vertical para separar del contenido */
 }
 
 .contenido{

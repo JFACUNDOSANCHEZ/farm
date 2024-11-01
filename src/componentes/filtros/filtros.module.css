@@ -4,7 +4,7 @@
   gap: 10px;
   padding: 20px;
   width: 63%;
-  margin-top: 0.2rem;
+
   margin-left: 260px;
 }
 
@@ -13,11 +13,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(216, 216, 216, 0.228);
+  /* background-color: rgba(216, 216, 216, 0); */
   padding: 20px;
   gap: 10px;
   border-radius: 0.3rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 select {
@@ -69,7 +69,7 @@ select:focus {
   padding: 13px ;
   border-radius: 7px;
   border: none;
-  background-color: #224ab9;
+  background-color: #020204;
   color: #ffffff;
   font-size:13px;
   font-family: 'Arial', sans-serif;
@@ -87,7 +87,7 @@ select:focus {
   padding: 10px ;
   border-radius: 70px;
   border: none;
-  background-color: #224ab9;
+  background-color: #000101;
   color: #ffffff;
     font-size:13px;
   font-family: 'Arial', sans-serif;
@@ -96,6 +96,6 @@ select:focus {
 }
 
 .buttonBuscar:hover {
-  background-color: rgb(1, 1, 1);
+  background-color: rgba(1, 1, 1, 0.808);
   color: white;
 }
