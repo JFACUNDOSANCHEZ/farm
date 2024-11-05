@@ -70,6 +70,12 @@ function MenuPage() {
             case 'MNUMATRIZ':
                     return <FaAffiliatetheme />;
 
+           
+           
+    
+
+
+                    
                 
             default:
                 return null;
@@ -115,6 +121,9 @@ function MenuPage() {
                     navigate('/estadosOT');
                     break;
 
+                    case 'MNUUM':
+                        navigate('/Clientes')
+
                         
     
             default:
@@ -129,6 +138,11 @@ function MenuPage() {
 
     // Agrupar los ítems en las categorías principales primero
     const groupedMenu = {
+        Sistema: {
+            descripcion: '👁 Sistema',
+            subItems: menuItems.filter(item => item.endpoint === 'SISTEMA'),
+        },
+
         Laboratorio: {
             descripcion: '☢ Laboratorio',
             subItems: menuItems.filter(item => item.endpoint === 'MNULAB'),

@@ -13,6 +13,7 @@ import Usuarios from './componentes/Usuarios/Usuarios';
 import Sectores from './componentes/sectores/Sectores';
 import EstadosOT from './componentes/estados/EstadosOT';
 import Matrices from './componentes/matrices/Matrices';
+import Clientes from './componentes/clientes/Clientes';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/sectores" element={<Layout><Sectores /></Layout>} />
       <Route path="/estadosOT" element={<Layout><EstadosOT /></Layout>} />
       <Route path="/matrices" element={<Layout><Matrices /></Layout>} />
+      <Route path="/Clientes" element={<Layout><Clientes /></Layout>} />
     </Routes>
   );
 }

@@ -1,63 +1,68 @@
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 250px;
+  text-align: start;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .title {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-  font-size: 24px;
+  text-align: start;
   color: #333;
-  margin-bottom: 2rem;
+  margin-left: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
 
 .card {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: 200px;
+  width: 200px; /* Ajusta según tus necesidades */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  text-align: center;
+  text-align: center; /* Centrar contenido */
 }
 
+
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efecto de hover */
 }
 
 .cardImage {
-  font-size: 40px;
-  color: #007bff;
-  margin-bottom: 10px;
+  width: 70px; /* Ajusta el tamaño de la imagen */
+  height: 70px; /* Mantiene proporciones */
+  border-radius: 10%; /* Hace la imagen circular */
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones sin deformarse */
+  margin-bottom: 10px; /* Espacio entre la imagen y el título */
 }
 
 .cardTitle {
   font-size: 18px;
   color: #333;
   margin: 0 0 10px;
+  text-align: center;
 }
+
 
 .cardCode {
   font-size: 14px;
   color: #666;
 }
 
-.loading {
-  font-size: 18px;
-  color: #888;
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las cards */
 }
 
-.error {
-  font-size: 18px;
-  color: #d9534f;
-}
+
+
+
+
+

@@ -24,8 +24,8 @@ const CondicionFiscalComponent = () => {
       <div className={styles.mainContent}>
         
         <div className={styles.contain}>
-          <h1 className={styles.title}>Condición Fiscal</h1>
-          <br />
+          <h2 className={styles.title}>Condición Fiscal</h2>
+        
           <table className={styles.table}>
             <thead>
               <tr>

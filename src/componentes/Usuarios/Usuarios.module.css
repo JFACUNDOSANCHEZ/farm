@@ -1,18 +1,31 @@
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 250px;
+  text-align: start;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .title {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-  font-size: 24px;
+  text-align: start;
   color: #333;
-  margin-bottom: 2rem;
+  margin-left: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.tableImage{
+  width: 30px;
+}
+
+.table {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
 .card {
   background-color: #f4f4f4;

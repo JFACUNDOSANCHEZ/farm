@@ -29,10 +29,10 @@ const Provincias = () => {
             <div className={styles.mainContent}>
             
            
-          <h1 className={styles.title}>Provincias</h1>
+          <h2 className={styles.title}>Provincias</h2>
                
 
-              <br />
+            
 
 
                 {/* Renderizado condicional según la vista */}

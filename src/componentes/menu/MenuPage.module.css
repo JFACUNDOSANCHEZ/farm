@@ -91,7 +91,7 @@
     list-style-type: none;
 }
 .submenu {
-    padding-left: 0.5rem; /* Ajusta el padding izquierdo para los submenús */
+    padding-left: 0rem; /* Ajusta el padding izquierdo para los submenús */
 }
 
 .submenuOpen {

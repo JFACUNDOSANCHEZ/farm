@@ -33,13 +33,13 @@ const EstadosOT = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Lista de EstadosOT</h1>
+      <h2 className={styles.title}>EstadosOT</h2>
       <div className={styles.cardContainer}>
         {list.map((metodo, index) => (
           <div key={index} className={styles.card}>
-            {getIconByDescription(metodo.descripcion)}
             <h2 className={styles.cardTitle}>{metodo.descripcion}</h2>
             <p className={styles.cardCode}>Código: {metodo.codigo}</p>
+            {getIconByDescription(metodo.descripcion)}
           </div>
         ))}
       </div>

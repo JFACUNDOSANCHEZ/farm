@@ -36,7 +36,7 @@ const Sectores = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.subtitle}>Sectores de Laboratorio</h2>
+      <h2 className={styles.title}>Sectores de Laboratorio</h2>
       <div className={styles.cardContainer}>
         {sectoresTrue.map((metodo, index) => {
           const { icon, color } = getIcon(metodo.descripcion);

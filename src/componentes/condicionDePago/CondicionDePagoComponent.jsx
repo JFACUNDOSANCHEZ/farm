@@ -27,7 +27,7 @@ const CondicionPagoComponent = () => {
       
      
         <div className={styles.contain}>
-          <h2 className={styles.title}>Lista de Condiciones de Pago</h2>
+          <h2 className={styles.title}>Condiciones de Pago</h2>
           <table className={styles.table}>
             <thead>
               <tr>
