@@ -110,7 +110,7 @@
    
     padding: 0.6rem 0.4rem 0.4rem 1rem; /* Mantiene un padding diferente para los subitems */
     color: #000000; /* Color más claro para los subitems */
-    font-size: 0.8rem; /* Reduce el tamaño de la fuente para los subitems */
+    font-size: 0.93rem; /* Reduce el tamaño de la fuente para los subitems */
 }
 
 .submenu li:hover {
