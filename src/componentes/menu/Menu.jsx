@@ -4,7 +4,7 @@ import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } fr
 import {FaAdjust, FaAffiliatetheme , FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styles from './MenuPage.module.css';
-import logo from '../../../public/logo.jpg.jpeg';
+import logo from '/logo.jpg.jpeg';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 function MenuPage() {
@@ -79,7 +79,7 @@ function MenuPage() {
     // Función para manejar el click en cada ítem del menú
     const handleMenuClick = (codigo) => {
         switch (codigo) {
-            case 'PRV': // Redirigir a la ruta '/provincias'
+            case 'PRV': 
                 navigate('/provincias');
                 break;
             case 'ENSAYOS':
