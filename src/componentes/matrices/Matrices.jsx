@@ -17,7 +17,7 @@ const Matrices = () => {
 
   return (
     <div className={styles.container}>
-        <h2 className={styles.title}>Lista de Matrices</h2>
+        <h2 className={styles.title}>Matrices</h2>
     <div className={styles.cardContainer}>
         {list.map((matriz, index) => (
           <div key={index} className={styles.card}>
