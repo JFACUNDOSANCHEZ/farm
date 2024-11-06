@@ -6,7 +6,7 @@ import styles from './Usuarios.module.css';
 const Usuarios = () => {
   const dispatch = useDispatch();
   const { list, loading, error } = useSelector((state) => state.usuarios);
-  const [viewMode, setViewMode] = useState('cards'); // Estado para alternar entre cards y table
+  const [viewMode, setViewMode] = useState('table'); // Estado para alternar entre cards y table
 
   useEffect(() => {
     dispatch(fetchUsuarios());
@@ -21,10 +21,12 @@ const Usuarios = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Lista de Usuarios</h2>
-      <button onClick={toggleViewMode} className={styles.toggleButton}>
-        Ver como {viewMode === 'cards' ? 'Tabla' : 'Cards'}
-      </button>
+   <div className={styles.header}>
+  <h2 className={styles.title}>Lista de Usuarios</h2>
+  <button onClick={toggleViewMode} className={styles.toggleButton}>
+    Ver como {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+  </button>
+</div>
 
       {viewMode === 'cards' ? (
         <div className={styles.cardContainer}>
