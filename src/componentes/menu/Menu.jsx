@@ -122,8 +122,12 @@ function MenuPage() {
                     break;
 
                     case 'MNUUM':
-                        navigate('/Clientes')
+                        navigate('/Clientes');
+                           break;
 
+                           case 'TMUESTRA':
+                            navigate('/Tipos');
+                               break;
                         
     
             default:

@@ -14,6 +14,7 @@ import Sectores from './componentes/sectores/Sectores';
 import EstadosOT from './componentes/estados/EstadosOT';
 import Matrices from './componentes/matrices/Matrices';
 import Clientes from './componentes/clientes/Clientes';
+import Tipos from './componentes/Tipos/Tipos';
 
 
 function App() {
@@ -21,10 +22,10 @@ function App() {
 
     
     <Routes>
-      {/* Página de login, sin el menú */}
+    
       <Route path="/" element={<Login />} />
       
-      {/* Rutas con el menú y nav dentro del Layout */}
+    
       <Route path="/menu" element={<Layout><Principal /></Layout>} />
       <Route path="/ensayos" element={<Layout><Form /></Layout>} />
       <Route path="/provincias" element={<Layout><Provincias /></Layout>} />
@@ -36,6 +37,7 @@ function App() {
       <Route path="/estadosOT" element={<Layout><EstadosOT /></Layout>} />
       <Route path="/matrices" element={<Layout><Matrices /></Layout>} />
       <Route path="/Clientes" element={<Layout><Clientes /></Layout>} />
+      <Route path="/Tipos" element={<Layout><Tipos /></Layout>} />
     </Routes>
   );
 }
