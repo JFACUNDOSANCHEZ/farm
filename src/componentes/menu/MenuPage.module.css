@@ -1,7 +1,7 @@
 .sidebar {
     position: fixed; /* Mantiene el menú fijo en la pantalla */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: black;
+    color: rgb(55, 54, 54);
     width: 250px;
     height: 100vh; /* Asegura que el menú ocupe toda la altura */
     background-color: #fffffffd;
@@ -23,7 +23,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
     padding:  0.6rem; 
-    color: #000000; /* Color del texto base */
+    color: #444444; /* Color del texto base */
     transition: background-color 0.3s ease; /* Transición suave para el hover */
     cursor: pointer; /* Cambia el puntero al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados para los ítems */
@@ -109,7 +109,7 @@
 .submenu li {
    
     padding: 0.6rem 0.4rem 0.4rem 1rem; /* Mantiene un padding diferente para los subitems */
-    color: #000000; /* Color más claro para los subitems */
+    color: #424242; /* Color más claro para los subitems */
     font-size: 0.93rem; /* Reduce el tamaño de la fuente para los subitems */
 }
 

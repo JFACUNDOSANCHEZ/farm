@@ -2,8 +2,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Define la función asíncrona para obtener los datos de las provincias
-export const fetchProvincias = createAsyncThunk('provincias/fetchProvincias', async (_, { getState }) => {
+
+export const fetchTipos = createAsyncThunk('tipos/fetchTipos', async (_, { getState }) => {
   const token = localStorage.getItem('token');
   
   const response = await axios.get('https://nube02.sytes.net:24082/api/Tablas/Provincias/Lista?oCodigo=""', {
@@ -18,10 +18,10 @@ console.log(response.data);
 });
 
 // Define el slice
-const provinciaSlice = createSlice({
-  name: 'provincias',
+const tiposSlice = createSlice({
+  name: 'tipos',
   initialState: {
-    provincias: [],
+    tipos: [],
     status: 'idle',
     error: null,
   },
@@ -30,15 +30,15 @@ const provinciaSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProvincias.pending, (state) => {
+      .addCase(fetchTipos.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchProvincias.fulfilled, (state, action) => {
+      .addCase(fetchTipos.fulfilled, (state, action) => {
         state.status = 'succeeded';
         // Agrega las provincias a la lista
-        state.provincias = action.payload;
+        state.tipos = action.payload;
       })
-      .addCase(fetchProvincias.rejected, (state, action) => {
+      .addCase(fetchTipos.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       });
@@ -46,8 +46,7 @@ const provinciaSlice = createSlice({
 });
 
 // Exporta los reducers y selectors necesarios
-export const selectProvincias = (state) => state.provincias.provincias;
-export const selectProvinciasStatus = (state) => state.provincias.status;
-export const selectProvinciasError = (state) => state.provincias.error;
-
-export default provinciaSlice.reducer;
+export const selectTipos = (state) => state.tipos.tipos;
+export const selectTiposStatus = (state) => state.tipos.status; 
+export const selectTiposError = (state) => state.tipos.error;   
+export default tiposSlice.reducer;

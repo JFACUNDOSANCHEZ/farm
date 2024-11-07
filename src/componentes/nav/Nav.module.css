@@ -13,7 +13,7 @@
 
 .breadcrumbs {
   font-size: 15px;
-  color: #666;
+  color: #1c1b1bdc;
   width: 200px; /* Ajusta este valor al ancho que desees */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
