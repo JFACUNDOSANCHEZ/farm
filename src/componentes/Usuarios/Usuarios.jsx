@@ -24,7 +24,7 @@ const Usuarios = () => {
    <div className={styles.header}>
   <h2 className={styles.title}>Lista de Usuarios</h2>
   <button onClick={toggleViewMode} className={styles.toggleButton}>
-    Ver como {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+    Ver  {viewMode === 'cards' ? 'Tabla' : 'Cards'}
   </button>
 </div>
 

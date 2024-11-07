@@ -5,16 +5,10 @@ const Logout = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Obtener el token del localStorage
-        const token = localStorage.getItem('token'); // Asegúrate de usar la clave correcta
-
-        // Si el token existe, lo borramos
+        const token = localStorage.getItem('token');
         if (token) {
-            localStorage.removeItem('token'); // Eliminar el token
-            // Puedes hacer cualquier otra acción que desees aquí, como una llamada a la API para cerrar sesión
+            localStorage.removeItem('token');       
         }
-
-        // Redirigir a la ruta raíz
         navigate('/'); 
     }, [navigate]);
 

@@ -33,6 +33,11 @@ const NavBar = () => {
 
   const currentPath = 
     location.pathname === '/provincias' ? 'Provincias' : 
+    location.pathname === '/matrices' ? 'Matrices' : 
+    location.pathname === '/estadosOT' ? 'Estados OT' : 
+    location.pathname === '/Tipos' ? 'Tipos De Muestras' : 
+    location.pathname === '/Metodos' ? 'Metodos' : 
+    location.pathname === '/usuarios' ? 'Usuarios' : 
     location.pathname === '/condicionDePago' ? 'Condicion De Pago' : 
     location.pathname === '/ensayos' ? 'Ensayos' :  
     location.pathname === '/condicionFiscal' ? 'Condición Fiscal' : 

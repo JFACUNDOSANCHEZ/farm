@@ -10,7 +10,7 @@ export const fetchClientes = createAsyncThunk(
       if (!token) throw new Error('Token no encontrado');
 
       const response = await axios.get(
-        'https://nube02.sytes.net:24082/api/Tablas/Clientes/Lista?oCodigo=""',
+        'https://nube02.sytes.net:24082/api/Tablas/Personal/Lista?oCodigo=""',
         {
           headers: {
             Authorization: `Bearer ${token}`,
