@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef  } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuItems, selectMenuItems, selectMenuStatus, selectMenuError } from '../../redux/slices/menuSlice.jsx';
-import {FaAdjust, FaAffiliatetheme , FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial } from 'react-icons/fa';
+import { FaAdjust, FaAffiliatetheme , FaHome, FaFlask, FaTable, FaUser, FaTools, FaIndustry, FaRuler, FaCashRegister, FaCity, FaVial, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import styles from './MenuPage.module.css';
 import logo from '/logo.jpg.jpeg';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 function MenuPage() {
     const dispatch = useDispatch();
@@ -14,8 +13,8 @@ function MenuPage() {
     const menuError = useSelector(selectMenuError);
     const navigate = useNavigate();
 
-    // Estado para manejar la expansión de grupos de menú
     const [openGroups, setOpenGroups] = useState({});
+    const subMenuRefs = useRef({});
 
     useEffect(() => {
         if (menuStatus === 'idle') {
@@ -28,149 +27,83 @@ function MenuPage() {
             const initialOpenGroups = {};
             menuItems.forEach(item => {
                 if (item.endpoint) {
-                    initialOpenGroups[item.endpoint] = false; // Inicialmente, todos cerrados
+                    initialOpenGroups[item.endpoint] = false;
                 }
             });
             setOpenGroups(initialOpenGroups);
         }
     }, [menuStatus, menuItems]);
 
-    // Función para obtener el ícono correcto basado en el código del ítem
     const getIconForItem = (codigo) => {
         switch (codigo) {
-            case 'RAIZ':
-                return <FaHome />;
-            case 'TABLAS':
-                return <FaTable />;
-            case 'ENSAYOS':
-                return <FaFlask />;
-            case 'MNUMETODO':
-                return <FaTools />;
-            case 'MNUPERSONAL':
-                return <FaUser />;
-            case 'MNUSECTOR':
-                return <FaIndustry />;
-            case 'MNUUM':
-                return <FaRuler />;
-            case 'MNICIVA':
-                return <FaCashRegister />;
+            case 'RAIZ': return <FaHome />;
+            case 'TABLAS': return <FaAdjust />;
+            case 'ENSAYOS': return <FaFlask />;
+            case 'MNUMETODO': return <FaTools />;
+            case 'MNUPERSONAL': return <FaUser />;
+            case 'MNUSECTOR': return <FaIndustry />;
+            case 'MNUUM': return <FaRuler />;
+            case 'MNICIVA': return <FaCashRegister />;
             case 'MNUCPAG':
-            case 'PRV':
-                return <FaCity />;
-            case 'TMUESTRA':
-                return <FaVial />;
-            case 'MNULAB':
-                return <FaFlask />;
-            case 'MNURESULTADOS':
-                return <FaTable />;
-            case 'MNUCOTIMUES':
-                return <FaIndustry />;
-            case 'ESTADOSOT':
-                    return <FaAdjust />;
-            case 'MNUMATRIZ':
-                    return <FaAffiliatetheme />;
-
-           
-           
-    
-
-
-                    
-                
-            default:
-                return null;
+            case 'PRV': return <FaCity />;
+            case 'TMUESTRA': return <FaVial />;
+            case 'MNULAB': return <FaFlask />;
+            case 'MNURESULTADOS': return <FaTable />;
+            case 'MNUCOTIMUES': return <FaIndustry />;
+            case 'ESTADOSOT': return <FaAdjust />;
+            case 'MNUMATRIZ': return <FaAffiliatetheme />;
+            case 'MNUCLI': return <FaAffiliatetheme />;
+            case 'MODULOCLI': return <FaVial />;
+            default: return null;
         }
     };
 
-    // Función para manejar el click en cada ítem del menú
     const handleMenuClick = (codigo) => {
         switch (codigo) {
-            case 'PRV': 
-                navigate('/provincias');
-                break;
-            case 'ENSAYOS':
-                navigate('/ensayos');
-                break;
-            case 'MNICIVA':
-                navigate('/condicionFiscal');
-                break;
-            case 'MNUCPAG':
-                navigate('/condicionDePago');
-                break;
-            case 'RAIZ':
-                    navigate('/menu');
-                    break;
-            
-            case 'MNUPERSONAL':
-                navigate('/usuarios');
-                break;
-
-                case 'MNUMATRIZ':
-                    navigate('/matrices');
-                    break;
-            
-            case 'MNUMETODO':
-                    navigate('/Metodos');
-                    break;
-            
-            case 'MNUSECTOR':
-                        navigate('/sectores');
-                        break;
-            
-            case 'ESTADOSOT':
-                    navigate('/estadosOT');
-                    break;
-
-                    case 'MNUUM':
-                        navigate('/Clientes');
-                           break;
-
-                           case 'TMUESTRA':
-                            navigate('/Tipos');
-                               break;
-                        
-    
-            default:
-                break;
+            case 'PRV': navigate('/provincias'); break;
+            case 'ENSAYOS': navigate('/ensayos'); break;
+            case 'MNICIVA': navigate('/condicionFiscal'); break;
+            case 'MNUCPAG': navigate('/condicionDePago'); break;
+            case 'RAIZ': navigate('/menu'); break;
+            case 'MNUPERSONAL': navigate('/usuarios'); break;
+            case 'MNUMATRIZ': navigate('/matrices'); break;
+            case 'MNUMETODO': navigate('/Metodos'); break;
+            case 'MNUSECTOR': navigate('/sectores'); break;
+            case 'ESTADOSOT': navigate('/estadosOT'); break;
+            case 'MNUUM': navigate('/Clientes'); break;
+            case 'TMUESTRA': navigate('/Tipos'); break;
+            default: break;
         }
     };
 
-    // Función para manejar la expansión y colapso de un grupo
     const toggleGroup = (endpoint) => {
         setOpenGroups(prev => ({ ...prev, [endpoint]: !prev[endpoint] }));
     };
 
-    // Agrupar los ítems en las categorías principales primero
-    const groupedMenu = {
-        Sistema: {
-            descripcion: '👁 Sistema',
-            subItems: menuItems.filter(item => item.endpoint === 'SISTEMA'),
-        },
-
-        Laboratorio: {
-            descripcion: '☢ Laboratorio',
-            subItems: menuItems.filter(item => item.endpoint === 'MNULAB'),
-        },
-        Tablas: {
-            descripcion: '〽 Tablas',
-            subItems: menuItems.filter(item => item.endpoint === 'TABLAS'),
-        }
-    };
+    const groupedMenu = menuItems
+        .filter(item => item.endpoint === 'RAIZ')
+        .reduce((acc, mainItem) => {
+            const subItems = menuItems.filter(subItem => subItem.endpoint === mainItem.codigo);
+            acc[mainItem.codigo] = { ...mainItem, subItems };
+            return acc;
+        }, {});
 
     return (
-        <div>
         <div className={styles.sidebar}>
             <img src={logo} alt="logo" className={styles.logo} />
             <div className={styles.menuContainer}>
                 <ul>
-                    <li onClick={() => handleMenuClick('RAIZ')}>
-                        {getIconForItem('RAIZ')} Menu Principal
-                    </li>
-                    {Object.entries(groupedMenu).map(([key, group], index) => {
-                        const subMenuRef = useRef(null);
+                <li className={styles.menuItem} onClick={() => handleMenuClick('RAIZ')}>
+    {getIconForItem('RAIZ')}
+    <span style={{ marginLeft: '5px' }}>Menu Principal</span>
+</li>
 
+                    {Object.entries(groupedMenu).map(([key, group]) => {
+                        if (!subMenuRefs.current[key]) {
+                            subMenuRefs.current[key] = React.createRef();
+                        }
                         return (
-                            <li key={index}>
+                            <li key={key}>
                                 <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'start' }}>
                                     {getIconForItem(key)}
                                     <span>{group.descripcion}</span>
@@ -179,28 +112,27 @@ function MenuPage() {
                                     </span>
                                 </div>
                                 <ul
-                                    ref={subMenuRef}
+                                    ref={subMenuRefs.current[key]}
                                     style={{
-                                        height: openGroups[key] ? `${subMenuRef.current.scrollHeight}px` : '0px'
+                                        height: openGroups[key] ? `${subMenuRefs.current[key].current.scrollHeight}px` : '0px'
                                     }}
                                     className={styles.submenu}
                                 >
-                                    {group.subItems.map((subItem, subIndex) => (
-                                        <li key={subIndex} onClick={() => handleMenuClick(subItem.codigo)}>
-                                            {getIconForItem(subItem.codigo)} {subItem.descripcion}
-                                        </li>
-                                    ))}
+                                  {group.subItems.map((subItem, subIndex) => (
+    <li key={subIndex} className={styles.menuItem} onClick={() => handleMenuClick(subItem.codigo)}>
+        {getIconForItem(subItem.codigo)}
+        <span style={{ marginLeft: '5px' }}>{subItem.descripcion}</span>
+    </li>
+))}
                                 </ul>
                             </li>
                         );
                     })}
                 </ul>
-                {menuError && <div className={styles.menuError}> Menu no disponible</div>}
+                {menuError && <div className={styles.menuError}>Menu no disponible</div>}
             </div>
         </div>
-    </div>
     );
 }
 
 export default MenuPage;
-

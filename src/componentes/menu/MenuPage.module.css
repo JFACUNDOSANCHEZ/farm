@@ -1,6 +1,6 @@
 .sidebar {
     position: fixed; /* Mantiene el menú fijo en la pantalla */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(55, 54, 54);
     width: 250px;
     height: 100vh; /* Asegura que el menú ocupe toda la altura */
@@ -17,11 +17,12 @@
     padding: 0rem;
     list-style-type: none;
     text-align: left;
+    gap: 8px;
 }
 
 .menuContainer li {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 8px;
     padding:  0.6rem; 
     color: #444444; /* Color del texto base */
     transition: background-color 0.3s ease; /* Transición suave para el hover */
@@ -31,9 +32,12 @@
     list-style-type: none;
     text-align: left; /* Asegura que el texto esté alineado a la izquierda */
 }
-
+.menuContainer li span {
+    margin-left: 5px; /* Ajusta el margen izquierdo para separar más el ícono del texto */
+}
 .menuContainer li:hover {
   color: rgb(37, 37, 37);
+    gap: 8px;
 }
 
 .logo {
@@ -107,7 +111,7 @@
 }
 
 .submenu li {
-   
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0.6rem 0.4rem 0.4rem 1rem; /* Mantiene un padding diferente para los subitems */
     color: #424242; /* Color más claro para los subitems */
     font-size: 0.93rem; /* Reduce el tamaño de la fuente para los subitems */
