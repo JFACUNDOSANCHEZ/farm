@@ -125,7 +125,8 @@
 }
 
 .submenu li:hover {
-    background-color: #00000031;
+    width: 110%;
+    background-color: #3636361b;
     color: rgb(32, 32, 31); /* Color hover para los subitems */
 }
 
