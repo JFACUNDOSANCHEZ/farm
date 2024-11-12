@@ -27,13 +27,13 @@ th, td {
   padding: 15px;
   text-align: left;
   border: none; /* Elimina todos los bordes */
-  border-bottom: 2px solid black; /* Línea negra debajo de cada celda */
+  border-bottom: 0.5px solid black; /* Línea negra debajo de cada celda */
 }
 
 th {
   background-color: #f4f4f400;
   font-weight: bold;
-  border-bottom: 2px solid black; /* Línea negra debajo de los encabezados */
+  border-bottom: 1px solid black; /* Línea negra debajo de los encabezados */
 }
 
 
