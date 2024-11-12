@@ -80,10 +80,11 @@
   display: flex;
  font-family: Arial, Helvetica, sans-serif;
   align-items: center;
-  background-color: #030307b3;
+  background-color: #0e0e1ad1;
   color: #e6dbdb;
   padding: 10px 10px;
-  border-radius: 10px;
+  margin: 0.2rem 0.5rem 0.5rem;
+  border-radius: 500px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease; /* Transición de color y fondo */
 }

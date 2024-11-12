@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css'; // Importando el CSS Module
-import { FaHome,FaAd, FaChevronDown,   } from 'react-icons/fa';
+import { FaHome,FaAd, FaChevronDown, FaSteam  } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
@@ -60,8 +60,8 @@ const NavBar = () => {
     
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
       
-        <span>US</span>
-        <FaChevronDown className="icon" />
+         <FaChevronDown className="icon" />
+        {/* <span>US</span> */}
         {isMenuOpen && (
           <div className={styles.dropdown}>
             <button onClick={handleLogout} className={styles.dropdownItem}>Cerrar sesión</button>
