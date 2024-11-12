@@ -28,17 +28,17 @@ const Clientes = () => {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Razon Social</th>
-                <th>Cliente/Proveedor</th>
-                <th>Direccion</th>
+                <th>Legajo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
               </tr>
             </thead>
             <tbody>
               {clientes.map((item, index) => (
                 <tr key={index}>
-                  <td>{item.razonSocial}</td>
-                  <td>{item.nombreFantasia}</td>
-                  <td>{item.direccion}</td> 
+                  <td>{item.legajo}</td>
+                  <td>{item.nombre}</td>
+                  <td>{item.apellido}</td> 
                 </tr>
               ))}
             </tbody>

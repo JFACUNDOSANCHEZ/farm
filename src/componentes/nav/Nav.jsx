@@ -41,6 +41,8 @@ const NavBar = () => {
     location.pathname === '/condicionDePago' ? 'Condicion De Pago' : 
     location.pathname === '/ensayos' ? 'Ensayos' :  
     location.pathname === '/condicionFiscal' ? 'Condición Fiscal' : 
+    location.pathname === '/Clientes' ? 'Clientes' : 
+    location.pathname === '/sectores' ? 'Sectores' : 
     '';
 
   return (

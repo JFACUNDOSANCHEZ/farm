@@ -70,7 +70,7 @@ function MenuPage() {
             case 'MNUMETODO': navigate('/Metodos'); break;
             case 'MNUSECTOR': navigate('/sectores'); break;
             case 'ESTADOSOT': navigate('/estadosOT'); break;
-            case 'MNUUM': navigate('/Clientes'); break;
+            case 'MNUCLI': navigate('/Clientes'); break;
             case 'TMUESTRA': navigate('/Tipos'); break;
             default: break;
         }
