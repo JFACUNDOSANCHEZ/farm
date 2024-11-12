@@ -1,19 +1,24 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProvincias, selectProvincias, selectProvinciasStatus, selectProvinciasError } from '../../redux/slices/provinciaSlice.jsx';
-import NavBar from '../nav/Nav.jsx';
-import Menu from '../menu/Menu.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThLarge, faList } from '@fortawesome/free-solid-svg-icons'; // Importamos los iconos
+
 import styles from './provincias.module.css';
 import { useEffect, useState } from 'react';
-import Filtros from '../filtros/Filtros.jsx';
+
+const iconosProvincias = {
+  "A": "https://img.freepik.com/vector-premium/mapa-silueta-salta-argentina_721965-3448.jpg", // Icono de Salta
+  "B": "https://static.thenounproject.com/png/172580-200.png", // Icono de Buenos Aires
+  "C": "https://static.thenounproject.com/png/172601-200.png", // Icono de Capital Federal
+  "E": "https://media.istockphoto.com/id/1158098054/es/vector/%C3%A1-%C3%A1-1-2%C3%B1%C3%A11-2-%C3%B1%C3%A1.jpg?s=612x612&w=0&k=20&c=XiGYsximS967RXee2xIPXl4tlNxdpUbUJ8X7yK-2IPY=", // Icono de Entre Ríos
+  // Añadir el resto de provincias aquí...
+  "EXTER": "https://link_a_icono_exterior.png" // Icono de Exterior del país
+};
 
 const Provincias = () => {
     const dispatch = useDispatch();
     const provincias = useSelector(selectProvincias);
     const status = useSelector(selectProvinciasStatus);
     const error = useSelector(selectProvinciasError);
-    const [view, setView] = useState('table'); // Estado para alternar entre vista de cards o tabla
+    const [viewMode, setViewMode] = useState('table'); // Estado para alternar entre vista de cards o tabla
 
     useEffect(() => {
         if (status === 'idle') {
@@ -21,59 +26,62 @@ const Provincias = () => {
         }
     }, [status, dispatch]);
 
+    const toggleViewMode = () => {
+      setViewMode(prevMode => (prevMode === 'cards' ? 'table' : 'cards'));
+    };
+
     return (
         <div className={styles.container}>
-            <div className={styles.menu}>
-              
+            <div className={styles.header}>
+                <h2 className={styles.title}>Provincias</h2>
+                <button onClick={toggleViewMode} className={styles.toggleButton}>
+                    Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+                </button>
             </div>
-            <div className={styles.mainContent}>
-            
-           
-          <h2 className={styles.title}>Provincias</h2>
-               
 
-            
-
-
-                {/* Renderizado condicional según la vista */}
-                {status === 'succeeded' && (
-                    view === 'cards' ? (
-                        <div className={styles.cardContainer}>
-                            {provincias.map((provincia) => (
-                                <div key={provincia.codigo} className={styles.card}>
-                                    <h2>{provincia.descripcion}</h2>
-                                    {status === 'loading' && <div><img src="https://cdn.pixabay.com/animation/2023/08/11/21/18/21-18-05-265_512.gif" alt="" /></div>}
-                                    <p>Código: {provincia.codigo}</p>
-                                    <p>Porcentaje IIBB: {provincia.porcentajeIIBB}%</p>
-                                    <p>Importe IIBB: ${provincia.importeIIBB}</p>
-                                </div>
-                            ))}
+            {viewMode === 'cards' ? (
+                <div className={styles.cardContainer}>
+                    {provincias.map((metodo, index) => (
+                        <div key={index} className={styles.card}>
+                            <img 
+                                src={iconosProvincias[metodo.codigo.trim()] || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"} 
+                                className={styles.cardImage} 
+                                alt={`Icono de ${metodo.descripcion}`} 
+                            />
+                            <h3 className={styles.cardTitle}>{metodo.descripcion}</h3>
+                            <p className={styles.cardCode}>Código: {metodo.codigo}</p>
+                            <p className={styles.cardCode}>Porcentaje IIBB: {metodo.porcentajeIIBB}</p>
                         </div>
-                    ) : (
-                        <table className={styles.table}>
-                            <thead>
-                                <tr>
-                                    <th>Descripción</th>
-                                    <th>Código</th>
-                                    <th>Porcentaje IIBB</th>
-                                    <th>Importe IIBB</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {provincias.map((provincia) => (
-                                    <tr key={provincia.codigo}>
-                                        <td>{provincia.descripcion}</td>
-                                        <td>{provincia.codigo}</td>
-                                        <td>{provincia.porcentajeIIBB}%</td>
-                                        <td>${provincia.importeIIBB}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    )
-                )}
-                {status === 'failed' && <div>Error: {error}</div>}
-            </div>
+                    ))}
+                </div>
+            ) : (
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th>Icono</th>
+                            <th>Provincia</th>
+                            <th>Código</th>
+                            <th>Porcentaje IIBB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {provincias.map((metodo, index) => (
+                            <tr key={index}>
+                                <td>
+                                    <img 
+                                        src={iconosProvincias[metodo.codigo.trim()] || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"} 
+                                        className={styles.tableImage} 
+                                        alt={`Icono de ${metodo.descripcion}`} 
+                                    />
+                                </td>
+                                <td>{metodo.descripcion}</td>
+                                <td>{metodo.codigo}</td>
+                                <td>{metodo.porcentajeIIBB}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
         </div>
     );
 };

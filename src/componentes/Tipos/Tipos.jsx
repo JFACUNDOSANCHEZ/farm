@@ -3,7 +3,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTipos } from '../../redux/slices/tiposSlice';
 import styles from './Tipos.module.css'; // Importa el CSS Module
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWind, faWater, faLeaf, faFlask, faTools } from '@fortawesome/free-solid-svg-icons';
+import {
+  faWind,
+  faWater,
+  faFlask,
+  faLeaf,
+  faTools,
+  faFolder,
+  faMountain,
+  faSeedling,
+  faTint,
+  faSun,
+  faFire,
+  faCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -22,6 +35,13 @@ const Tipos = () => {
     EFLUE: faFlask,
     CROM: faLeaf,
     CMA: faTools,
+    ACEIT: faFolder,
+    BAGRA: faTools,
+    SUELO: faMountain,
+    CC: faSeedling,
+    TC: faTint,
+    SI: faSun,
+    SOLSE: faCircle,
     // Agrega más mapeos según tus necesidades
   };
 
