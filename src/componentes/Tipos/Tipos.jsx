@@ -27,7 +27,6 @@ const Tipos = () => {
             <thead>
               <tr>
                 <th>Descripción</th>
-                <th>Porcentaje IIBB</th>
                 <th>Código</th>
               
               </tr>
@@ -36,7 +35,7 @@ const Tipos = () => {
               {list.map((item, index) => (
                 <tr key={index}>
                   <td>{item.descripcion}</td>
-                  <td>{item.porcentajeIIBB}</td>
+              
                   <td>{item.codigo}</td>
              
                 </tr>

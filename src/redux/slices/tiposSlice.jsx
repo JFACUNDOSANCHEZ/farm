@@ -6,7 +6,7 @@ import axios from 'axios';
 export const fetchTipos = createAsyncThunk('tipos/fetchTipos', async (_, { getState }) => {
   const token = localStorage.getItem('token');
   
-  const response = await axios.get('https://nube02.sytes.net:24082/api/Tablas/Provincias/Lista?oCodigo=""', {
+  const response = await axios.get('https://nube02.sytes.net:24082/api/Tablas/TiposMuestra/Lista?oCodigo=""', {
     headers: {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json',
