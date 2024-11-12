@@ -1,12 +1,34 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTipos } from '../../redux/slices/tiposSlice';
 import styles from './Tipos.module.css'; // Importa el CSS Module
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWind, faWater, faLeaf, faFlask, faTools } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const Tipos = () => {
   const dispatch = useDispatch();
   const { tipos: list, status, error } = useSelector((state) => state.tipos);
 
+
+  
+  const [viewMode, setViewMode] = useState('cards');
+
+
+  const iconMapping = {
+    AIRE: faWind,
+    OTRA: faWater,
+    EFLUE: faFlask,
+    CROM: faLeaf,
+    CMA: faTools,
+    // Agrega más mapeos según tus necesidades
+  };
+
+
+  const toggleViewMode = () => {
+    setViewMode(prevMode => (prevMode === 'cards' ? 'table' : 'cards'));
+  };
   useEffect(() => {
     dispatch(fetchTipos());
   }, [dispatch]);
@@ -17,33 +39,51 @@ const Tipos = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.menu}>
-        {/* Aquí puedes agregar contenido del menú si es necesario */}
+      <div className={styles.header}>
+        <h2 className={styles.title}>Tipo de muestras</h2>
+        <button onClick={toggleViewMode} className={styles.toggleButton}>
+          Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+        </button>
       </div>
-      <div className={styles.mainContent}>
-        <div className={styles.contain}>
-          <h2 className={styles.title}>Tipos de muestras</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Descripción</th>
-                <th>Código</th>
-              
-              </tr>
-            </thead>
-            <tbody>
-              {list.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.descripcion}</td>
-              
-                  <td>{item.codigo}</td>
-             
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+
+     {viewMode === 'cards' ? (
+  <div className={styles.cardContainer}>
+    {list.map((cliente, index) => (
+      <div key={index} className={styles.card}>
+        <FontAwesomeIcon
+          icon={iconMapping[cliente.codigo.trim()] || faFlask} // Ícono por defecto si no hay mapeo
+          className={styles.cardIcon}
+        />
+        <h3 className={styles.cardTitle}>{cliente.nombre} {cliente.codigo}</h3>
+        <p className={styles.cardCode}>{cliente.descripcion}</p>
       </div>
+    ))}
+  </div>
+) : (
+  <table className={styles.table}>
+    <thead>
+      <tr>
+        <th>Ícono</th>
+        <th>Código</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      {list.map((cliente, index) => (
+        <tr key={index}>
+          <td>
+            <FontAwesomeIcon
+              icon={iconMapping[cliente.codigo.trim()] || faFlask}
+              className={styles.tableIcon}
+            />
+          </td>
+          <td>{cliente.codigo}</td>
+          <td>{cliente.descripcion}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+)}
     </div>
   );
 };
