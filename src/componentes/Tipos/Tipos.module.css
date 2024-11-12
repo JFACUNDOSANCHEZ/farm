@@ -22,6 +22,13 @@
   border: #666666be;
 }
 
+.table {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 .header {
   display: flex;
   align-items: center;
@@ -32,27 +39,7 @@
   margin-bottom: 20px;
 }
 
-.table {
-  width: 92%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
 
-.table th, .table td {
-  padding: 8px 10px; /* Reduce el padding si es necesario */
-  text-align: left;  /* Ajusta según tu preferencia */
-  line-height: 1.2; /* Ajusta el line-height para reducir espacio vertical */
-  vertical-align: middle; /* Centra verticalmente el contenido en la celda */
-}
-
-.tableImage {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%; /* Opcional: para redondear la imagen */
-  margin: 0; /* Elimina cualquier margen adicional */
-}
 
 .card {
   background-color: #f4f4f4;
@@ -71,15 +58,17 @@
 }
 
 .cardIcon {
-  font-size: 24px;
-  color: #007bff;
-  margin-bottom: 10px;
+  font-size: 44px;
+  color: #333537; /* Ajusta el color a tu preferencia */
+  margin-bottom: 8px;
 }
 
 .tableIcon {
   font-size: 20px;
-  color: #007bff;
+  color: #374758;
+
 }
+
 
 .cardImage {
   width: 100px; /* Ajusta el tamaño de la imagen */

@@ -49,6 +49,7 @@
   margin: 0; /* Elimina cualquier margen adicional */
 }
 
+
 .card {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
@@ -60,6 +61,12 @@
   text-align: center; /* Centrar contenido */
 }
 
+
+.icon {
+  font-size: 20px;
+  color: #333537; /* Ajusta el color a tu preferencia */
+  margin-bottom: 8px; /* Para espaciar el ícono del texto */
+}
 
 .card:hover {
   transform: scale(1.05); /* Efecto de hover */

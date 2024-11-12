@@ -42,7 +42,7 @@ const Tipos = () => {
       <div className={styles.header}>
         <h2 className={styles.title}>Tipo de muestras</h2>
         <button onClick={toggleViewMode} className={styles.toggleButton}>
-          Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+          Ver {viewMode === 'cards' ? 'Tabla' : 'Tabla'}
         </button>
       </div>
 
