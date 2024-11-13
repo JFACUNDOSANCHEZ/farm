@@ -26,7 +26,7 @@ const Tipos = () => {
 
 
   
-  const [viewMode, setViewMode] = useState('cards');
+  const [viewMode, setViewMode] = useState('table');
 
 
   const iconMapping = {
@@ -62,7 +62,7 @@ const Tipos = () => {
       <div className={styles.header}>
         <h2 className={styles.title}>Tipo de muestras</h2>
         <button onClick={toggleViewMode} className={styles.toggleButton}>
-          Ver {viewMode === 'cards' ? 'Tabla' : 'Tabla'}
+          Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
         </button>
       </div>
 

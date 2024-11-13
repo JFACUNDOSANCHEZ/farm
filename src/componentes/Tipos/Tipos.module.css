@@ -57,8 +57,15 @@
   transform: scale(1.05); /* Efecto de hover */
 }
 
+.table th:nth-child(3) {
+  text-align: right;
+}
+.table td:nth-child(3) {
+  text-align: right;
+}
+
 .cardIcon {
-  font-size: 44px;
+  font-size: 40px;
   color: #333537; /* Ajusta el color a tu preferencia */
   margin-bottom: 8px;
 }

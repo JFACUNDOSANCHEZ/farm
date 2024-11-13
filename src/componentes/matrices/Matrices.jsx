@@ -8,7 +8,7 @@ import styles from './MatricesList.module.css';
 const Matrices = () => {
   const dispatch = useDispatch();
   const { list, loading, error } = useSelector((state) => state.matrices);
-  const [viewMode, setViewMode] = useState('cards');
+  const [viewMode, setViewMode] = useState('table');
 
   useEffect(() => {
     dispatch(fetchMatrices());
@@ -46,10 +46,9 @@ const Matrices = () => {
             <div key={index} className={styles.card}>
               <FontAwesomeIcon
                 icon={getIconByDescription(metodo.descripcion)}
-                className={styles.icon}
+                className={styles.cardIcon}
               />
               <h3 className={styles.cardTitle}>{metodo.descripcion}</h3>
-              <p className={styles.cardCode}>Código: {metodo.codigo.trim()}</p>
               <p className={styles.cardCode}>Nivel: {metodo.muestra.trim()}</p>
             </div>
           ))}
@@ -70,7 +69,7 @@ const Matrices = () => {
                 <td>
                   <FontAwesomeIcon
                     icon={getIconByDescription(metodo.descripcion)}
-                    className={styles.icon}
+                    className={styles.tableIcon}
                   />
                 </td>
                 <td>{metodo.descripcion}</td>

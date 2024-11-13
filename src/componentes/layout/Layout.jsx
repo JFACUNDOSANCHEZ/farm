@@ -15,9 +15,9 @@ const Layout = ({ children }) => {
         <Nav /> {/* Renderiza la barra de navegación */}
         
         <div className={styles.filtro}>
-        { location.pathname === '/ensayos' ? null : 
-        <Filtros />
-        }
+        {/* { location.pathname === '/ensayos' ? null : 
+        // <Filtros />''
+        } */}
 
           
           

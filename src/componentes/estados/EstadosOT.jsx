@@ -16,15 +16,15 @@ const EstadosOT = () => {
   const getIconByDescription = (descripcion) => {
     switch (descripcion) {
       case 'Abierta':
-        return <FaExclamationTriangle className={styles.cardImage} style={{ color: '#FFA500' }} />; // Naranja
+        return <FaExclamationTriangle className={styles.cardImage} style={{ color: '#666' }} />; // Naranja
       case 'Completada':
-        return <FaCheckCircle className={styles.cardImage} style={{ color: '#28a745' }} />; // Verde
+        return <FaCheckCircle className={styles.cardImage} style={{ color: '#666' }} />; // Verde
       case 'Informada':
-        return <FaInfoCircle className={styles.cardImage} style={{ color: '#007bff' }} />; // Azul
+        return <FaInfoCircle className={styles.cardImage} style={{ color: '#666' }} />; // Azul
       case 'Parcial':
-        return <FaHourglassHalf className={styles.cardImage} style={{ color: '#6c757d' }} />; // Gris
+        return <FaHourglassHalf className={styles.cardImage} style={{ color: '#666' }} />; // Gris
       default:
-        return <FaClipboardList className={styles.cardImage} style={{ color: '#333' }} />; // Color por defecto
+        return <FaClipboardList className={styles.cardImage} style={{ color: '#666' }} />; // Color por defecto
     }
   };
 
@@ -37,9 +37,9 @@ const EstadosOT = () => {
       <div className={styles.cardContainer}>
         {list.map((metodo, index) => (
           <div key={index} className={styles.card}>
+            {getIconByDescription(metodo.descripcion)}
             <h2 className={styles.cardTitle}>{metodo.descripcion}</h2>
             <p className={styles.cardCode}>Código: {metodo.codigo}</p>
-            {getIconByDescription(metodo.descripcion)}
           </div>
         ))}
       </div>

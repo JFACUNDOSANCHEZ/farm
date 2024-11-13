@@ -60,12 +60,22 @@
   transition: transform 0.2s;
   text-align: center; /* Centrar contenido */
 }
-
-
-.icon {
-  font-size: 20px;
+.cardIcon {
+  font-size: 40px;
   color: #333537; /* Ajusta el color a tu preferencia */
-  margin-bottom: 8px; /* Para espaciar el ícono del texto */
+  margin-bottom: 8px;
+}
+.tableIcon {
+  font-size: 20px;
+  color: #374758;
+
+}
+.icon {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px; /* Mantiene proporciones */
+  border-radius: 10%; /* Hace la imagen circular */
+  object-fit: cover; /* Asegura que la imagen mantenga proporciones sin deformarse */
+  margin-bottom: 10px; /* Para espaciar el ícono del texto */
 }
 
 .card:hover {

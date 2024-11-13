@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Nav.module.css'; // Importando el CSS Module
 import { FaHome,FaAd, FaChevronDown, FaSteam  } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+import Filtros from '../filtros/Filtros.jsx'
+ 
+ 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); 
@@ -51,11 +53,9 @@ const NavBar = () => {
         <span onClick={() => navigate('/menu')}><FaHome className="icon" /> Inicio</span> / <span>{currentPath}</span>
       </div>
 
-{/* <div>
-  <button><FaHome/> </button>
-  <button><FaAd/></button>
-  <button>hola </button>
-</div> */}
+ <div>
+<Filtros></Filtros>
+</div> 
     <div className={styles.user}>
     
       <div className={styles.userOptions} onClick={toggleMenu} ref={menuRef}>
