@@ -66,7 +66,7 @@ const Provincias = () => {
                             <tr key={index}>
                                 <td>
                                     <img 
-                                        src={iconosProvincias[metodo.codigo.trim()] || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"} 
+                                        src={iconosProvincias[metodo.codigo.trim()] || "https://static.thenounproject.com/png/674232-200.png"} 
                                         className={styles.tableImage} 
                                         alt={`Icono de ${metodo.descripcion}`} 
                                     />
