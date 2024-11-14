@@ -35,6 +35,8 @@ const EstadosOT = () => {
     <div>
 
     <div className={styles.container}>
+      <div className={styles.header}>
+
       <h2 className={styles.title}>EstadosOT</h2>
       <div className={styles.cardContainer}>
         {list.map((metodo, index) => (
@@ -45,6 +47,7 @@ const EstadosOT = () => {
           </div>
         ))}
       </div>
+        </div>
         </div>
     </div>
   );
