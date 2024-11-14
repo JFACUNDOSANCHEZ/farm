@@ -3,10 +3,18 @@
 html, body {
   height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
   margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 body {
   overflow-y: scroll;
+}
+.title {
+  text-align: start;
+  color: #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0; /* Quita el margen */
 }
 
 .footer {
@@ -16,9 +24,19 @@ body {
   text-align: center;
 }
 
-table {
-  width: 100%;
+.header {
+  align-items: center;
+  justify-content: space-between;
+  width: 92%; /* Alinea con el ancho de la tabla */
   max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px; 
+}
+
+
+table {
+  width: 900px;
+  max-width: 1000px;
   margin: 20px auto;
   border-collapse: collapse;
 }

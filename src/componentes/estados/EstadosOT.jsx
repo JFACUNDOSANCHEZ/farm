@@ -32,6 +32,8 @@ const EstadosOT = () => {
   if (error) return <p className={styles.error}>Error: {error}</p>;
 
   return (
+    <div>
+
     <div className={styles.container}>
       <h2 className={styles.title}>EstadosOT</h2>
       <div className={styles.cardContainer}>
@@ -43,6 +45,7 @@ const EstadosOT = () => {
           </div>
         ))}
       </div>
+        </div>
     </div>
   );
 };

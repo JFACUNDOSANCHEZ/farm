@@ -17,7 +17,12 @@ export default function Principal() {
       {/* Contenido principal con los filtros */}
       <div className={styles.mainContent}>
         
-        
+        <h2>Menu principal</h2>
+
+<div>
+  
+</div>
+
         {/* <Filtros /> */}
       </div>
     </div>

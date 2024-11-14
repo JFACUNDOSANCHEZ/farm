@@ -20,13 +20,8 @@ const CondicionPagoComponent = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.menu}>
-      
-      </div>
-      <div className={styles.mainContent}>
-      
-     
-        <div className={styles.contain}>
+  
+        <div className={styles.header}>
           <h2 className={styles.title}>Condiciones de Pago</h2>
           <table className={styles.table}>
             <thead>
@@ -58,7 +53,7 @@ const CondicionPagoComponent = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      
     </div>
   );
 };

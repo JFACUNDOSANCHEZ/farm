@@ -11,7 +11,7 @@ const Formulario = () => {
 
   return (
     <div className={styles.container}>
-    <div className={styles.menu}>
+    {/* <div className={styles.menu}>
   
     </div>
     <div className={styles.mainContent}>
@@ -78,7 +78,7 @@ const Formulario = () => {
         <button type="submit" className={styles.submitButton}>Añadir</button>
       </form>
     </div>
-    </div>
+    </div> */}
     </div>
   );
 };

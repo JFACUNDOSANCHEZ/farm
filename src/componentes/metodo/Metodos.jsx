@@ -15,12 +15,8 @@ const Metodos = () => {
   if (error) return <p className={styles.error}>Error: {error}</p>;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.menu}>
-      
-      </div>
-      <div className={styles.mainContent}>
-        <div className={styles.contain}>
+    <div className={styles.container}>   
+        <div className={styles.header}>
           <h2 className={styles.title}>Lista de Métodos</h2>
           <table className={styles.table}>
             <thead>
@@ -39,7 +35,7 @@ const Metodos = () => {
             </tbody>
           </table>
         </div>
-      </div>
+   
     </div>
   );
 };
