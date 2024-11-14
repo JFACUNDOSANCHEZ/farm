@@ -51,7 +51,7 @@ th, td {
 th {
   background-color: #f4f4f400;
   font-weight: bold;
-  border-bottom: 1px solid rgb(71, 71, 71); /* Línea negra debajo de los encabezados */
+  border-bottom: 0.5px solid rgb(71, 71, 71); /* Línea negra debajo de los encabezados */
 }
 
 
