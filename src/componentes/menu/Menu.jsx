@@ -105,11 +105,11 @@ function MenuPage() {
                         return (
                             <li key={key}>
                                 <div onClick={() => toggleGroup(key)} style={{ display: 'flex', alignItems: 'start' }}>
-                                    {getIconForItem(key)}
-                                    <span>{group.descripcion}</span>
-                                    <span style={{ marginLeft: '5px' }}>
+                                    <span style={{ marginRight: '5px' }}>
                                         {openGroups[key] ? <FaChevronUp /> : <FaChevronDown />}
                                     </span>
+                                    {getIconForItem(key)}
+                                    <span>{group.descripcion}</span>
                                 </div>
                                 <ul
                                     ref={subMenuRefs.current[key]}
