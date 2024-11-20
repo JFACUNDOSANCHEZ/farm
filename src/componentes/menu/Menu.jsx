@@ -94,8 +94,12 @@ function MenuPage() {
             <div className={styles.menuContainer}>
                 <ul>
                 <li className={styles.menuItem} onClick={() => handleMenuClick('RAIZ')}>
-    {getIconForItem('RAIZ')}
-    <span style={{ marginLeft: '5px' }}>Menu Principal</span>
+    <span
+    style={{ marginLeft: '27px' }}>
+         {getIconForItem('RAIZ')}
+        </span>
+    <span style={{ marginLeft: '7px' }}>
+        Menu Principal</span>
 </li>
 
                     {Object.entries(groupedMenu).map(([key, group]) => {
