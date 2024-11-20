@@ -7,6 +7,28 @@
   margin-bottom: 20px; 
 }
 
+
+.loading {
+  text-align: center;
+  color: #007bff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.error {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.noData {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
 .table th:nth-child(4) {
   text-align: right;
 }

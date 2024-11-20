@@ -27,6 +27,10 @@ const Provincias = () => {
       setViewMode(prevMode => (prevMode === 'cards' ? 'table' : 'cards'));
     };
 
+    if (error) return <p className={styles.loading}>Cargando datos...</p>;
+    if (error) return <p className={styles.error}>Error al cargar los datos: {error}</p>;
+    if (!provincias || provincias.length === 0) return <p className={styles.noData}>No hay métodos disponibles.</p>;
+  
     return (
         <div className={styles.container}>
             <div className={styles.header}>

@@ -19,66 +19,62 @@ const Clientes = () => {
     dispatch(fetchClientes());
   }, [dispatch]);
 
-  if (loading) return <p>Cargando...</p>;
-  if (error) return <p>Error: {error}</p>;
-  console.log(clientes);
-  
+  if (loading) return <p className={styles.loading}>Cargando...</p>;
+  if (error) return <p className={styles.error}>Error: {error}</p>;
+  if (!clientes || clientes.length === 0) return <p className={styles.noData}>No hay clientes disponibles.</p>;
 
   return (
     <div className={styles.container}>
-    <div className={styles.header}>
-   <h2 className={styles.title}>Lista de Clientes</h2>
-   <button onClick={toggleViewMode} className={styles.toggleButton}>
-     Ver  {viewMode === 'cards' ? 'Tabla' : 'Cards'}
-   </button>
- </div>
- 
-       {viewMode === 'cards' ? (
-         <div className={styles.cardContainer}>
-           {clientes.map((metodo, index) => (
-             <div key={index} className={styles.card}>
-               <img 
-                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
-                 className={styles.cardImage} 
-                 alt={`Avatar de ${metodo.descripcion}`} 
-               />
-               <h3 className={styles.cardTitle}>{metodo.nombre}</h3>
-               <p className={styles.cardCode}>Apellido: {metodo.apellido}</p>
-               <p className={styles.cardCode}>Legajo: {metodo.legajo}</p>
-             </div>
-           ))}
-         </div>
-       ) : (
-         <table className={styles.table}>
-           <thead>
-             <tr>
-              
-               <th>Avatar</th>
-               <th>Nombre</th>
-               <th>Apellido</th>
-               <th>Legajo</th>
-             </tr>
-           </thead>
-           <tbody>
-             {clientes.map((metodo, index) => (
-               <tr key={index}>
-                 <td>
-                   <img 
-                     src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
-                     className={styles.tableImage} 
-                     alt={`Avatar de ${metodo.descripcion}`} 
-                   />
-                 </td>
-                 <td>{metodo.nombre}</td>
-               
-                 <td>{metodo.apellido}</td>
-                 <td>{metodo.legajo}</td>
-               </tr>
-             ))}
-           </tbody>
-         </table>
-       )}
-     </div>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Lista de Clientes</h2>
+        <button onClick={toggleViewMode} className={styles.toggleButton}>
+          Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
+        </button>
+      </div>
+      {viewMode === 'cards' ? (
+        <div className={styles.cardContainer}>
+          {clientes.map((metodo, index) => (
+            <div key={index} className={styles.card}>
+              <img 
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
+                className={styles.cardImage} 
+                alt={`Avatar de ${metodo.descripcion}`} 
+              />
+              <h3 className={styles.cardTitle}>{metodo.nombre}</h3>
+              <p className={styles.cardCode}>Apellido: {metodo.apellido}</p>
+              <p className={styles.cardCode}>Legajo: {metodo.legajo}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Avatar</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Legajo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {clientes.map((metodo, index) => (
+              <tr key={index}>
+                <td>
+                  <img 
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
+                    className={styles.tableImage} 
+                    alt={`Avatar de ${metodo.descripcion}`} 
+                  />
+                </td>
+                <td>{metodo.nombre}</td>
+                <td>{metodo.apellido}</td>
+                <td>{metodo.legajo}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
   );
 };
 

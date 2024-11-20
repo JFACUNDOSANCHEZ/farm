@@ -12,30 +12,30 @@ const Metodos = () => {
   }, [dispatch]);
 
   if (loading) return <p className={styles.loading}>Cargando datos...</p>;
-  if (error) return <p className={styles.error}>Error: {error}</p>;
+  if (error) return <p className={styles.error}>Error al cargar los datos: {error}</p>;
+  if (!list || list.length === 0) return <p className={styles.noData}>No hay métodos disponibles.</p>;
 
   return (
     <div className={styles.container}>   
-        <div className={styles.header}>
-          <h2 className={styles.title}>Lista de Métodos</h2>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Descripción</th>
-                <th>Código</th>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Lista de Métodos</h2>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Código</th>
+            </tr>
+          </thead>
+          <tbody>
+            {list.map((metodo, index) => (
+              <tr key={index}>
+                <td>{metodo.descripcion}</td>
+                <td>{metodo.codigo}</td>
               </tr>
-            </thead>
-            <tbody>
-              {list.map((metodo, index) => (
-                <tr key={index}>
-                  <td>{metodo.descripcion}</td>
-                  <td>{metodo.codigo}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-   
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

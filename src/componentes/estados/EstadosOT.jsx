@@ -12,6 +12,10 @@ const EstadosOT = () => {
     dispatch(fetchEstadosOT());
   }, [dispatch]);
 
+  if (loading) return <p className={styles.loading}>Cargando datos...</p>;
+  if (error) return <p className={styles.error}>Error al cargar los datos: {error}</p>;
+  if (!list || list.length === 0) return <p className={styles.noData}>No hay condiciones de pago disponibles.</p>;
+
   // Función para asignar un ícono y color en función de la descripción
   const getIconByDescription = (descripcion) => {
     switch (descripcion) {

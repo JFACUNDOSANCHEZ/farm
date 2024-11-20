@@ -34,6 +34,10 @@ const Sectores = () => {
   const sectoresTrue = list.filter(metodo => metodo.flagLab);
   const sectoresFalse = list.filter(metodo => !metodo.flagLab);
 
+  if (loading) return <p className={styles.loading}>Cargando datos...</p>;
+  if (error) return <p className={styles.error}>Error al cargar los datos: {error}</p>;
+  if (!list || list.length === 0) return <p className={styles.noData}>No hay métodos disponibles.</p>;
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Sectores de Laboratorio</h2>
