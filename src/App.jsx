@@ -15,6 +15,7 @@ import EstadosOT from './componentes/estados/EstadosOT';
 import Matrices from './componentes/matrices/Matrices';
 import Clientes from './componentes/clientes/Clientes';
 import Tipos from './componentes/Tipos/Tipos';
+import Unidades from './componentes/unidades/Unidades';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Route path="/matrices" element={<Layout><Matrices /></Layout>} />
       <Route path="/Clientes" element={<Layout><Clientes /></Layout>} />
       <Route path="/Tipos" element={<Layout><Tipos /></Layout>} />
+      <Route path="/unidades" element={<Layout><Unidades /></Layout>} />
     </Routes>
   );
 }

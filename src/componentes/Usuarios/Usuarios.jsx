@@ -16,8 +16,10 @@ const Usuarios = () => {
     setViewMode((prevMode) => (prevMode === 'cards' ? 'table' : 'cards'));
   };
 
-  if (loading) return <p className={styles.loading}>Cargando datos...</p>;
-  if (error) return <p className={styles.error}>Error: {error}</p>;
+ 
+  if (loading === 'loading') return <p className={styles.loading}>Cargando datos...</p>;
+  if (error === 'failed') return <p className={styles.error}>Error al cargar los datos: {error}</p>;
+  if (!list || list.length === 0) return <p className={styles.noData}>No hay unidades disponibles.</p>;
 
   return (
     <div className={styles.container}>

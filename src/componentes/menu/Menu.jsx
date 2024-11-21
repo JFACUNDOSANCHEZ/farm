@@ -72,6 +72,7 @@ function MenuPage() {
             case 'ESTADOSOT': navigate('/estadosOT'); break;
             case 'MNUCLI': navigate('/Clientes'); break;
             case 'TMUESTRA': navigate('/Tipos'); break;
+            case 'MNUUM': navigate('/unidades'); break;
             default: break;
         }
     };
