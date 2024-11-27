@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
           
                
         </div>
-        
+        <br /><br /><br />
         <main className={styles.contenido}>
           {children}
         </main>

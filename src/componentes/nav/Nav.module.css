@@ -2,12 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #fff; */
   padding: 5px 10px;
-  border-bottom: 0px solid #ddd; /* Solo el borde inferior */
-  position: relative;
-  margin-left: 260px;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  position: fixed; /* Cambiar de 'relative' a 'fixed' */
+  top: 0; /* Fija la barra al borde superior */
+  left: 0;
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  z-index: 10; /* Para que quede por encima de otros elementos */
+  margin-left: 250px;
+  background-color: #fff; /* Fondo blanco para que se vea claro sobre el contenido */
+
 }
 
 
