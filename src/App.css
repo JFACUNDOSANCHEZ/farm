@@ -42,7 +42,7 @@ table {
 }
 
 th, td {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   border: none; /* Elimina todos los bordes */
   border-bottom: 0.5px solid rgb(143, 143, 143); /* Línea negra debajo de cada celda */
@@ -59,3 +59,4 @@ th {
 tbody tr:hover {
   background-color: #f1f1f1;
 }
+

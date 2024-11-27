@@ -83,22 +83,22 @@ const Tipos = () => {
   <table className={styles.table}>
     <thead>
       <tr>
-        <th>Ícono</th>
         <th>Código</th>
         <th>Descripción</th>
+      <th>Ícono</th>
       </tr>
     </thead>
     <tbody>
       {list.map((cliente, index) => (
         <tr key={index}>
+          <td>{cliente.codigo}</td>
+          <td>{cliente.descripcion}</td>
           <td>
             <FontAwesomeIcon
               icon={iconMapping[cliente.codigo.trim()] || faFlask}
               className={styles.tableIcon}
             />
           </td>
-          <td>{cliente.codigo}</td>
-          <td>{cliente.descripcion}</td>
         </tr>
       ))}
     </tbody>

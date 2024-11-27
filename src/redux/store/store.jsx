@@ -13,7 +13,7 @@ import estadosOTReducer from '../slices/estadosOTSlice';
 import matricesReducer from '../slices/matricesSlice'
 import tiposReducer from '../slices/tiposSlice'
 import unidadesReducer from '../slices/unidadesSlice'
-
+import personalReducer from '../slices/personalSlice';
 const store = configureStore({
   reducer: {
     auth: authReducer,
@@ -28,7 +28,8 @@ const store = configureStore({
     estadosOT: estadosOTReducer,  
     matrices: matricesReducer,  
     tipos: tiposReducer,
-    unidades: unidadesReducer
+    unidades: unidadesReducer,
+    personal: personalReducer,
   },
 });
 

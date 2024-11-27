@@ -40,7 +40,7 @@ const Clientes = () => {
                 className={styles.cardImage} 
                 alt={`Avatar de ${metodo.descripcion}`} 
               />
-              <h3 className={styles.cardTitle}>{metodo.nombre}</h3>
+              <h3 className={styles.cardTitle}>{metodo.razonSocial}</h3>
               <p className={styles.cardCode}>Apellido: {metodo.apellido}</p>
               <p className={styles.cardCode}>Legajo: {metodo.legajo}</p>
             </div>
@@ -50,10 +50,10 @@ const Clientes = () => {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>Avatar</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Legajo</th>
+              <th></th>
+              <th>Razon docial</th>
+              <th>Localidad</th>
+              <th>direccion</th>
             </tr>
           </thead>
           <tbody>
@@ -66,9 +66,9 @@ const Clientes = () => {
                     alt={`Avatar de ${metodo.descripcion}`} 
                   />
                 </td>
-                <td>{metodo.nombre}</td>
-                <td>{metodo.apellido}</td>
-                <td>{metodo.legajo}</td>
+                <td>{metodo.razonSocial}</td>
+                <td>{metodo.localidad}</td>
+                <td>{metodo.direccion}</td>
               </tr>
             ))}
           </tbody>

@@ -1,16 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Thunk para la petición GET a la URL de "Clientes"
-export const fetchClientes = createAsyncThunk(
-  'clientes/fetchClientes',
+// Thunk para la petición GET a la URL de "Usuarios"
+export const fetchPersonal= createAsyncThunk(
+  'personal/fetchPersonal',
   async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Token no encontrado');
 
       const response = await axios.get(
-        'https://nube02.sytes.net:24082/api/Tablas/Clientes/Lista?oCodigo=""&limit=100',
+        'https://nube02.sytes.net:24082/api/Tablas/Personal/Lista?oCodigo=""',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -27,9 +27,9 @@ export const fetchClientes = createAsyncThunk(
   }
 );
 
-// Slice de "Clientes"
-const clientesSlice = createSlice({
-  name: 'clientes',
+// Slice de "Usuarios"
+const personalSlice = createSlice({
+  name: 'personal',
   initialState: {
     list: [],
     loading: false,
@@ -38,15 +38,15 @@ const clientesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchClientes.pending, (state) => {
+      .addCase(fetchPersonal.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchClientes.fulfilled, (state, action) => {
+      .addCase(fetchPersonal.fulfilled, (state, action) => {
         state.loading = false;
         state.list = action.payload;
       })
-      .addCase(fetchClientes.rejected, (state, action) => {
+      .addCase(fetchPersonal.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload || action.error.message;
       });
@@ -54,4 +54,4 @@ const clientesSlice = createSlice({
 });
 
 // Exporta el reducer
-export default clientesSlice.reducer;
+export default personalSlice.reducer;

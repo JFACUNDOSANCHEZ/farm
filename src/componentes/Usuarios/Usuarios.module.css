@@ -9,6 +9,14 @@
 }
 
 
+.loading {
+  text-align: center;
+  color: #0e1012;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
 .toggleButton {
   padding: 8px 16px;
   width: 5rem;

@@ -65,7 +65,7 @@ function MenuPage() {
             case 'MNICIVA': navigate('/condicionFiscal'); break;
             case 'MNUCPAG': navigate('/condicionDePago'); break;
             case 'RAIZ': navigate('/menu'); break;
-            case 'MNUPERSONAL': navigate('/usuarios'); break;
+            case 'MNUPERSONAL': navigate('/personal'); break;
             case 'MNUMATRIZ': navigate('/matrices'); break;
             case 'MNUMETODO': navigate('/Metodos'); break;
             case 'MNUSECTOR': navigate('/sectores'); break;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsuarios } from '../../redux/slices/usuariosSlice.jsx';
+import { fetchPersonal } from '../../redux/slices/personalSlice.jsx';
 import styles from './Usuarios.module.css';
 
 const Usuarios = () => {

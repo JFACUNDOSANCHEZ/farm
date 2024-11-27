@@ -16,6 +16,7 @@ import Matrices from './componentes/matrices/Matrices';
 import Clientes from './componentes/clientes/Clientes';
 import Tipos from './componentes/Tipos/Tipos';
 import Unidades from './componentes/unidades/Unidades';
+import Personal from './componentes/personal/Personal';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
       <Route path="/condicionFiscal" element={<Layout><CondicionFiscalComponent /></Layout>} />
       <Route path="/condicionDePago" element={<Layout><CondicionPagoComponent /></Layout>} />
       <Route path="/Metodos" element={<Layout><Metodos /></Layout>} />
-      <Route path="/usuarios" element={<Layout><Usuarios /></Layout>} />
+      <Route path="/personal" element={<Layout><Personal /></Layout>} />
       <Route path="/sectores" element={<Layout><Sectores /></Layout>} />
       <Route path="/estadosOT" element={<Layout><EstadosOT /></Layout>} />
       <Route path="/matrices" element={<Layout><Matrices /></Layout>} />
