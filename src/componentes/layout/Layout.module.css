@@ -27,7 +27,7 @@
 
 .contenido{
 height: 50rem;
-background-color: rgba(0, 0, 0, 0.023);
+
 
 }
 main {
@@ -47,6 +47,7 @@ main {
   flex: 1; /* Permite que el contenido ocupe el espacio restante */
   overflow-y: auto; /* Habilita el desplazamiento vertical */
   padding: 16px; /* Añade algo de espacio */
+  background-color: rgba(0, 0, 0, 0.019);
 }
 /* Responsividad */
 @media (max-width: 768px) {

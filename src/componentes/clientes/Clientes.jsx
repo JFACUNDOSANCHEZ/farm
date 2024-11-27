@@ -19,7 +19,7 @@ const Clientes = () => {
     dispatch(fetchClientes());
   }, [dispatch]);
 
-  if (loading) return <p className={styles.loading}>Cargando...</p>;
+  if (loading) return <p className={styles.loading}>Cargando datos...</p>;
   if (error) return <p className={styles.error}>Error: {error}</p>;
   if (!clientes || clientes.length === 0) return <p className={styles.noData}>No hay clientes disponibles.</p>;
 

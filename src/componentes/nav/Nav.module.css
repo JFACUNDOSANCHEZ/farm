@@ -3,16 +3,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  position: fixed; /* Cambiar de 'relative' a 'fixed' */
-  top: 0; /* Fija la barra al borde superior */
-  left: 0;
-  width: 100%; /* Asegúrate de que ocupe todo el ancho */
-  z-index: 10; /* Para que quede por encima de otros elementos */
-  margin-left: 250px;
-  background-color: #fff; /* Fondo blanco para que se vea claro sobre el contenido */
-
+  position: fixed;
+  top: 0;
+  left: 250px; /* Ajusta según el ancho del sidebar */
+  width: calc(99% - 250px); /* Calcula el espacio restante */
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Evita que se desborde el contenido */
 }
-
 
 .breadcrumbs {
   font-size: 15px;
