@@ -47,7 +47,7 @@ main {
   flex: 1; /* Permite que el contenido ocupe el espacio restante */
   overflow-y: auto; /* Habilita el desplazamiento vertical */
   padding: 16px; /* Añade algo de espacio */
-  background-color: rgba(0, 0, 0, 0.019);
+  background-color: rgba(0, 0, 0, 0.035);
 }
 /* Responsividad */
 @media (max-width: 768px) {

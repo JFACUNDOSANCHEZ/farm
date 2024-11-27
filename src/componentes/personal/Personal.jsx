@@ -23,7 +23,10 @@ const Personal = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        <div className={styles.contentTitle}>
+
         <h2 className={styles.title}> Personal</h2> 
+        </div>
         <button onClick={toggleViewMode} className={styles.toggleButton}>
           Ver {viewMode === 'cards' ? 'Tabla' : 'Cards'}
         </button>

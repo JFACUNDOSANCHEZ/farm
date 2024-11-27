@@ -75,14 +75,7 @@ try {
               className={styles.inputField}
             />
           </div>
-          <div className={styles.options}>
-            <div>
-              <label htmlFor="remember">Recordar mi ingreso</label>
-             
-              <input type="checkbox" id="remember" />
-            </div>
-            <a href="#">¿Olvidó su contraseña?</a>
-          </div>
+        
           <button type="submit" className={styles.submitButton}>Ingresar</button>
         </form>
       </div>

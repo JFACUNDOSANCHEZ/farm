@@ -40,7 +40,10 @@ const Sectores = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.contentTitle}>
+
       <h2 className={styles.title}>Sectores de Laboratorio</h2>
+</div>
       <div className={styles.cardContainer}>
         {sectoresTrue.map((metodo, index) => {
           const { icon, color } = getIcon(metodo.descripcion);

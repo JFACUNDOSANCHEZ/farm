@@ -23,7 +23,10 @@ console.log(unidades);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+      <div className={styles.contentTitle}>
+
         <h2 className={styles.title}>Lista de Unidades</h2>
+</div>
         <table className={styles.table}>
           <thead>
             <tr>
