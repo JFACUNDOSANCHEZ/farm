@@ -1,9 +1,6 @@
 import React from 'react'
-import SearchBar from '../searchbar/SearchbBar';
-import Nav from '../nav/Nav';
-import Filtros from '../filtros/Filtros';
-import Menu from '../menu/Menu'
-import Provincias from '../provincias/Provincias';
+
+
 import styles from './principal.module.css';
 
 export default function Principal() {
